@@ -4,7 +4,10 @@ import WithDoc, { components } from '~/lib/with-doc'
 import Image from '~/components/Image'
 
 export default WithDoc({
-  title: 'All about Basic Attention Token (BAT)'
+  title: 'All about Basic Attention Token (BAT)',
+  description: 'BAT is a new concept for online advertising which doesn\'t compromise users\' privacy.',
+  image: 'https://basicattentiontoken.org/fonts/BAT_explode.svg',
+  url: `${ROOT_URL}/blog/all-about-basic-attention-token`
 })(markdown(components)`
 
 ${<Image src="https://basicattentiontoken.org/fonts/BAT_explode.svg" width={300}/>}
