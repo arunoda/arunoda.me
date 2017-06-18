@@ -7,7 +7,11 @@ export default WithDoc({
   title: 'All about Basic Attention Token (BAT)',
   description: 'BAT is a new concept for online advertising which doesn\'t compromise users\' privacy.',
   image: 'https://basicattentiontoken.org/fonts/BAT_explode.svg',
-  url: `${ROOT_URL}/blog/all-about-basic-attention-token`
+  url: `${ROOT_URL}/blog/all-about-basic-attention-token`,
+  links: {
+    twitter: 'https://ssd/twitter',
+    facebook: 'https://ssd/facebook'
+  }
 })(markdown(components)`
 
 ${<Image src="https://basicattentiontoken.org/fonts/BAT_explode.svg" width={300}/>}
