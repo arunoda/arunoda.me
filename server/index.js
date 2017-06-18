@@ -18,9 +18,15 @@ async function run() {
   await app.prepare()
   const server = express()
 
+  server.get('/share', (req, res) => {
+    const { redirectTo, slug } = req.query
+    res.redirect(redirectTo)
+    if (db) Usage.trackPost(db, `/blog/${slug}`, 'share')
+  })
+
   server.get('/blog/:slug', (req, res) => {
     handle(req, res)
-    if (db) Usage.trackPost(db, req)
+    if (db) Usage.trackPost(db, req.url, 'view')
   })
 
   server.get('*', (req, res) => {
