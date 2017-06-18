@@ -1,9 +1,13 @@
 import markdown from 'markdown-in-js'
-import WithDoc from '../../lib/with-doc'
+import WithDoc, { components } from '~/lib/with-doc'
+
+import Image from '~/components/Image'
 
 export default WithDoc({
-  title: 'All about Basic Attention Token'
-})(markdown`
+  title: 'All about Basic Attention Token (BAT)'
+})(markdown(components)`
+
+${<Image src="https://basicattentiontoken.org/fonts/BAT_explode.svg" width={300}/>}
 
 **TLDR;** <br/>
 You might not have heard about BAT but it's a pretty interesting privacy focused technology trying to complete with Google and others in the online advertising space.
@@ -11,8 +15,6 @@ You might not have heard about BAT but it's a pretty interesting privacy focused
 BAT is a part of the Brave browser eco-system and it's co-founded by Brendan Eich who created Mozilla and JavaScript.
 
 Interestingly they just raised a USD 36 million funding round and it's not venture backed.
-
-![](https://basicattentiontoken.org/images/bat_triad_diagram.png)
 
 * * *
 
@@ -22,13 +24,18 @@ Before we begin, we need to make sure everyone is in the same page. So, I'll lay
 
 This is not a new topic anymore. User tracking is not a bad thing specially for logged-in users.
 
-![](https://basicattentiontoken.org/fonts/BAT_explode.svg)
-
 But the issue comes when some parties try to track user activities across multiple websites. This is extensively used in online advertising and often called as re-targeting.
 
 For an example, google knows everything inside gmail and what you are searching. Then when you visit [techcruch.com](http://techcruch.com/) you will starting to see ads based on the content inside gmail and what you have searched for.
 
 This is pretty scary since this works across Google, Twitter, Facebook and almost all over the internet. So, now a set of third parties know what you are doing in the internet without your consent.
+
+${
+  <Image
+    src="https://basicattentiontoken.org/fonts/BAT_explode.svg"
+    title={'This is the browser marker share according to the bloomberg in year 2015.'}
+  />
+}
 
 ## AdBlockers
 

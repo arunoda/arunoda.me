@@ -3,6 +3,7 @@
     "next/babel"
   ],
   "plugins": [
-    "markdown-in-js/babel"
+    "markdown-in-js/babel",
+    "babel-plugin-root-import"
   ]
 }
