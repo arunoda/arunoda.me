@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/arunoda/arunoda.me#readme",
   "dependencies": {
+    "markdown-in-js": "^1.1.3",
     "next": "beta",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
