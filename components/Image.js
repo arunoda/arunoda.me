@@ -21,6 +21,7 @@ export default ({ src, width="100%", height, alt, title }) => (
       .title {
         color: #888;
         font-size: 13px;
+        line-height: 17px;
         padding: 5px 0;
       }
 
