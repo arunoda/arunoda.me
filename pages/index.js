@@ -55,6 +55,12 @@ export default () => (
         text-align: center;
         margin: 20px 0 0 0;
       }
+
+      @media screen and (max-width: 650px) {
+        #intro {
+          margin: 150px 0 0 0;
+        }
+      }
     `}</style>
   </div>
 )
