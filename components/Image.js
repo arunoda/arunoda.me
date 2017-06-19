@@ -15,7 +15,7 @@ export default ({ src, width="100%", height, alt, title }) => (
       .container {
         text-align: center;
         max-width: 100%;
-        margin: 30px 0;
+        margin: 50px 0;
       }
 
       img {

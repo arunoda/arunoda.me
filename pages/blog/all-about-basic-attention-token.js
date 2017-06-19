@@ -5,22 +5,24 @@ import Image from '~/components/Image'
 
 export default WithDoc({
   title: 'All about Basic Attention Token (BAT)',
-  description: 'BAT is a new concept for online advertising which doesn\'t compromise users\' privacy.',
-  image: 'https://basicattentiontoken.org/fonts/BAT_explode.svg',
+  description: 'BAT is a pretty interesting privacy focused online ad-tech trying to compete with Google and others',
+  image: 'https://res.cloudinary.com/dsdjlta5b/image/upload/v1497872902/arunoda.me/BAT_explode.svg',
   slug: 'all-about-basic-attention-token',
-  date: 'May 28, 2017',
+  date: 'June 19, 2017',
   links: {
-    twitter: 'https://ssd/twitter',
-    facebook: 'https://ssd/facebook'
+    twitter: '',
+    facebook: ''
   }
 })(markdown(components)`
+
+${<Image src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1497872902/arunoda.me/BAT_explode.svg" width={300}/>}
 
 **TL;DR;** <br/>
 You might not have heard about BAT yet, but it's a pretty interesting privacy focused online ad-tech trying to compete with Google and others. 
 
-BAT is a part of the Brave browser eco-system and it's co-founded by Brendan Eich who is the creator of Mozilla and JavaScript. 
+BAT is a part of the [Brave](https://brave.com/) browser eco-system and it's co-founded by [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich) who is the creator of Mozilla and JavaScript. 
 
-Interestingly, they just raised 36 million USD in funding, and it's not venture backed. 
+Interestingly, they just raised **36 million USD** in funding, and it's not venture backed. 
 
 * * *
 
@@ -40,7 +42,7 @@ That's crazy.
 
 ## AdBlockers
 
-This is where AdBlockers comes into the game. They are usually browser extensions which detect those trackers and block them. So those third parties won't be able to track you across the internet anymore. Also AdBlockers usually block most of the display ads in websites.
+This is where [AdBlockers](https://www.ublock.org/) comes into the game. They are usually browser extensions which detect those trackers and block them. So those third parties won't be able to track you across the internet anymore. Also AdBlockers usually block most of the display ads in websites.
 
 They are pretty popular and completely legal to use. 
 
@@ -52,11 +54,18 @@ So, some websites are using [AdBlocker Detectors](http://www.detectadblock.com/)
 
 ## Brave Browser and Brave Payments
 
-Brave is a Chromium(the open source version of Google Chrome) based web browser which comes with a built in AdBlocker. It is co-founded by Brendan Eich, who is the father of both Mozilla and JavaScript. 
+[Brave](https://brave.com/) is a Chromium(the open source version of Google Chrome) based web browser which comes with a built in AdBlocker. It is co-founded by [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich), who is the father of both Mozilla and JavaScript. 
 
 Brave does more than adblocking. It's trying to solve the revenue problem publishers face when users are using AdBlockers. So, publishers don't have to use Adblocker Dectectors.
 
-Brave does this via Brave Payments. Here's how it works:
+${
+  <Image
+    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1497874114/arunoda.me/payments_screen_100.png"
+    title="A screenshot of Brave Payments inside the Brave browser."
+  />
+}
+
+Brave does this via [Brave Payments](https://www.brave.com/Payments_FAQ.html). Here's how it works:
 
 * As a user I can decide the budget I am willing to share with websites I visit
 * Let's say I allocated $5 per month
@@ -116,9 +125,16 @@ First of all, I'm not trying to deep dive into the underline technology. This is
 
 > But if you need more information, you can refer to the [BAT whitepaper](https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf). 
 
-BAT is based on the blockchain technology Ethereum. Ethereum is something like Bitcoin but it allows developers to write code and execute them in distributor fashion without a central authority.
+BAT is based on the blockchain technology [Ethereum](https://www.ethereum.org/). Ethereum is something like [Bitcoin](https://en.wikipedia.org/wiki/Bitcoin) but it allows developers to write code and execute them in distributed fashion without a central authority.
 
-So, it's a very good software system to implement anonymous, self serving financial transactions. Just like Bitcoin, Ethereum also has monitory value. It's also just as big as Bitcoin and has over [30 billion market valuation](https://coinmarketcap.com/currencies/).
+So, it's a very good software system to implement anonymous, self serving financial transactions. Just like Bitcoin, Ethereum also has monitory value. It's also just as big as Bitcoin and has over [30 billion USD market valuation](https://coinmarketcap.com/currencies/).
+
+${
+  <Image
+    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1497873913/arunoda.me/ethereum-market-cap.png"
+    title="A list of market caps of top cryptocurrencies as of June 19, 2017."
+  />
+}
 
 In BAT, all the ad transactions are based on this Ethereum platform. In order to execute such a transaction we need to pay an amount. This is a reason why Brave charges an amount from the ad revenue.
 
@@ -130,11 +146,16 @@ Interestingly, BAT has it's own currency. It's also known as [BAT](https://coinm
 
 > Technically, there's more to this. But to make things simple, let's call BAT's currency as Batcoin.
 
-There's a public pool of 1 billion Batcoins available for trading right now. Brave foundation sold all of these Batcoins in the open market for around 36 million USD on the 31st of May. And this happened in just 30 seconds. 
+There's a public pool of 1 billion Batcoins available for trading right now. Brave foundation sold all of these Batcoins in the open market for around [36 million USD](https://steemit.com/cryptocurrency/@rooby/how-bat-earn-36-million-in-a-dozen-seconds) on the 31st of May. And this happened in just 30 seconds. 
 
 As of writing this post, it's market valuation was around 195 million USD. So, it's doing pretty well.
 
-// Proof and images
+${
+  <Image
+    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1497874511/arunoda.me/bat-market-cap.png"
+    title="A list of market caps of top tokens as of June 19, 2017."
+  />
+}
 
 Now you can buy Batcoins from a cryptocurrency exchange like [Liqui](https://liqui.io/#/exchange/BAT_BTC) right away. This will be the currency for all the transactions in BAT.
 
@@ -188,5 +209,5 @@ As I mentioned before, BAT is a pretty interesting solution to a burning problem
 
 Anyway, it's too early to predict anything about BAT at this moment. But we need to give some time and see how it works in the real world.
 
-We are a part of this eco-system and we should help them to make BAT a success. As a baby step, download the Brave browser today and start using it.
+We are a part of this eco-system and we should help them to make BAT a success. As a baby step, download the [Brave browser](https://brave.com/) today and start using it.
 `)
