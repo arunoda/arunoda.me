@@ -6,7 +6,7 @@ import Image from '~/components/Image'
 export default WithDoc({
   title: 'All about Basic Attention Token (BAT)',
   description: 'BAT is a pretty interesting privacy focused online ad-tech trying to compete with Google and others',
-  image: 'https://res.cloudinary.com/dsdjlta5b/image/upload/v1497872902/arunoda.me/BAT_explode.svg',
+  image: 'https://res.cloudinary.com/dsdjlta5b/image/upload/v1497882869/arunoda.me/bat-logo.png',
   slug: 'all-about-basic-attention-token',
   date: 'June 19, 2017',
   links: {
@@ -15,7 +15,7 @@ export default WithDoc({
   }
 })(markdown(components)`
 
-${<Image src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1497872902/arunoda.me/BAT_explode.svg" width={300}/>}
+${<Image src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1497882869/arunoda.me/bat-logo.png" width={400}/>}
 
 **TL;DR;** <br/>
 You might not have heard about BAT yet, but it's a pretty interesting privacy focused online ad-tech trying to compete with Google and others. 
