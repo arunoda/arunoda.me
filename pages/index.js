@@ -59,7 +59,7 @@ export default () => (
       h1 {
         padding: 0;
         margin: 0;
-        font-size: 40px;
+        font-size: 35px;
         font-weight: 400;
         color: #FFF;
         line-height: 1;
