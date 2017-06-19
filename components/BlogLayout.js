@@ -11,13 +11,14 @@ const MyLink = ({ href, as, children }) => (
       }
 
       a {
-        color: #0288D1;
+        color: #000;
         text-decoration: none;
-        font-size: 15px;
+        font-size: 16px;
+        font-weight: 600;
       }
 
       a:hover {
-        opacity: 0.7;
+        color: #FFF;
       }
     `}</style>
   </span>
@@ -32,11 +33,21 @@ export default ({ children }) => (
     <article>
       { children }
     </article>
+    <style jsx>{`
+      header {
+        padding: 30px 30px;
+        background-color: #8BC34A;
+      }
+
+      article {
+        padding: 0 30px;
+      }
+    `}</style>
     <style jsx global>{`
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        margin: 10px 0;
-        padding: 30px;
+        padding: 0;
+        margin: 0;
         -webkit-font-smoothing: antialiased;
       }
     `}</style>

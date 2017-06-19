@@ -10,7 +10,7 @@ const PostLink = ({ href, title, date }) => (
       #post-link {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         margin: 10px 0;
-        font-size: 15px;
+        font-size: 18px;
       }
 
       .date-mobile {
@@ -36,6 +36,10 @@ const PostLink = ({ href, title, date }) => (
       }
 
       @media screen and (max-width: 650px) {
+        #post-link {
+          margin: 20px 0;
+        }
+
         .date-desktop {
           display: none;
         }
