@@ -11,39 +11,57 @@ const MainLink = ({ href, as, children }) => (
       }
 
       a {
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         text-decoration: none;
-        color: #2196F3;
+        color: #000;
         font-size: 20px;
+      }
+
+      a:hover {
+        color: #FFF;
       }
     `}</style>
   </span>
 )
 
 export default () => (
-  <div>
-    <div id="intro">
-      <h1>Arunoda Susiripala</h1>
-    </div>
-    <div id="ct2">
-      <MainLink href="https://twitter.com/arunoda">Twitter</MainLink>
-      <MainLink href="/blog">Blog</MainLink>
-      <MainLink href="https://github.com/arunoda">GitHub</MainLink>
+  <div className="wrapper">
+    <div className="page">
+      <div id="intro">
+        <h1>Arunoda Susiripala</h1>
+      </div>
+      <div id="ct2">
+        <MainLink href="https://twitter.com/arunoda">Twitter</MainLink>
+        <MainLink href="/blog">Blog</MainLink>
+        <MainLink href="https://github.com/arunoda">GitHub</MainLink>
+      </div>
     </div>
     <style jsx>{`
+      .wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .page {
+      }
+
       #intro {
-        margin: 250px 0 0 0;
         text-align: center;
-        font-family: 'Source Sans Pro', sans-serif;
-        -webkit-font-smoothing: antialiased;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
       }
 
       h1 {
         padding: 0;
-        margin: 0 0 20px 0;
-        font-size: 80px;
+        margin: 0;
+        font-size: 40px;
         font-weight: 400;
-        color: #333;
+        color: #FFF;
         line-height: 1;
       }
 
@@ -57,9 +75,12 @@ export default () => (
       }
 
       @media screen and (max-width: 650px) {
-        #intro {
-          margin: 150px 0 0 0;
-        }
+        
+      }
+    `}</style>
+    <style jsx global>{`
+      body {
+        background-color: #8BC34A;
       }
     `}</style>
   </div>
