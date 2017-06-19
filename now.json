@@ -1,0 +1,7 @@
+{
+  "name": "arunodame",
+  "alias": "arunoda.me",
+  "env": {
+    "MONGO_URL": "@arunodame-mongo-url"
+  }
+}
