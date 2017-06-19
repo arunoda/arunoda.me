@@ -10,8 +10,8 @@ export default WithDoc({
   slug: 'all-about-basic-attention-token',
   date: 'June 19, 2017',
   links: {
-    twitter: '',
-    facebook: ''
+    twitter: 'https://twitter.com/arunoda/status/876828315570421761',
+    facebook: 'https://www.facebook.com/arunoda.susiripala/posts/10155578306283606'
   }
 })(markdown(components)`
 
