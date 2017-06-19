@@ -8,6 +8,7 @@ export default WithDoc({
   description: 'BAT is a new concept for online advertising which doesn\'t compromise users\' privacy.',
   image: 'https://basicattentiontoken.org/fonts/BAT_explode.svg',
   slug: 'all-about-basic-attention-token',
+  date: 'May 28, 2017',
   links: {
     twitter: 'https://ssd/twitter',
     facebook: 'https://ssd/facebook'
