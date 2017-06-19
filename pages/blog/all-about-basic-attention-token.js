@@ -15,62 +15,56 @@ export default WithDoc({
   }
 })(markdown(components)`
 
-${<Image src="https://basicattentiontoken.org/fonts/BAT_explode.svg" width={300}/>}
+**TL;DR;** <br/>
+You might not have heard about BAT yet, but it's a pretty interesting privacy focused online ad-tech trying to compete with Google and others. 
 
-**TLDR;** <br/>
-You might not have heard about BAT but it's a pretty interesting privacy focused technology trying to complete with Google and others in the online advertising space.
+BAT is a part of the Brave browser eco-system and it's co-founded by Brendan Eich who is the creator of Mozilla and JavaScript. 
 
-BAT is a part of the Brave browser eco-system and it's co-founded by Brendan Eich who created Mozilla and JavaScript.
-
-Interestingly they just raised a USD 36 million funding round and it's not venture backed.
+Interestingly, they just raised 36 million USD in funding, and it's not venture backed. 
 
 * * *
 
-Before we begin, we need to make sure everyone is in the same page. So, I'll layout the ground work for BAT in the first few sections.
+Before we begin, we need to make sure everyone is on the same page. So, I'll layout the ground work for BAT in the first few sections.
 
-## User Tracking and Online Privacy
+## User Tracking and Online Privacy 
 
-This is not a new topic anymore. User tracking is not a bad thing specially for logged-in users.
+This is not a new topic anymore. Generally, user tracking is not a bad thing, especially for logged-in users.
 
-But the issue comes when some parties try to track user activities across multiple websites. This is extensively used in online advertising and often called as re-targeting.
+But an issue arises when some parties try to track user activities across multiple websites. This is extensively used in online advertising and is often called re-targeting. 
 
-For an example, google knows everything inside gmail and what you are searching. Then when you visit [techcruch.com](http://techcruch.com/) you will starting to see ads based on the content inside gmail and what you have searched for.
+For an example, Google knows everything you search for on the internet. Then, when you visit [techcruch.com](http://techcruch.com/) you will starting to see ads based on your search history. 
 
-This is pretty scary since this works across Google, Twitter, Facebook and almost all over the internet. So, now a set of third parties know what you are doing in the internet without your consent.
+This is pretty scary since this works across Google, Twitter, Facebook and almost all over the internet. So, now a set of third parties know what you are doing on the internet without your consent. 
 
-${
-  <Image
-    src="https://basicattentiontoken.org/fonts/BAT_explode.svg"
-    title={'This is the browser marker share according to the bloomberg in year 2015.'}
-  />
-}
+That's crazy. 
 
 ## AdBlockers
 
-This is where AdBlockers comes into the game. They are usually browser extensions which detect those trackers and block them. So those third parties won't be able to track you across the internet and they'll be blocked. Also AdBlockers usually block most of the display ads in websites.
+This is where AdBlockers comes into the game. They are usually browser extensions which detect those trackers and block them. So those third parties won't be able to track you across the internet anymore. Also AdBlockers usually block most of the display ads in websites.
+
+They are pretty popular and completely legal to use. 
 
 ## AdBlocker Dectectors
 
-Even though AdBlockers are great for end users, they will directly affect the revenue generation of publishers. Because ads are a very good revenue stream for them.
+Even though AdBlockers are great for end users, they will directly affect the revenue generation of websites (publishers) you visit. Because ads are a very good revenue stream for them.
 
-So, some websites using [AdBlocker Detectors](http://www.detectadblock.com/) which detect AdBlockers and warn users to stop using them. Only as a few publishers do this right now, but if AdBlockers usage continue to increase things will be different.
+So, some websites are using [AdBlocker Detectors](http://www.detectadblock.com/) which detect AdBlockers and warn users to stop using them. Only a few set of publishers do this right now, but if everyone starts using adblockers, they might have to use them. 
 
 ## Brave Browser and Brave Payments
 
-Brave is a chromium based web browser which comes with a in built AdBlocker. It is co-founded by Brendan Eich who is father of both Mozilla and JavaScript.
+Brave is a Chromium(the open source version of Google Chrome) based web browser which comes with a built in AdBlocker. It is co-founded by Brendan Eich, who is the father of both Mozilla and JavaScript. 
 
-It does more than adblocking. It's trying to solve the revenue problem publishers face when users use AdBlockers. So, they don't need to use Adblocker Dectectors.
+Brave does more than adblocking. It's trying to solve the revenue problem publishers face when users are using AdBlockers. So, publishers don't have to use Adblocker Dectectors.
 
 Brave does this via Brave Payments. Here's how it works:
 
-
-* I can decide the budget I am willing to share with websites I visit
+* As a user I can decide the budget I am willing to share with websites I visit
 * Let's say I allocated $5 per month
-* Now brave keeps a ledger of all the websites I visit and time I spend on.
-* At the end of the month, brave will share my $5 with above sites based on proportion of time I spend on them
-* In this process, brave doesn't send my data to a central sever and everything happens inside my browser.
-* Publishers(websites) get paid end of the month but they don't know anything about users.
-* So, there's no privacy issue
+* Now Brave keeps a ledger of all the websites I visit and time I spend on them 
+* At the end of the month, Brave will share my $5 with above sites based on proportion of time I spend on them
+* In this process, Brave doesn't send my data to a central server and everything happens inside my browser 
+* Publishers (websites) get paid at the end of the month but they don't know anything about me and other users 
+* So, there's no privacy issue 
 
 This is a pretty good concept. But in order to make this practical across the web, Brave has to do a lot and it's tough. I will talk more about this in a later section.
 
@@ -78,115 +72,121 @@ This is a pretty good concept. But in order to make this practical across the we
 
 Finally, now we can talk about Basic Attention Token. (BAT)
 
-Advertising is not a bad thing. That's the way how we get to know about products we care about. So, it's an essential part of the web.  But it should be done in a proper way without compromising user privacy.
+Advertising is not a bad thing. That's the way we get to know about products we care about. So, it's an essential part of the web. But it should be done in a proper way without compromising user privacy.
 
-Brave Payments introduce a new monatization strategy for publishers. BAT is the way how it introduce advertisers into the picture and extend Brave Payments.
+Brave Payments already introduced a new monetizing strategy for publishers. BAT is the way it introduces advertisers into the picture and extends Brave Payments.
 
-With BAT, Users, publishers and advertisers directly connect with each other. There are no middlemen. User privacy is the number one priority.
+With BAT, users, publishers and advertisers directly connect with each other in a open marketplace. There are no middlemen. User privacy is the number one priority.
 
-So, BAT creates a very healthy open and efficient relationship between all these parties.
+So, BAT creates a healthy, open and efficient relationship between all these parties.
 
 ## How BAT Works
 
-Let's have a look at how BAT works.
+Let's have a look at it. 
 
-This is a marketplace. Here we've four main stackholders.
+This is a marketplace. Here we have four main stackholders.
 
-1. Users - End users like you and me
-2. Publishers - Content creating websites like TechCrunch and Facebook.
-3. Advertisers - Who pays for the ads
-4. Brave - The brave system which does all the transactions
+1. Users - end users like you and me
+2. Publishers - content creating websites like TechCrunch and Facebook.
+3. Advertisers - those who pay for the ads
+4. Brave - the Brave system which does all the transactions
 
 Here's how this works:
 
-* Advertisers pays money to display ads
-* Publishers has places to display ads in their websites
+* Advertisers pay money to display ads
+* Publishers have places to display ads in their websites
 * Brave browser knows about the user and it picks relevant ads to display inside publishers' websites.
 * Brave picks ads totally based on the user data on the browser and it won't send anything to a central server
 
+Then, based on how users view ads along with the content in publishers' websites, Brave will distribute the advertisers' payments between following parties:
 
-Then based on how users view ads along with the content in publishers' websites, brave will distribute the advertisers' payments between following parties:
+* Users - for viewing ads and the content
+* Brave - to do the transaction and cover other costs
+* Publisher - for displaying ads along with the website content
 
-* Users - For viewing ads and the content
-* Brave - To do the transaction and cover other costs
-* Publisher - Publisher gets the rest of the advertisers payment
+So, it's an open system and everything is clear. Most importantly, user privacy will be protected while serving relevant ads to the user.
 
-So, it's a open system and everything is clear. Most importantly user privacy will be protected while serving relevant ads to the user.
-
-Interestingly with BAT, users will get paid too. That's a very important factor.
-User are a part of the content creation process. So, they should also be in the revenue equation.
-It incentives users to not to block these ads.
-
-You can learn more about BAT by reading the [BAT whitepape](https://basicattentiontoken.org/wp-content/uploads/2017/05/BasicAttentionTokenWhitePaper-4.pdf)r.
+Interestingly with BAT, users will get paid too. That's a very important factor. 
+Users are a part of the content creation process. So, they should also be in the revenue equation.
+It is also an incentive for users to not block these ads.
 
 ## The Technology
 
-First of all, I'm not going to go deep technology. But I'll give you a simple overview.
-BAT is based on the blockchain technology Etherium. It's like Bitcoin but it allows developers to write code and execute them in the distributed manner.
+First of all, I'm not trying to deep dive into the underline technology. This is just an overview. 
 
-So, it's a very good software system to implement anonymous and distributed financial transactions. Even though this is a new technology, it has a market valuation around [36 billion USD](https://coinmarketcap.com/currencies/ethereum/).
+> But if you need more information, you can refer to the [BAT whitepaper](https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf). 
 
-In BAT, all the ad transaction are based on this Etherium platform. In order to do a such a transaction we need to pay an amount. This is a reason why Brave charges an amount from the ad revenue.
+BAT is based on the blockchain technology Ethereum. Ethereum is something like Bitcoin but it allows developers to write code and execute them in distributor fashion without a central authority.
 
-All of these code will be open source and anybody will be able to inspect it and contribute. In addition to that, all these transaction will be done in public but anonymously. That's why we consider brave as an open platform.
+So, it's a very good software system to implement anonymous, self serving financial transactions. Just like Bitcoin, Ethereum also has monitory value. It's also just as big as Bitcoin and has over [30 billion market valuation](https://coinmarketcap.com/currencies/).
+
+In BAT, all the ad transactions are based on this Ethereum platform. In order to execute such a transaction we need to pay an amount. This is a reason why Brave charges an amount from the ad revenue.
+
+All of these codes will be open sourced and anyone can inspect them and contribute back. In addition to that, all these transactions will be done in public but anonymously. That's why we consider BAT an open platform.
 
 ## The Currency (And Funding)
 
-BAT itself is the currency for this system and usually we refer to it as BATcoins. There's an public pool of 1 billion BATcoins available for trading right now. Brave foundations sold all of these BATcoins in the open market for around 36 millions USD in 31st may. And this was happened in just 30 seconds.
+Interestingly, BAT has it's own currency. It's also known as [BAT](https://coinmarketcap.com/assets/basic-attention-token/). 
 
-Now you can buy BATcoins from a crytocurrency exchange like [Liqui](https://liqui.io/#/exchange/BAT_BTC) and spend on advertising.
+> Technically, there's more to this. But to make things simple, let's call BAT's currency as Batcoin.
 
-Interestingly, BAT is itself funded without any venture backing. So, that's a pretty good things and it seems like the general public has a good faith in this technology (At least among the people who participle in crytocurrency  markets).
+There's a public pool of 1 billion Batcoins available for trading right now. Brave foundation sold all of these Batcoins in the open market for around 36 million USD on the 31st of May. And this happened in just 30 seconds. 
+
+As of writing this post, it's market valuation was around 195 million USD. So, it's doing pretty well.
+
+// Proof and images
+
+Now you can buy Batcoins from a cryptocurrency exchange like [Liqui](https://liqui.io/#/exchange/BAT_BTC) right away. This will be the currency for all the transactions in BAT.
+
+Interestingly, because of Batcoins, BAT funded itself without any venture backing. So, that's a pretty good thing. Additionally, it seems like the general public has good faith in this technology. 
 
 ## Challenges
 
-The goal of BAT is a massive one. So, they'll have to solve lot of problems and there will be many challenges. Here are a set of challenges BAT might have to tackle sooner or later.
+The goal of BAT is a massive one. So, they'll have to solve a lot of problems and there will be many challenges. Here are a set of challenges BAT might have to tackle sooner or later.
 
 ### Browser Share
 
-We know Chrome, IE, Firefox and Safari almost holds the entire browser marketplace. Existing AdBlockers are pretty good. So, it'll be very tough to beat these browsers in the browser market share even in the long run.
+We know Chrome, IE, Firefox and Safari hold almost the entire browser marketplace. Existing AdBlockers are pretty good too. So, it'll be very tough to beat these browsers (along with AdBlockers), even in the long run.
 
-The only solution I can see is to build a Brave extension for each of the browser. So, they'll have Brave capabilities.
+The only solution I can see is to build a Brave extension for each of the browsers. So, they'll have Brave capabilities.
 
 ### Mobile APPS
 
-It's not secret that, we tend to use mobile apps for most of things in our daily routine. But the browser is rarely in that list. Even it was there, it might be fired inside Facebook or Twitter.
+It's no secret that we tend to use mobile apps for most things in our daily routine. But the browser is rarely on that list. Even if it was there, it might be launched inside Facebook or Twitter app.
 
-In the BAT whitepaper, they haven't mention how they bring BAT into mobile app eco-space. That's something I am curious to know about.
+In the BAT whitepaper, they haven't mentioned how they bring BAT into a mobile app eco-space. That's something I'm curious to know about.
 
-### Closed platforms / Publishers
+### Closed Platforms
 
-It's not a secret that Google and Facebook itself holds a vast majority of global ad revenue. New platforms like Snapchat tries to introduce their own ad system. And this is continue to happen.
+It's no secret that Google and Facebook hold a vast majority of the global ad revenue. And most of the popular platforms like twitter, snapchat, whatsapp and others have their own ad system, or they rely on Google.
 
-So It'll be an extreme challenge for BAT to convince these closed platforms to use BAT instead of using their own ad platforms.
-Interestingly, these are the platforms where users spent most of their time.
+Converting these platforms to use BAT will be hard from both technical and business point of view. 
 
-I'll be tough.
+Most importantly, these are places where end users are. So, without these platforms, it's harder for BAT to succeed.
 
-### BAT Market Instability
+### Batcoin Market Instability
 
-BAT is a new Etherium (a bitcoin like technology) based currency. The whole market is new. Not only BAT, but even the Etherium market itself.
+Batcoin market is new. Not only Batcoin, the whole cryptocurrency market is new and experimental. So, things might go wrong. 
 
-So, there's a chance for an instability in BAT and the price might fluctuate rapidly.
+There might be a software bug in Ethereum which will directly affect Batcoin; There might be some government regulations; Just like this there are many other possibilities for market instability. 
 
-Currently the whole BAT market is based people who thinks BAT will be successful. Advertisers haven't come to the market yet. So, it's not cleat what'll happen when advertisers jump into the market.
+So, if there's a such an instability, the price of Batcoin might drop or fluctuate rapidly.
 
-If there's rapid fluctuation in the currency, advertisers has to deal with that beside managing the ad campaign.
+If there's a rapid fluctuation in the currency, advertisers have to deal with that rather than just focus on their ad campaign. That'll be an obstacle to deal with. 
 
-Then middlemen might come to the equation and things won't be simple as it seems now.
+Also, middlemen might come into the equation and things won't be as simple as they seem now.
 
 ## Implementation and Execution
 
-Currently Brave browser and the Brave Payments is the only implementation we've seen from Brave.
+Currently, Brave browser and the Brave Payments are the only implementation we've seen. There's a public [roadmap ](https://basicattentiontoken.org/bat-roadmap-1-0.html) for BAT but we have not seen anything yet.
 
-They haven't released anything related to BAT yet. So, it's not possible to comment about it yet.
-But they neee to make it pretty simple for everyone to use.
+They are going against a solid ad-tech solution, so the implementation of BAT should be solid and easy to use for all parties.
 
 ## Finally
 
-As I mentioned before, BAT is a pretty interesting solution to a burning problem. But they have to face a lot of challenges. And this will be a long journey.
+As I mentioned before, BAT is a pretty interesting solution to a burning problem. But they have to face a lot of challenges. And this will be a long journey. 
 
-Anyway it's too early to predict anything about BAT. But we need to give some time and see how it works in the real world.
+Anyway, it's too early to predict anything about BAT at this moment. But we need to give some time and see how it works in the real world.
 
-I think we can help them in many ways to make BAT successful. As a baby step, download the Brave browser today and start using it.
+We are a part of this eco-system and we should help them to make BAT a success. As a baby step, download the Brave browser today and start using it.
 `)
