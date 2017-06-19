@@ -18,6 +18,10 @@ export default ({ src, width="100%", height, alt, title }) => (
         margin: 30px 0;
       }
 
+      img {
+        max-width: 100%;
+      }
+
       .title {
         color: #888;
         font-size: 13px;
