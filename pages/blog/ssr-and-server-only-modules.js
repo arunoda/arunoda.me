@@ -2,6 +2,7 @@ import markdown from 'markdown-in-js'
 import WithDoc, { components } from '~/lib/with-doc'
 
 import Image from '~/components/Image'
+import Code from '~/components/Code'
 
 export default WithDoc({
   title: 'SSR and Server Only Modules',
@@ -62,7 +63,8 @@ But sometimes, we need to import some NPM modules only to run inside the server.
 When data fetching in Next.js apps with [getInitialProps](https://github.com/zeit/next.js/#fetching-data-and-component-lifecycle), this could happen.
 Here is an example:
 
-~~~js
+${
+  <Code language="js">{`
 import React from 'react'
 import Link from 'next/link'
 
@@ -92,7 +94,8 @@ export default class Index extends React.Component {
     )
   }
 }
-~~~
+    `}</Code>
+}
 
 In the above example, our intention is to use “faker” module only in the server.
 
@@ -106,9 +109,11 @@ Here's a sample Next.js [app](https://github.com/zeit/next.js/tree/master/exampl
 
 Download the app and run the following command:
 
-~~~js
+${
+  <Code language="bash">{`
 npm run analyze
-~~~
+  `}</Code>
+}
 
 Then it will open a HTML page in the browser and it'll look like this:
 
@@ -130,9 +135,11 @@ After you've identified the issue, it's pretty easy to fix. There are two ways t
 
 You can require the module inside \`eval\` as mentioned below:
 
-~~~js
+${
+  <Code language="js">{`
 const faker = eval("require('faker')")
-~~~
+  `}</Code>
+}
 
 Webpack can't statically analyze what's inside eval. So it won't bundle the faker module.
 
@@ -142,10 +149,10 @@ Webpack also has a [plugin](https://webpack.js.org/plugins/ignore-plugin/) where
 
 Create a file called “next.config.js” in your Next.js app and add the webpack IgnorePlugin.
 
-~~~js
+${
+  <Code language="js">{`
 module.exports = {
   webpack: function (config) {
-
     config.plugins.push(
       new require('webpack').IgnorePlugin(/faker/)
     )
@@ -153,7 +160,8 @@ module.exports = {
     return config
   }
 }
-~~~
+  `}</Code>
+}
 
 > If you are using webpack directly, just use the plugin directly.
 
