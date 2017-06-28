@@ -1,7 +1,10 @@
 import dynamic from 'next/dynamic'
 import theme from 'react-syntax-highlighter/dist/styles/github-gist'
 
-const SyntaxHighlighter = dynamic(import('react-syntax-highlighter'))
+// We use dynamic import here to make sure we don't copy this module across pages.
+const SyntaxHighlighter = dynamic(import('react-syntax-highlighter'), {
+  loading: () => (<div></div>)
+})
 
 const customPreStyle = {
   padding: 15,
