@@ -20,8 +20,8 @@ Recently there was an interesting discussion about Next.js's performance on Twit
 
 ${
   <Image
-    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1498687215/Screen_Shot_2017-06-29_at_1.33.42_AM_qioxnz.png"
-    width={1500}
+    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1498691479/arunoda.me/Screen_Shot_2017-06-29_at_1.33.42_AM.png"
+    width={450}
     title="Screenshot of the tweet without the author info."
   />
 }
