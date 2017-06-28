@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node server",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node server"
+    "start": "cross-env NODE_ENV=production node server",
+    "analyze": "cross-env ANALYZE=1 next build"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "next": "beta",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-syntax-highlighter": "^5.6.2"
+    "react-syntax-highlighter": "^5.6.2",
+    "webpack-bundle-analyzer": "^2.8.2"
   }
 }

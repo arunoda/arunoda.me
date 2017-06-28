@@ -1,5 +1,7 @@
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import theme from 'react-syntax-highlighter/dist/styles/github-gist';
+import dynamic from 'next/dynamic'
+import theme from 'react-syntax-highlighter/dist/styles/github-gist'
+
+const SyntaxHighlighter = dynamic(import('react-syntax-highlighter'))
 
 const customPreStyle = {
   padding: 15,
