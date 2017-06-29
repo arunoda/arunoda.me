@@ -7,7 +7,7 @@ import Code from '~/components/Code'
 export default WithDoc({
   title: 'SSR and Server Only Modules',
   description: 'Using server only modules in a SSR enabled app could make your app slower. You need to use them wisely',
-  image: 'https://res.cloudinary.com/dsdjlta5b/image/upload/v1498687216/Screen_Shot_2017-06-29_at_1.16.31_AM_rzkxx1.png',
+  image: 'https://res.cloudinary.com/dsdjlta5b/image/upload/v1498729190/arunoda.me/webpack-analyzer-output-for-a-nextjs-app.png',
   slug: 'ssr-and-server-only-modules',
   date: 'June 29, 2017',
   links: {
@@ -32,7 +32,7 @@ Technically, this is impossible for a simple [hello world](https://abc-nfedfcfmo
 
 ${
   <Image
-    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1498687216/Screen_Shot_2017-06-29_at_1.39.54_AM_ks1qvp.png"
+    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1498729185/arunoda.me/hello-world-nextjs-app-network-tab.png"
     title="A simple Next.js app only contains less than 100 KB of content."
   />
 }
@@ -121,7 +121,7 @@ Then it will open a HTML page in the browser and it'll look like this:
 
 ${
   <Image
-    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1498687216/Screen_Shot_2017-06-29_at_1.16.31_AM_rzkxx1.png"
+    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1498729190/arunoda.me/webpack-analyzer-output-for-a-nextjs-app.png"
   />
 }
 
