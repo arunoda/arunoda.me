@@ -11,8 +11,8 @@ export default WithDoc({
   slug: 'ssr-and-server-only-modules',
   date: 'June 29, 2017',
   links: {
-    twitter: '',
-    facebook: ''
+    twitter: 'https://twitter.com/arunoda/status/880453551100641281',
+    facebook: 'https://www.facebook.com/groups/228321510706889/permalink/632366906969012/'
   }
 })(markdown(components)`
 
