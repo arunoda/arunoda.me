@@ -16,7 +16,7 @@ export default WithDoc({
   }
 })(markdown(components)`
 
-Recently there was an interesting discussion about Next.js's performance on Twitter.
+Recently there was an interesting discussion about [Next.js](https://github.com/zeit/next.js/)'s performance on Twitter.
 
 ${
   <Image
@@ -60,8 +60,10 @@ SSR is pretty interesting and it runs your client side code in the server. Usual
 
 But sometimes, we need to import some NPM modules only to run inside the server.
 
-When data fetching in Next.js apps with [getInitialProps](https://github.com/zeit/next.js/#fetching-data-and-component-lifecycle), this could happen.
-Here is an example:
+For an example, when [fetching data](https://github.com/zeit/next.js/#fetching-data-and-component-lifecycle) in
+a Next.js app we might use a server only module to fetch data.
+
+Have a look at the following code:
 
 ${
   <Code language="js">{`
@@ -97,13 +99,13 @@ export default class Index extends React.Component {
     `}</Code>
 }
 
-In the above example, our intention is to use “faker” module only in the server.
+In the above example, our intention is to use \`faker\` module only in the server.
 
-But webpack includes faker module in client side as well. So, your bundle size increases and it takes more time to build.
+But webpack includes \`faker\` module in client side as well. So, the app's bundle size increases and it takes more time to build.
 
 ## How to identify
 
-Frankly, there's no simple way to identify this issue. You need to use a webpack analyzer to visualize this.
+Frankly, there's no simple way to identify this issue. You need to use a webpack analyzer to visualize what's inside your bundle.
 
 Here's a sample Next.js [app](https://github.com/zeit/next.js/tree/master/examples/with-webpack-bundle-analyzer) which comes with a [webpack analyzer](https://github.com/th0r/webpack-bundle-analyzer).
 
@@ -123,13 +125,13 @@ ${
   />
 }
 
-You can clearly see faker module is included in the client side bundle of the “index.js” page.
+You can clearly see \`faker\` module is included in the client side bundle of the “index.js” page.
 
 As shown in the above example app, you can configure [webpack-bundle-analyzer](https://github.com/th0r/webpack-bundle-analyzer) with your app and see what's included in your client side bundle(s).
 
 ## How to fix it
 
-After you've identified the issue, it's pretty easy to fix. There are two ways to do this.
+After you've identified the issue, it's pretty easy to fix it. There are two ways to do this.
 
 ### 1. Using Eval
 
@@ -141,13 +143,13 @@ const faker = eval("require('faker')")
   `}</Code>
 }
 
-Webpack can't statically analyze what's inside eval. So it won't bundle the faker module.
+Webpack can't statically analyze what's inside eval. So it won't bundle the \`faker\` module.
 
 ### 2. Using Webpack Ignore plugin
 
 Webpack also has a [plugin](https://webpack.js.org/plugins/ignore-plugin/) where you can ignore modules. Here's how to use it.
 
-Create a file called “next.config.js” in your Next.js app and add the webpack IgnorePlugin.
+Create a file called \`next.config.js\` in your Next.js app and add the webpack IgnorePlugin.
 
 ${
   <Code language="js">{`
@@ -167,7 +169,7 @@ module.exports = {
 
 ## Lack of tools and awareness
 
-This is a problem we face not only with Next.js, but with any SSR enabled app (including PWAs).
+This is a problem we face not only with [Next.js](https://github.com/zeit/next.js/), but with any SSR enabled app (including [PWAs](https://developers.google.com/web/progressive-web-apps/)).
 Normally, most of the developers are not aware of this issue.
 
 So we need some better tooling to detect this problem other than manually inspecting the bundle.
