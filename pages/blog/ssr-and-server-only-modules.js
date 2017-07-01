@@ -131,7 +131,7 @@ As shown in the above example app, you can configure [webpack-bundle-analyzer](h
 
 ## How to fix it
 
-After you've identified the issue, it's pretty easy to fix it. There are two ways to do this.
+After you've identified the issue, it's pretty easy to fix it. There are few ways to do this.
 
 ### 1. Using Eval
 
@@ -145,7 +145,7 @@ const faker = eval("require('faker')")
 
 Webpack can't statically analyze what's inside eval. So it won't bundle the \`faker\` module.
 
-### 2. Using Webpack Ignore plugin
+### 2. Using Webpack's Ignore plugin
 
 Webpack also has a [plugin](https://webpack.js.org/plugins/ignore-plugin/) where you can ignore modules. Here's how to use it.
 
@@ -166,6 +166,25 @@ module.exports = {
 }
 
 > If you are using webpack directly, just use the plugin directly.
+
+### 3. Using the "browser" field of the "package.json"
+
+You can also ask webpack to disable bundling \`faker\` module via adding a config in the main \`package.json\` file.<br />
+Add the following code in to your \`package.json\` file.
+
+${
+  <Code language="js">{`
+{
+  ...
+  "browser": {
+    "faker": false
+  }
+  ...
+}
+  `}</Code>
+}
+
+> Additionally you can use webpack's [\`resolve.alias\`](https://webpack.js.org/configuration/resolve/#resolve-alias) to map \`faker\` into an empty module.
 
 ## Lack of tools and awareness
 
