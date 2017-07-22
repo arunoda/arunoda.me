@@ -7,7 +7,7 @@ import Code from '~/components/Code'
 export default WithDoc({
   title: 'SSR and Server Only Modules',
   description: 'Using server only modules in a SSR enabled app could make your app slower. You need to use them wisely',
-  image: 'https://res.cloudinary.com/dsdjlta5b/image/upload/v1498729190/arunoda.me/webpack-analyzer-output-for-a-nextjs-app.png',
+  image: 'https://user-images.githubusercontent.com/50838/28487017-cff25bac-6ea6-11e7-9484-8372467903d2.png',
   slug: 'ssr-and-server-only-modules',
   date: 'June 29, 2017',
   links: {
@@ -20,7 +20,7 @@ Recently there was an interesting discussion about [Next.js](https://github.com/
 
 ${
   <Image
-    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1498691479/arunoda.me/Screen_Shot_2017-06-29_at_1.33.42_AM.png"
+    src="https://user-images.githubusercontent.com/50838/28487019-cff64fd2-6ea6-11e7-9b59-f7c2d67bed1f.png"
     width={450}
     title="Screenshot of the tweet without the author info."
   />
@@ -32,7 +32,7 @@ Technically, this is impossible for a simple [hello world](https://abc-nfedfcfmo
 
 ${
   <Image
-    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1498729185/arunoda.me/hello-world-nextjs-app-network-tab.png"
+    src="https://user-images.githubusercontent.com/50838/28487018-cff49782-6ea6-11e7-8354-724a6ac0e07c.png"
     title="A simple Next.js app only contains less than 100 KB of content."
   />
 }
@@ -121,7 +121,7 @@ Then it will open a HTML page in the browser and it'll look like this:
 
 ${
   <Image
-    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1498729190/arunoda.me/webpack-analyzer-output-for-a-nextjs-app.png"
+    src="https://user-images.githubusercontent.com/50838/28487017-cff25bac-6ea6-11e7-9484-8372467903d2.png"
   />
 }
 

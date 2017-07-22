@@ -6,7 +6,7 @@ import Image from '~/components/Image'
 export default WithDoc({
   title: 'All about Basic Attention Token (BAT)',
   description: 'BAT is a pretty interesting privacy focused online ad-tech trying to compete with Google and others',
-  image: 'https://res.cloudinary.com/dsdjlta5b/image/upload/v1497882869/arunoda.me/bat-logo.png',
+  image: 'https://user-images.githubusercontent.com/50838/28487049-1f6156ac-6ea7-11e7-99cc-0ee227c40ba1.png',
   slug: 'all-about-basic-attention-token',
   date: 'June 19, 2017',
   links: {
@@ -15,7 +15,7 @@ export default WithDoc({
   }
 })(markdown(components)`
 
-${<Image src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1497882869/arunoda.me/bat-logo.png" width={400}/>}
+${<Image src="https://user-images.githubusercontent.com/50838/28487049-1f6156ac-6ea7-11e7-99cc-0ee227c40ba1.png" width={400}/>}
 
 **TL;DR;** <br/>
 You might not have heard about BAT yet, but it's a pretty interesting privacy focused online ad-tech trying to compete with Google and others. 
@@ -60,7 +60,7 @@ Brave does more than adblocking. It's trying to solve the revenue problem publis
 
 ${
   <Image
-    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1497874114/arunoda.me/payments_screen_100.png"
+    src="https://user-images.githubusercontent.com/50838/28487051-1f6438c2-6ea7-11e7-9027-ab22633590b6.png"
     title="A screenshot of Brave Payments inside the Brave browser."
   />
 }
@@ -131,7 +131,7 @@ So, it's a very good software system to implement anonymous, self serving financ
 
 ${
   <Image
-    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1497873913/arunoda.me/ethereum-market-cap.png"
+    src="https://user-images.githubusercontent.com/50838/28487050-1f61e478-6ea7-11e7-8626-838d2f0395bf.png"
     title="A list of market caps of top cryptocurrencies as of June 19, 2017."
   />
 }
@@ -152,7 +152,7 @@ As of writing this post, it's market valuation was around 195 million USD. So, i
 
 ${
   <Image
-    src="https://res.cloudinary.com/dsdjlta5b/image/upload/v1497874511/arunoda.me/bat-market-cap.png"
+    src="https://user-images.githubusercontent.com/50838/28487048-1f603b96-6ea7-11e7-9f20-5ada10fb6e7d.png"
     title="A list of market caps of top tokens as of June 19, 2017."
   />
 }
