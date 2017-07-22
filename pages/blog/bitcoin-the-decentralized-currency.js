@@ -139,7 +139,7 @@ ${
   <Image
     src="https://user-images.githubusercontent.com/50838/28485674-b9e27fbc-6e98-11e7-9669-fb56959ae885.png"
     width={650}
-    title="This is how you buy bitcoins using the cex.io exchange"
+    title="This is how you can buy bitcoins using the cex.io exchange"
   />
 }
 
