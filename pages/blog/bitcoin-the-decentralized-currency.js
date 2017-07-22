@@ -2,6 +2,7 @@ import markdown from 'markdown-in-js'
 import WithDoc, { components } from '~/lib/with-doc'
 
 import Image from '~/components/Image'
+import * as NewsLetter from '~/components/NewsLetter'
 
 export default WithDoc({
   title: 'Bitcoin: The Decentralized Currency - Or Is It?',
@@ -121,6 +122,8 @@ As explained, mining Bitcoins is an increasingly expensive and difficult job as 
 Because it was hard to act alone, people began grouping together to form "[mining pools](https://en.bitcoin.it/wiki/Comparison_of_mining_pools)". A mining pool is a set of nodes, where miners work together by pooling their computational resources to win.
 
 If the pool wins for a given ten-minute window, the reward of 12.5 Bitcoins will be distributed between all the nodes in the pool.
+
+${<NewsLetter.Cryptocurrency />}
 
 ### Exchanges
 
@@ -271,4 +274,6 @@ ${
 Bitcoin is not a massively distributed currency as it was promised when it was first introduced. Only a few entities possess control of the Bitcoin network, but none of them are working together to regulate the network (which can be seen as a good thing). 
 
 However, if these entities start to collaborate and control the network, Bitcoin will be like other traditional currencies or worse. The benefits of using Bitcoins will be lost and that could be the end of the Bitcoin.
+
+${<NewsLetter.Cryptocurrency />}
 `)
