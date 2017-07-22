@@ -1,6 +1,6 @@
 const NewsLetter = ({ name, link }) => (
   <div>
-    <p><a href={link} target="_blank">Subscribe</a> to the {name} newsletter to see more blog posts like this.</p>
+    <p><a href={link} target="_blank">Subscribe</a> to the {name} newsletter to see more like this.</p>
     <style jsx>{`
       p {
         margin: 20px 0;
