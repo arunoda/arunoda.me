@@ -99,7 +99,7 @@ ${
   <Image
     src="https://user-images.githubusercontent.com/50838/28485811-c38210ea-6e99-11e7-9c98-1198ab120cdf.jpg"
     width={650}
-    title="Currently, bitcoin mining is done using a special hardware device known as ASIC. That's the efficient solution right now."
+    title="Currently, bitcoin mining is done using a special hardware device known as ASIC. That's the most efficient solution right now."
   />
 }
 
