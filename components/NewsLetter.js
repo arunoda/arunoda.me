@@ -11,7 +11,7 @@ const NewsLetter = ({ name, link }) => (
         text-align: center;
       }
 
-      a {
+      p a {
         color: #FFF;
         border-bottom-color: #FFF;
         font-weight: 600;
