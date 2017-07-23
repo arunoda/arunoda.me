@@ -38,21 +38,6 @@ However, the Bitcoin market is experiencing rapid growth. A few years ago, you c
 
 It is not easy to explain how Bitcoin works without going into detail about its cryptography and distributed computing technologies; however, let's try to understand it by comparing with fiat currencies (like USD).
 
-${
-  <Question
-    question="Mining bitcoin is expensive, but why people still mining bitcoin?"
-    answers={
-      [
-        'They want to help the bitcoin network.',
-        'They get a reward if they win, that\'s their incentive.',
-        'They do that because the government encourage them via tax grants.',
-        'They are sponsored by the people who uses Bitcoin.'
-      ]
-    }
-    correctAnswer="They get a reward if they win, that's their incentive."
-  />
-}
-
 ### Network
 
 With fiat currencies, governments, banks and payment providers (such as Visa) are participants in the network. With Bitcoin, anyone in the world can participate in the network just by [downloading](https://bitcoin.org/en/download) a software.
@@ -78,6 +63,21 @@ ${
     src="https://user-images.githubusercontent.com/50838/28486111-4f58be50-6e9c-11e7-8761-92f1c09cae33.png"
     width={650}
     title="This is a public Bitcoin transaction (https://goo.gl/Xyy2GV)."
+  />
+}
+
+${
+  <Question
+    question="All of my Bitcoin transactions are publicly available. Does that mean that my friends can see how I spend my Bitcoins?"
+    answers={
+      [
+        'Yes. That\'s the problem with using Bitcoins.',
+        'Yes. You need to stop your friends from searching those transactions.',
+        'No, not if I use different addresses for each transaction.',
+        'No. I keep my Bitcoin address safe and no one can see it.'
+      ]
+    }
+    correctAnswer="No, not if I use different addresses for each transaction."
   />
 }
 
@@ -139,6 +139,21 @@ Because it was hard to act alone, people began grouping together to form "[minin
 
 If the pool wins for a given ten-minute window, the reward of 12.5 Bitcoins will be distributed between all the nodes in the pool.
 
+${
+  <Question
+    question="Mining Bitcoin is expensive, but why do people still mine it?"
+    answers={
+      [
+        'They want to help the Bitcoin network.',
+        'They get the reward if they win; that\'s their incentive.',
+        'They do that because the government encourages them via tax grants.',
+        'They are sponsored by the people who use Bitcoin.'
+      ]
+    }
+    correctAnswer="They get the reward if they win; that's their incentive."
+  />
+}
+
 ${<NewsLetter.Cryptocurrency />}
 
 ### Exchanges
@@ -190,6 +205,36 @@ and some other new types.
 
 Each type of wallet has its own pros and cons. Using an online wallet is convenient, while using a paper wallet with a local Bitcoin node provides excellent security and control.
 
+${
+  <Question
+    question="One of Alice's addresses got $10 worth of Bitcoin in a transaction from Bob. Alice's address and the above transaction can be seen by anyone. Can you redeem that $10 worth of Bitcoin?"
+    answers={
+      [
+        'Yes. I need to do it before Alice does.',
+        'Yes, but only if I am Bob.',
+        'No. I don\'t have the secret key for Alice\'s address.',
+        'No. I don\'t have access to Alice\'s computer.'
+      ]
+    }
+    correctAnswer="No. I don't have the secret key for Alice's address."
+  />
+}
+
+${
+  <Question
+    question="In order to do a Bitcoin transaction, you need to have some Bitcoins. What's the way that you cannot get Bitcoins?"
+    answers={
+      [
+        'I can mine Bitcoins.',
+        'I can buy Bitcoins from an exchange.',
+        'When creating a Bitcoin address, I can add some funds by using a credit card.',
+        'I can ask one of my friends to give me some Bitcoins.'
+      ]
+    }
+    correctAnswer="When creating a Bitcoin address, I can add some funds by using a credit card."
+  />
+}
+
 ## Distributed Nature of Bitcoins
 
 Now that we have a good understanding of how Bitcoin works, let us analyze how it is distributed across the world.
@@ -227,6 +272,21 @@ This makes exchanges significant in the Bitcoin circulation.
 As a regular Bitcoin user, it is unlikely that you will run a Bitcoin node to maintain secrets and create transactions. You may be using some form of an online wallet or a remote node. Some of those wallets have great security measures, so you are in good hands.
 
 However, you won't be validating transactions — that happens in a remote node or an online wallet service.
+
+${
+  <Question
+    question="Is Bitcoin massively distributed?"
+    answers={
+      [
+        'Yes. There\'s a huge amount of people doing Bitcoin transactions.',
+        'Yes. It has been used all over the world.',
+        'No. The majority of the network is mainly a few mining pools, exchanges, and wallet services.',
+        'No. Only a few miners control it.',
+      ]
+    }
+    correctAnswer="No. The majority of the network is mainly a few mining pools, exchanges, and wallet services."
+  />
+}
 
 ---
 
@@ -283,7 +343,20 @@ ${
   />
 }
 
-> This is a good example of how public users can influence main stakeholders with the price of Bitcoin.
+${
+  <Question
+    question="Can end users (who do transactions) control or influence the Bitcoin network?"
+    answers={
+      [
+        'No. It\'s all up to the miners.',
+        'No. That\'s restricted by the Bitcoin software.',
+        'Yes. Only if they start mining Bitcoins.',
+        'Yes. They are the people who set the Bitcoin\'s market price. They do it with the demand and supply of Bitcoins in exchanges.'
+      ]
+    }
+    correctAnswer="Yes. They are the people who set the Bitcoin's market price. They do it with the demand and supply of Bitcoins in exchanges."
+  />
+}
 
 ## Conclusion
 
