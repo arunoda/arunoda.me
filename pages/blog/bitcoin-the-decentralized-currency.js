@@ -2,6 +2,7 @@ import markdown from 'markdown-in-js'
 import WithDoc, { components } from '~/lib/with-doc'
 
 import Image from '~/components/Image'
+import Question from '~/components/Question'
 import * as NewsLetter from '~/components/NewsLetter'
 
 export default WithDoc({
@@ -36,6 +37,21 @@ However, the Bitcoin market is experiencing rapid growth. A few years ago, you c
 ## How Bitcoin works
 
 It is not easy to explain how Bitcoin works without going into detail about its cryptography and distributed computing technologies; however, let's try to understand it by comparing with fiat currencies (like USD).
+
+${
+  <Question
+    question="Mining bitcoin is expensive, but why people still mining bitcoin?"
+    answers={
+      [
+        'They want to help the bitcoin network.',
+        'They get a reward if they win, that\'s their incentive.',
+        'They do that because the government encourage them via tax grants.',
+        'They are sponsored by the people who uses Bitcoin.'
+      ]
+    }
+    correctAnswer="They get a reward if they win, that's their incentive."
+  />
+}
 
 ### Network
 
