@@ -296,7 +296,7 @@ As mentioned, while many are involved in the Bitcoin network, the problem is tha
 
 Since only a few entities control the Bitcoin network, it may defeat the value of the distributed nature of Bitcoin.
 
-Here are some major issues:
+Here are some potential issues:
 
 1. Mining pools could create incorrect transactions.
 2. Exchanges can freeze your Bitcoins or block you from using them.
@@ -360,7 +360,7 @@ ${
 
 ## Conclusion
 
-Bitcoin is not a massively distributed currency as it was promised when it was first introduced. Only a few entities possess control of the Bitcoin network, but none of them are working together to regulate the network (which can be seen as a good thing). 
+Bitcoin is not a massively distributed currency. Only a few entities possess control of the Bitcoin network, but none of them are working together to regulate the network (which can be seen as a good thing). 
 
 However, if these entities start to collaborate and control the network, Bitcoin will be like other traditional currencies or worse. The benefits of using Bitcoins will be lost and that could be the end of the Bitcoin.
 
