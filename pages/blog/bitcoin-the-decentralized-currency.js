@@ -12,8 +12,8 @@ export default WithDoc({
   slug: 'bitcoin-the-decentralized-currency',
   date: 'July 22, 2017',
   links: {
-    twitter: '',
-    facebook: ''
+    twitter: 'https://twitter.com/arunoda/status/889882921330286592',
+    facebook: 'https://www.facebook.com/arunoda.susiripala/posts/10155720330773606'
   }
 })(markdown(components)`
 I'm pretty sure, you may have heard about [Bitcoin](https://bitcoin.org/en/). It is a decentralized currency, which means that it is not controlled by a central bank: imagine US dollars without the control of the Federal Reserve Bank.
