@@ -313,7 +313,7 @@ They could also block you from using the exchange. But there are alternatives.
 
 If a wallet service block transactions, users may respond by using alternative services or running wallets by themselves — this will also impact the acceptability of the wallet service.
 
-Even above mentioned issues are valid, they are unlickly to happen.
+Even above mentioned issues are valid, they are unlikely to happen.
 
 ### Acting together
 
