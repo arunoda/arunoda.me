@@ -1,5 +1,10 @@
 export default [
   {
+    slug: "new-hobby-firmwares-and-little-devices",
+    title: 'New Hobby: Firmwares and Little Devices',
+    date: 'October 24, 2017'
+  },
+  {
     slug: "bitcoin-the-decentralized-currency",
     title: 'Bitcoin: The Decentralized Currency - Or Is It?',
     date: 'July 22, 2017'
