@@ -6,13 +6,13 @@ import Code from '~/components/Code'
 
 export default WithDoc({
   title: 'New Hobby: Firmwares and Little Devices',
-  description: 'BAT is a pretty interesting privacy focused online ad-tech trying to compete with Google and others',
-  image: 'https://user-images.githubusercontent.com/50838/28487049-1f6156ac-6ea7-11e7-99cc-0ee227c40ba1.png',
+  description: 'I started playing with Arduino and chips like ESP8266. It was fun and that\'s my hobby now.',
+  image: 'https://user-images.githubusercontent.com/50838/31915499-4f8950be-b86c-11e7-86aa-760dcd9a83a8.jpeg',
   slug: 'new-hobby-firmwares-and-little-devices',
   date: 'October 24, 2017',
   links: {
-    twitter: 'https://twitter.com/arunoda/status/876828315570421761',
-    facebook: 'https://www.facebook.com/arunoda.susiripala/posts/10155578306283606'
+    twitter: '',
+    facebook: ''
   }
 })(markdown(components)`
 
