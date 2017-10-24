@@ -11,8 +11,8 @@ export default WithDoc({
   slug: 'new-hobby-firmwares-and-little-devices',
   date: 'October 24, 2017',
   links: {
-    twitter: '',
-    facebook: ''
+    twitter: 'https://twitter.com/arunoda/status/922692571381473280',
+    facebook: 'https://www.facebook.com/arunoda.susiripala/posts/10156003118538606'
   }
 })(markdown(components)`
 
