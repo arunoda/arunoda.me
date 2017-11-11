@@ -7,12 +7,12 @@ import Code from '~/components/Code'
 export default WithDoc({
   title: 'Building a Connected Ammeter with Arduino',
   description: 'This is my experience on building a connected Ammeter with Arduino.',
-  image: '',
+  image: 'https://user-images.githubusercontent.com/50838/32688937-289f0b40-c700-11e7-846a-d656572fe73c.jpg',
   slug: 'building-a-connected-ammeter-with-arduino',
   date: 'November 11, 2017',
   links: {
-    twitter: '',
-    facebook: ''
+    twitter: 'https://twitter.com/arunoda/status/929353256362373120',
+    facebook: 'https://www.facebook.com/arunoda.susiripala/posts/10156058822568606'
   }
 })(markdown(components)`
 As I continue my electronic experiments, I wanted to measure the current used by [ESP8266](https://en.wikipedia.org/wiki/ESP8266) at its different stages. I didn’t wanna just look at numbers, but visualize the current via graphs. The current range I wanted to measure is from 120mA to 30uA. At the end, I wanted a graph like this:
