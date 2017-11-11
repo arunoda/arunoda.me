@@ -21,7 +21,7 @@ const PostLink = ({ href, title, date }) => (
 
       .date-desktop {
         display: inline-block;
-        width: 150px;
+        width: 200px;
         text-align: right;
         padding-right: 30px;
       }

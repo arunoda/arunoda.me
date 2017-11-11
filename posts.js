@@ -1,5 +1,10 @@
 export default [
   {
+    slug: "building-a-connected-ammeter-with-arduino",
+    title: 'Building a Connected Ammeter with Arduino',
+    date: 'November 11, 2017'
+  },
+  {
     slug: "new-hobby-firmwares-and-little-devices",
     title: 'New Hobby: Firmwares and Little Devices',
     date: 'October 24, 2017'
