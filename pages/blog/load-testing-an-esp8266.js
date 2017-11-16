@@ -11,8 +11,8 @@ export default WithDoc({
   slug: 'load-testing-an-esp8266',
   date: 'November 16, 2017',
   links: {
-    twitter: '',
-    facebook: ''
+    twitter: 'https://twitter.com/arunoda/status/931199229984350208',
+    facebook: 'https://www.facebook.com/arunoda.susiripala/posts/10156074418128606?pnref=story'
   }
 })(markdown(components)`
 [ESP8266](https://en.wikipedia.org/wiki/ESP8266) is a really cheap WiFi module with a built-in TCP/IP stack. Basically, you can program it just like an Arduino.
@@ -54,7 +54,7 @@ So, I started the client and ran it for 3 days. Here are the result.
 
 NOTE: All of the download speed numbers are in **Killo Bytes Per Seconds (kBps)**.
 
-First of all, let me show you the time series chart of the download speed data I collected.
+First of all, let me show you the time series chart of the download speed data I [collected](https://gist.github.com/arunoda/adad7657d7e89b512212df793526d237).
 
 ${<Image src="https://user-images.githubusercontent.com/50838/32901946-2527f182-cb17-11e7-8870-8a714ea9ce85.png" />}
 
