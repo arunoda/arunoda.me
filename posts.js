@@ -1,5 +1,10 @@
 export default [
   {
+    slug: "load-testing-an-esp8266",
+    title: 'Load Testing an ESP8266',
+    date: 'November 16, 2017'
+  },
+  {
     slug: "building-a-connected-ammeter-with-arduino",
     title: 'Building a Connected Ammeter with Arduino',
     date: 'November 11, 2017'
