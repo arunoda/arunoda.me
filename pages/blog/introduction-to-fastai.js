@@ -18,8 +18,8 @@ export default WithDoc({
   slug: 'introduction-to-fastai',
   date: 'October 17, 2018',
   links: {
-    twitter: '',
-    facebook: ''
+    twitter: 'https://twitter.com/arunoda/status/1052319353721348096',
+    facebook: 'https://www.facebook.com/arunoda.susiripala/posts/10157044978978606'
   }
 })(markdown(components)`
 
