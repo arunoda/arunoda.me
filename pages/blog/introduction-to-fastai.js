@@ -22,6 +22,13 @@ export default WithDoc({
     facebook: ''
   }
 })(markdown(components)`
+
+${
+  <Image
+    src="https://user-images.githubusercontent.com/50838/47049269-6bf2da00-d1ba-11e8-9a7a-a13bd789f874.png"
+  />
+}
+
 I wanted to be good at Artificial Intelligence (AI), specially in deep learning and machine learning, as it is something important in a developer's toolbox. In the last couple of years, I followed a few popular AI courses from [Andrew Ng](https://www.coursera.org/learn/machine-learning), Coursera and Udacity.
 
 However, I never finished those courses because I lost interest. I don't blame those courses per se, but for me the problem lay with how the courses were organized; they introduced a lot of math or very complex code right from the beginning.
