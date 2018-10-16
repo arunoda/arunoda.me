@@ -14,7 +14,7 @@ I think most of us can spare 1 USD per day to learn something really useful for 
 export default WithDoc({
   title: 'Introduction to Fast.ai',
   description: 'Fast.ai is the best way to get started with AI. This is my introduction to it.',
-  image: 'https://user-images.githubusercontent.com/50838/32901959-2f83b472-cb17-11e7-9bf2-4a1c21320159.png',
+  image: 'https://user-images.githubusercontent.com/50838/47049269-6bf2da00-d1ba-11e8-9a7a-a13bd789f874.png',
   slug: 'introduction-to-fastai',
   date: 'October 17, 2017',
   links: {
