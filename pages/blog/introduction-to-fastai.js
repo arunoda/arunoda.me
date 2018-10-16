@@ -120,11 +120,11 @@ ${
   <Note>{noteOnMyGpuChoice}</Note>  
 }
 
-## Fast.ai v1
+## Fast.ai 1.0
 
-fast.ai recently [released v1](http://www.fast.ai/2018/10/02/fastai-ai/) of the library with a lot of improvements. However, there are no tutorials or guides to use it, unless you are already familiar with fast.ai and how it works.
+fast.ai recently [released version 1.0](http://www.fast.ai/2018/10/02/fastai-ai/) of the library with a lot of improvements. However, there are no tutorials or guides to use it, unless you are already familiar with fast.ai and how it works.
 
-Fortunately, the team is starting a live course for fast.ai v1 on October 22nd. Unfortunately, enrollment in the course is now closed.
+Fortunately, the team is starting a live course for fast.ai 1.0 on October 22nd. Unfortunately, enrollment in the course is now closed.
 
 After October 22nd, you can expect to see tutorials on how to use the fast.ai library v1. I'm also planning to write a series of blog posts as I'm taking the course.
 
