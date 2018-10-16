@@ -1,5 +1,10 @@
 export default [
   {
+    slug: "introduction-to-fastai",
+    title: 'Introduction to Fast.ai',
+    date: 'October 17, 2018'
+  },
+  {
     slug: "load-testing-an-esp8266",
     title: 'Load Testing an ESP8266',
     date: 'November 16, 2017'
