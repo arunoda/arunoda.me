@@ -16,7 +16,7 @@ export default WithDoc({
   description: 'Fast.ai is the best way to get started with AI. This is my introduction to it.',
   image: 'https://user-images.githubusercontent.com/50838/47049269-6bf2da00-d1ba-11e8-9a7a-a13bd789f874.png',
   slug: 'introduction-to-fastai',
-  date: 'October 17, 2017',
+  date: 'October 17, 2018',
   links: {
     twitter: '',
     facebook: ''
