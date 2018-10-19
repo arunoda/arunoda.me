@@ -13,7 +13,7 @@ I think most of us can spare 1 USD per day to learn something really useful for 
 
 export default WithDoc({
   title: 'Introduction to Fast.ai',
-  description: 'Fast.ai is the best way to get started with AI. This is my introduction to it.',
+  description: 'If you are looking to get started with deep learning, fast.ai is the best place you should look at. It is a research lab followed by a great library and a set of courses.',
   image: 'https://user-images.githubusercontent.com/50838/47049269-6bf2da00-d1ba-11e8-9a7a-a13bd789f874.png',
   slug: 'introduction-to-fastai',
   date: 'October 17, 2018',
@@ -41,7 +41,7 @@ Then something called [fast.ai](http://www.fast.ai/) changed my perception of AI
 
 ## What is fast.ai? 
 
-If you visit the [fast.ai](http://www.fast.ai/)website, you'd think it's just another blog. If you hopover to their [MOOC](http://course.fast.ai/), you'd think it just looks like a set of videos recorded in some university classroom. If you check [fast.ai'](https://github.com/fastai/fastai)s GitHub repository, you'd definitely ask, "What the hell is this?"
+If you visit the [fast.ai](http://www.fast.ai/) website, you'd think it's just another blog. If you hopover to their [MOOC](http://course.fast.ai/), you'd think it just looks like a set of videos recorded in some university classroom. If you check [fast.ai'](https://github.com/fastai/fastai)s GitHub repository, you'd definitely ask, "What the hell is this?"
 
 Yet despite what it looks like, what's behind fast.ai is very interesting.
 
@@ -55,9 +55,9 @@ ${<Image
 
 fast.ai can be described as a research lab bundled with courses, an easy-to-use Python library with a huge community. Their library wraps popular deep learning and machine learning libraries for common workflows and provides a user-friendly interface.
 
-Most importantly, it follows the **"bottom up"** approach. 
+Most importantly, it follows the **"top down"** approach. 
 
-"Bottom up" is exactly like how we learn a sport. We start by trying to play it, without worrying about rules. Once we are confident, we learn the rules and tricks one by one.
+"Top down" is exactly like how we learn a sport. We start by trying to play it, without worrying about rules. Once we are confident, we learn the rules and tricks one by one.
 
 Similarly, fast.ai allows us to build a model using only a few lines of code. After that, we can improve it further.
 For example, have a look at the following code:
@@ -120,13 +120,13 @@ ${
   <Note>{noteOnMyGpuChoice}</Note>  
 }
 
-## Fast.ai 1.0
+## Fastai version 1.0
 
 fast.ai recently [released version 1.0](http://www.fast.ai/2018/10/02/fastai-ai/) of the library with a lot of improvements. However, there are no tutorials or guides to use it, unless you are already familiar with fast.ai and how it works.
 
-Fortunately, the team is starting a live course for fast.ai 1.0 on October 22nd. Unfortunately, enrollment in the course is now closed.
+Fortunately, the team is starting a live course for fastai 1.0 on October 22nd. Unfortunately, enrollment in the course is now closed.
 
-After October 22nd, you can expect to see tutorials on how to use the fast.ai library v1. I'm also planning to write a series of blog posts as I'm taking the course.
+After October 22nd, you can expect to see tutorials on how to use the fastai library v1. I'm also planning to write a series of blog posts as I'm taking the course.
 
 Everyone will be able to access this new course early next year. But please don't wait, visit <http://course.fast.ai> and start learning today.
 `)
