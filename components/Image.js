@@ -1,10 +1,11 @@
-export default ({ src, width="100%", height, alt, title }) => (
+export default ({ src, width="100%", height, alt, title, onClick }) => (
   <div className="container">
     <img
       src={src}
       width={width}
       height={height}
       alt={alt}
+      onClick={onClick}
     />
     {title? (
       <div className="title">

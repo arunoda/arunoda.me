@@ -4,6 +4,7 @@ import WithDoc, { components } from '~/lib/with-doc'
 import Image from '~/components/Image'
 import Code from '~/components/Code'
 import Note from '~/components/Note'
+import Youtube from '~/components/Youtube'
 
 const noteOnJupyterAccess = markdown(components)`
 After creating the VM, you will get an external IP.<br/>
@@ -30,7 +31,13 @@ export default WithDoc({
     facebook: ''
   }
 })(markdown(components)`
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/quMRkV-zGq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="1"></iframe>
+${
+  <Youtube
+    overlay="https://user-images.githubusercontent.com/50838/47286724-8ccd8c00-d60d-11e8-946d-f7d40366460a.png"
+    src="https://www.youtube.com/embed/quMRkV-zGq0"
+    height={360}
+  />
+}
 
 We know fast.ai is pretty cool and I've wrote about [it here](https://arunoda.me/blog/introduction-to-fastai). One of its requirements is to have a Nvidia GPU. There are a couple of [options](https://github.com/fastai/course-v3/tree/master/docs) out there.
 
