@@ -6,6 +6,16 @@ import Code from '~/components/Code'
 import Note from '~/components/Note'
 import Youtube from '~/components/Youtube'
 
+const mainFeatures = markdown(components)`
+  * create a node with the **Tesla v100** GPU for just **$0.8/hour**
+  * create a node with the **Tesla K80** GPU for just **$0.2/hour**
+  * create a node with No GPU for just **$0.01/hour**
+  * switch between these nodes whenever needed
+  * install new tools and save data (won't get deleted when switching)
+  * run notebooks by just starting the server (no SSH needed)
+  * create a password protected jupyter notebooks environment
+`
+
 const noteOnJupyterAccess = markdown(components)`
 After creating the VM, you will get an external IP.<br/>
 simply visit <http://external-ip:8888> to start working with your notebooks.
@@ -47,13 +57,7 @@ _I wanted something better. This is a result of that._
 
 At the end of this post, you will be able to:
 
-  * create a node with the very powerful **Tesla v100** GPU for just **$0.8/hour**
-  * create a node with **Tesla K8** GPU for just **$0.2/hour**
-  * create a node with No GPU for just **$0.01/hour**
-  * switch between these nodes whenever needed
-  * install new tools and save data (they won't get deleted when switching)
-  * run notebooks by just starting the server (no SSH needed)
-  * create a password protected jupyter notebooks environment.
+${<Note>{mainFeatures}</Note>}
 
 For all of these, you just need to run a set of commands initially. After that, it's just a single command to start the fastai node.
 
