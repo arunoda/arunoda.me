@@ -37,8 +37,8 @@ export default WithDoc({
   slug: 'ideal-way-to-creare-a-fastai-node',
   date: 'October 22, 2018',
   links: {
-    twitter: '',
-    facebook: ''
+    twitter: 'https://twitter.com/arunoda/status/1054375818460315649',
+    facebook: 'https://www.facebook.com/arunoda.susiripala/posts/10157059550078606'
   }
 })(markdown(components)`
 ${
