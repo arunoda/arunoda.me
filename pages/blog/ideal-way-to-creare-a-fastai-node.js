@@ -32,8 +32,8 @@ In addition to the computing power, you'll be charged **$8/month** for the SSD b
 
 export default WithDoc({
   title: 'Ideal Way to Create a Fastai Node',
-  description: '',
-  image: '',
+  description: 'Get a K80 GPU for $0.2/hour or a powerful v100 gpu for just $0.8/hour. No SSH needed to work on jupyter notebooks. Built for customizations.',
+  image: 'https://user-images.githubusercontent.com/50838/47286724-8ccd8c00-d60d-11e8-946d-f7d40366460a.png',
   slug: 'ideal-way-to-creare-a-fastai-node',
   date: 'October 22, 2018',
   links: {
@@ -49,7 +49,7 @@ ${
   />
 }
 
-We know fast.ai is pretty cool and I've wrote about [it here](https://arunoda.me/blog/introduction-to-fastai). One of its requirements is to have a Nvidia GPU. There are a couple of [options](https://github.com/fastai/course-v3/tree/master/docs) out there.
+Fast.ai is pretty cool and I've wrote about [it here](https://arunoda.me/blog/introduction-to-fastai). One of its requirements is to have a Nvidia GPU. There are a couple of [options](https://github.com/fastai/course-v3/tree/master/docs) out there.
 
 Some options are very simple to use but may be expensive. Some options are very flexible to work with but are hard to set up and manage. 
 
@@ -67,7 +67,7 @@ For all of these, you just need to run a set of commands initially. After that, 
 
 We are not running production models here, so we can live with those limitations and benefit from the cost advantage. 
 
-To use this, you need to create a [Google Cloud](https://cloud.google.com/compute/) account and [enable billing](https://www.youtube.com/watch?v=Nr7-fQEocgo). Once you've done that, start a Google Cloud [console](https://console.cloud.google.com/) for your account by visiting this URL or clicking the cloud console button as shown below:
+To use this, you need to create a [Google Cloud](https://cloud.google.com/compute/) account and [enable billing](https://www.youtube.com/watch?v=Nr7-fQEocgo). Once you've done that, start a Google Cloud [shell](https://console.cloud.google.com/) for your account by visiting this URL or clicking the cloud console button as shown below:
 
 ${
   <Image
@@ -77,7 +77,7 @@ ${
 }
 
 
-We'll be using that console to invoke the commands mentioned below. You don't need to set up anything locally.
+We'll be using that shell to invoke the commands mentioned below. You don't need to set up anything locally.
 
 ## The Network
 
