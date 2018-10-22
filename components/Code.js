@@ -13,7 +13,7 @@ const customPreStyle = {
   backgroundColor: "#FAFAFA"
 }
 
-export default ({ language, children }) => (
+export default ({ language, wrap, children }) => (
   <div className="code">
     <SyntaxHighlighter
       language={language}
@@ -25,6 +25,10 @@ export default ({ language, children }) => (
     <style jsx>{`
       .code {
         margin: 30px 0;
+      }
+
+      .code :global(pre) {
+        ${wrap? 'white-space: normal' : ''};
       }
     `}</style>
   </div>

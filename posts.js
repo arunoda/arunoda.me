@@ -1,5 +1,10 @@
 export default [
   {
+    slug: 'ideal-way-to-creare-a-fastai-node',
+    title: 'Ideal Way to Create a Fastai Node',
+    date: 'October 22, 2018'
+  },
+  {
     slug: "introduction-to-fastai",
     title: 'Introduction to Fast.ai',
     date: 'October 17, 2018'

@@ -1,5 +1,5 @@
 export default ({ children }) => (
-  <div>
+  <div className="p">
     {children}
     <style jsx>{`
       margin: 15px 0;
