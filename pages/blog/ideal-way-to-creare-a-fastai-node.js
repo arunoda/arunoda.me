@@ -150,12 +150,12 @@ gcloud compute instances delete fastai-boot --zone=us-west1-b --project=$DEVSHEL
 
 Now everything is ready. We can create a node with one of the following types. Select an option you like and apply the command in the cloud shell:
 
-### 1. POWERFUL GPU ($0.8/HOUR):
+### 1. POWERFUL GPU ($0.53/HOUR):
 
-This is a setup with Tesla v100 GPU, 8 vCPUs and 30GB RAM.
+This is a setup with Tesla p100 GPU, 8 vCPUs and 30GB RAM.
 
 ${<Code language="bash">{`
-gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai --zone=us-west1-b --machine-type=n1-standard-8 --subnet=fastai --network-tier=PREMIUM --no-restart-on-failure --maintenance-policy=TERMINATE --preemptible --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=type=nvidia-tesla-v100,count=1 --disk=name=fastai-boot,device-name=fastai-boot,mode=rw,boot=yes
+gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai --zone=us-west1-b --machine-type=n1-standard-4 --subnet=fastai --network-tier=PREMIUM --no-restart-on-failure --maintenance-policy=TERMINATE --preemptible --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=type=nvidia-tesla-p100,count=1 --disk=name=fastai-boot,device-name=fastai-boot,mode=rw,boot=yes
 `}</Code>}
 
 ### 2. STANDARD GPU ($0.2/HOUR):
@@ -166,15 +166,7 @@ ${<Code language="bash">{`
 gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai --zone=us-west1-b --machine-type=n1-standard-4 --subnet=fastai --network-tier=PREMIUM --no-restart-on-failure --maintenance-policy=TERMINATE --preemptible --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=type=nvidia-tesla-k80,count=1 --disk=name=fastai-boot,device-name=fastai-boot,mode=rw,boot=yes
 `}</Code>}
 
-### 3. MID RANGE GPU ($0.5/HOUR)
-
-This is a setup with Tesla p100 GPU, 8 vCPUs and 30GB RAM.
-
-${<Code language="bash">{`
-gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai --zone=us-west1-b --machine-type=n1-standard-4 --subnet=fastai --network-tier=PREMIUM --no-restart-on-failure --maintenance-policy=TERMINATE --preemptible --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=type=nvidia-tesla-p100,count=1 --disk=name=fastai-boot,device-name=fastai-boot,mode=rw,boot=yes
-`}</Code>}
-
-### 4. NO GPU ($0.01/HOUR)
+### 3. NO GPU ($0.01/HOUR)
 
 This doesn't have a GPU, but it is great for management tasks like downloading data and creating notes.
 
