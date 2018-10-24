@@ -7,7 +7,7 @@ import Note from '~/components/Note'
 import Youtube from '~/components/Youtube'
 
 const mainFeatures = markdown(components)`
-  * create a node with the **Tesla v100** GPU for just **$0.8/hour**
+  * create a node with the **Tesla p100** GPU for just **$0.53/hour**
   * create a node with the **Tesla K80** GPU for just **$0.2/hour**
   * create a node with No GPU for just **$0.01/hour**
   * switch between these nodes whenever needed
@@ -31,8 +31,8 @@ In addition to the computing power, you'll be charged **$8/month** for the SSD b
 `
 
 export default WithDoc({
-  title: 'Ideal Way to Create a Fastai Node',
-  description: 'Get a K80 GPU for $0.2/hour or a powerful v100 gpu for just $0.8/hour. No SSH needed to work on jupyter notebooks. Built for customizations.',
+  title: 'Ideal Way to Create a Fastai Instance',
+  description: 'Get a K80 GPU for $0.2/hour or a powerful p100 gpu for just $0.8/hour. Just create the server and start learning.',
   image: 'https://user-images.githubusercontent.com/50838/47286724-8ccd8c00-d60d-11e8-946d-f7d40366460a.png',
   slug: 'ideal-way-to-creare-a-fastai-node',
   date: 'October 22, 2018',
