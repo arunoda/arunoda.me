@@ -155,7 +155,7 @@ Now everything is ready. We can create a node with one of the following types. S
 This is a setup with Tesla p100 GPU, 8 vCPUs and 30GB RAM.
 
 ${<Code language="bash">{`
-gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai --zone=us-west1-b --machine-type=n1-standard-4 --subnet=fastai --network-tier=PREMIUM --no-restart-on-failure --maintenance-policy=TERMINATE --preemptible --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=type=nvidia-tesla-p100,count=1 --disk=name=fastai-boot,device-name=fastai-boot,mode=rw,boot=yes
+gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai --zone=us-west1-b --machine-type=n1-standard-8 --subnet=fastai --network-tier=PREMIUM --no-restart-on-failure --maintenance-policy=TERMINATE --preemptible --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=type=nvidia-tesla-p100,count=1 --disk=name=fastai-boot,device-name=fastai-boot,mode=rw,boot=yes
 `}</Code>}
 
 ### 2. STANDARD GPU ($0.2/HOUR):
