@@ -1,5 +1,10 @@
 export default [
   {
+    slug: 'getting-started-with-fastai',
+    title: 'Getting Started with Fastai Deep Learning Framework',
+    date: 'October 29, 2018'
+  },
+  {
     slug: 'ideal-way-to-creare-a-fastai-node',
     title: 'Ideal Way to Create a Fastai Node',
     date: 'October 22, 2018'
