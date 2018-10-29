@@ -7,7 +7,7 @@ import Note from '~/components/Note'
 import Youtube from '~/components/Youtube'
 
 const noteOnJupyter = markdown(components)`
-In the rest of this post, I'm using some Fastai-related code. If you need to run them, you will need a machine with a Nvidia GPU.
+In the rest of this post, I'm using some fastai-related code. If you need to run them, you will need a machine with a Nvidia GPU.
 
 Here's [my guide](https://arunoda.me/blog/ideal-way-to-creare-a-fastai-node) on how to build such an environment using Google Cloud Platform.
 `
@@ -18,17 +18,17 @@ We can run the trained classifier with that set and validate the accuracy of our
 `
 
 export default WithDoc({
-  title: 'Getting Started with Fastai Deep Learning Framework',
+  title: 'Getting Started with fastai Deep Learning Framework',
   description: 'This is my experience on using Fast.ai to create a deep learning classifier which could differentiate between ten different vehicle models with the accuracy of 97%.',
   image: '-',
   slug: 'getting-started-with-fastai',
-  date: 'October 29, 2018',
+  date: 'October 30, 2018',
   links: {
     twitter: '',
     facebook: ''
   }
 })(markdown(components)`
-This is my experience on using [Fastai](http://www.fast.ai/) to create a deep learning classifier which could differentiate between ten different vehicle models with the accuracy of 97%. 
+This is my experience on using [fastai](http://www.fast.ai/) to create a deep learning classifier which could differentiate between ten different vehicle models with the accuracy of 97%. 
 
 This is not something groundbreaking. The interesting thing is that I just did it with a little amount of code and using some common sense. 
 
@@ -43,6 +43,8 @@ googleimagesdownload --limit 20 --keywords "Honda Fit, Jeep Wrangler" --format j
 `}</Code>}
 
 With this command, it downloads 20 images for both “Honda Fit” and “Jeep Wrangler.” Just like that, you can list as many keywords as you want.
+
+> For the final dataset, I've downloaded 150 images for each keyword.
 
 ${
   <Image
@@ -82,10 +84,10 @@ ${
 
 ## The Notebook
 
-Here, I'm using an interactive development environment called [Jupyter notebooks](http://jupyter.org/). A notebook is just like a blog post, but with some code blocks and output of those. It's the de-facto standard in building models.
+Here, I'm using an interactive development environment called [Jupyter notebooks](http://jupyter.org/). A notebook is just like a blog post, but with some code blocks and output of those. It's the de-facto standard in data science related projects.
 
 Since we have the notebook, I won't mention each and every step I did. But If you like to follow along, here's [the notebook](https://github.com/arunoda/fastai-courses/blob/master/dl1/projects/vehicles.ipynb).
-If you have a Fast.ai setup, you can clone [this repo](https://github.com/arunoda/fastai-courses) and run this notebook.
+If you have a fastai setup, you can clone [this repo](https://github.com/arunoda/fastai-courses) and run this notebook.
 
 You can also watch this screencast to see how I develop this classifier.
 
@@ -103,7 +105,7 @@ As per the first step, I used an already build model called "resnet34". Basicall
 
 So, instead of building my classifier from scratch, I can build it on top of resnet34.
 
-> Basically, it's like teaching a kid to identify vehicles even though he or she already knows the difference between a car and bus.
+> Basically, it's like teaching a kid to identify these vehicles who already knows the difference between a car and bus.
 
 In order to do that, I run the following code:
 
@@ -123,7 +125,7 @@ epoch  train_loss  valid_loss  error_rate
 4      0.900561    0.565570    0.202703    (00:04)
 `}</Code>}
 
-This model trained for four times with our dataset. In the end, it gave us an error rate of 20% at the end. That means, it incorrectly identified 20% of the images on the validation set.
+This model trained for four times with our dataset. In the end, it gave us an error rate of 20%. That means, it incorrectly identified 20% of the images on the validation set.
 
 ${<Note>{noteOnValidationSet}</Note>}
 
@@ -151,7 +153,7 @@ ${
   />
 }
 
-Learning rate is a constant which affects the performance of the model. If it's higher, it'll train faster, but this might lead to incorrect results. If it's lower, it'll be slower, and we might not get the result.
+Learning rate is a constant which affects the performance of the model. If it's higher, it'll train faster, but it might lead to incorrect results. If it's lower, it'll be slower, and we might not get the result.
 
 By default, Fast.ai uses a good default learning rate. But with the unfreezed model, it's better to specify a range of learning rates manually.
 
@@ -167,21 +169,21 @@ This gave us an **error rate of 10%**. So, this is a good improvement from the 2
 
 ## With resnet50
 
-This is also a pre-trained model like resnet34 but with 50 layers. Hopefully, this gives us better results.
+This is also a pre-trained model like resnet34 but with 50 layers. Hopefully, this would give us better results.
 
 ${<Code language="python">{`
 learn2 = ConvLearner(data, models.resnet50, metrics=error_rate)
 learn2.fit_one_cycle(4)
 `}</Code>}
 
-This gave us an **error rate of 18% and 11%** after the unfreezed.
+This gave us an **error rate of 18% and 11%** after unfreezing.
 
-> It's not a considerable improvement. So, this is not about the performance of the model, but the way I use these images.
+> It's not a significant improvement. It seems like I am doing something wrong here.
 
 ## Using Square Images
 
-Usually, a picture of the vehicle is a rectangle. But when we are training the model, we need to give it a square.
-So, Fastai automatically crops images like this:
+Usually, a picture of the vehicle is a rectangle. But when we are training the classifier, we need to give it a square.
+So, fastai automatically crops images like this:
 
 ${
   <Image
@@ -189,7 +191,7 @@ ${
   />
 }
 
-As you can see, we are not feeding the whole vehicle to the model. I thought that's the problem.
+As you can see, we are not feeding the whole vehicle to the classifier. I thought that's the problem.
 So, I resized these images as a square, like below:
 
 ${
@@ -259,11 +261,11 @@ ${
   />
 }
 
-I think that was totally fair with the amount of effort I spent.
+I think some of these errored images are not that easy to classify. As a overall fact, the classifier did a terrific job.
 
 ---
 
-Finally, I built a deep learning classifier to detect the vehicle models with an accuracy of 97%. It was not as difficult as it seemed. It was just some code and using some common sense.
+With fastai, building an accurate classifier is not as difficult as it seems. It was just some code and using some common sense.
 
-And of course, I'd like to thank Fastai and all the people who work hard to build these pre-trained models and libraries.
+All these possible to the great work done by fast.ai and all the people who work hard to build these pre-trained models and libraries.
 `)
