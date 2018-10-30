@@ -238,7 +238,7 @@ find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224^ -
 
 As expected, I received an error rate of **3%** with resnet34 and **2%** with resnet50.
 
-> This version of the classifier did a very good job with an accuracy of 98%. 
+${<Note>{`This version of the classifier did a very good job with an accuracy of 98%. `}</Note>}
 
 Here's the set of images our classifier predicted incorrectly:
 
