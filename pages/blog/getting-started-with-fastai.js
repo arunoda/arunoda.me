@@ -19,7 +19,7 @@ We can run the trained classifier with that set and validate the accuracy of our
 
 export default WithDoc({
   title: 'Getting Started with fastai Deep Learning Framework',
-  description: 'This is my experience on using Fast.ai to create a deep learning classifier which could differentiate between ten different vehicle models with the accuracy of 97%.',
+  description: 'This is my experience on using fastai to create a deep learning classifier which has an accuracy of 98%.',
   image: '-',
   slug: 'getting-started-with-fastai',
   date: 'October 30, 2018',
@@ -28,7 +28,7 @@ export default WithDoc({
     facebook: ''
   }
 })(markdown(components)`
-This is my experience on using [fastai](http://www.fast.ai/) to create a deep learning classifier which could differentiate between ten different vehicle models with the accuracy of 97%. 
+This is my experience on using [fastai](http://www.fast.ai/) to create a deep learning classifier which could differentiate between ten different vehicle models with the accuracy of 98%. 
 
 This is not something groundbreaking. The interesting thing is that I just did it with a little amount of code and using some common sense. 
 
@@ -89,16 +89,6 @@ Here, I'm using an interactive development environment called [Jupyter notebooks
 Since we have the notebook, I won't mention each and every step I did. But If you like to follow along, here's [the notebook](https://github.com/arunoda/fastai-courses/blob/master/dl1/projects/vehicles.ipynb).
 If you have a fastai setup, you can clone [this repo](https://github.com/arunoda/fastai-courses) and run this notebook.
 
-You can also watch this screencast to see how I develop this classifier.
-
-${
-  <Youtube
-    overlay="https://user-images.githubusercontent.com/50838/47286724-8ccd8c00-d60d-11e8-946d-f7d40366460a.png"
-    src="https://www.youtube.com/embed/quMRkV-zGq0"
-    height={360}
-  />
-}
-
 ## Initial Model
 
 As per the first step, I used an already build model called "resnet34". Basically, it's a publicly-available model which is pre-trained for a huge amount of images.
@@ -111,18 +101,17 @@ In order to do that, I run the following code:
 
 ${<Code language="python">{`
 learn1 = ConvLearner(data, models.resnet34, metrics=error_rate)
-learn1.fit_one_cycle(4)
+learn1.fit_one_cycle(3)
 `}</Code>}
 
 Here's the result of this:
 
 ${<Code language="bash">{`
-Total time: 00:18
+Total time: 00:15
 epoch  train_loss  valid_loss  error_rate
-1      2.189602    1.205166    0.409910    (00:04)
-2      1.493517    0.697307    0.229730    (00:04)
-3      1.112668    0.571896    0.189189    (00:04)
-4      0.900561    0.565570    0.202703    (00:04)
+1      2.187938    0.983076    0.296154    (00:05)
+2      1.498773    0.632621    0.196154    (00:04)
+3      1.140838    0.589371    0.203846    (00:04)
 `}</Code>}
 
 This model trained for four times with our dataset. In the end, it gave us an error rate of 20%. That means, it incorrectly identified 20% of the images on the validation set.
@@ -165,7 +154,7 @@ learn1.unfreeze()
 learn1.fit_one_cycle(3, slice(1e-4, 1e-2))
 `}</Code>}
 
-This gave us an **error rate of 10%**. So, this is a good improvement from the 20% error rate which we had before.
+This gave us an **error rate of 11%**. So, this is a good improvement from the 20% error rate which we had before.
 
 ## With resnet50
 
@@ -176,7 +165,7 @@ learn2 = ConvLearner(data, models.resnet50, metrics=error_rate)
 learn2.fit_one_cycle(4)
 `}</Code>}
 
-This gave us an **error rate of 18% and 11%** after unfreezing.
+This gave us an **error rate of 17% and 13%** after unfreezing.
 
 > It's not a significant improvement. It seems like I am doing something wrong here.
 
@@ -214,10 +203,9 @@ cd $SRC
 find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224 -gravity center -extent 224x224 ../$DEST/{}.jpg \;
 `}</Code>}
 
-I ran this dataset against both resnet34 and resnet50. But it gave me a similar result as before. 
-Actually, it was worse than before.
+I ran this dataset against both resnet34 and resnet50. The result is worse than before.
 
-It could be due to the details of the image. Even though my classifier could see the whole vehicle, it had more white space due to the way I resized these images.
+It could be due to the lack of details of the image. Even though my classifier could see the whole vehicle, it had more white space due to the way I resized these images.
 
 ## With Multiple Crops
 
@@ -248,9 +236,9 @@ find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224^ -
 `}</Code>}
 
 
-As expected, I received an **error rate of 7% with resnet34 and 3% with resnet50**. Unfreezing didn't help me in this case. 
+As expected, I received an error rate of **3%** with resnet34 and **2%** with resnet50.
 
-> This version of the classifier did a very good job with the 97% accuracy. 
+> This version of the classifier did a very good job with an accuracy of 98%. 
 
 Here's the set of images our classifier predicted incorrectly:
 
@@ -265,7 +253,7 @@ I think some of these errored images are not that easy to classify. As a overall
 
 ---
 
-With fastai, building an accurate classifier is not as difficult as it seems. It was just some code and using some common sense.
+Nowadays, building an accurate classifier is not as difficult as it seems. It was just some code and using some common sense.
 
-All these possible to the great work done by fast.ai and all the people who work hard to build these pre-trained models and libraries.
+All these possible to the great work done by [fast.ai](https://www.fast.ai/) and all the people who work hard to build these pre-trained models and libraries.
 `)
