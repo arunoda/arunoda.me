@@ -24,8 +24,8 @@ export default WithDoc({
   slug: 'getting-started-with-fastai',
   date: 'October 30, 2018',
   links: {
-    twitter: '',
-    facebook: ''
+    twitter: 'https://twitter.com/arunoda/status/1057276101716795393',
+    facebook: 'https://www.facebook.com/arunoda.susiripala/posts/10157080335103606'
   }
 })(markdown(components)`
 This is my experience on using [fastai](http://www.fast.ai/) to create a deep learning classifier which could differentiate between ten different vehicle models with the accuracy of 98%. 
