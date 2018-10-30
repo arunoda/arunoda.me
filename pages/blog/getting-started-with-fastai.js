@@ -20,7 +20,7 @@ We can run the trained classifier with that set and validate the accuracy of our
 export default WithDoc({
   title: 'Getting Started with fastai Deep Learning Framework',
   description: 'This is my experience on using fastai to create a deep learning classifier which has an accuracy of 98%.',
-  image: '-',
+  image: 'https://user-images.githubusercontent.com/50838/47661273-b9117b80-dbbe-11e8-9e5a-e68ffd0dc3ae.png',
   slug: 'getting-started-with-fastai',
   date: 'October 30, 2018',
   links: {
