@@ -100,7 +100,7 @@ gcloud compute --project=$DEVSHELL_PROJECT_ID firewall-rules create allow-all --
 Now we are trying to create our boot disk. For that, we need to create a small temporary VM. For that, run the following command:
 
 ${<Code language="bash">{`
-gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai-boot --zone=us-west1-b --machine-type=n1-standard-1 --subnet=fastai --network-tier=PREMIUM --maintenance-policy=TERMINATE --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=type=nvidia-tesla-k80,count=1 --image=ubuntu-1804-bionic-v20181003 --image-project=ubuntu-os-cloud --boot-disk-size=50GB --no-boot-disk-auto-delete --boot-disk-type=pd-ssd --boot-disk-device-name=fastai-boot
+gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai-boot --zone=us-west1-b --machine-type=n1-standard-1 --subnet=fastai --network-tier=PREMIUM --maintenance-policy=TERMINATE --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=type=nvidia-tesla-k80,count=1 --image=ubuntu-1804-bionic-v20181029 --image-project=ubuntu-os-cloud --boot-disk-size=50GB --no-boot-disk-auto-delete --boot-disk-type=pd-ssd --boot-disk-device-name=fastai-boot
 `}</Code>}
 
 SSH into that box by typing the following command:
