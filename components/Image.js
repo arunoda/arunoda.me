@@ -4,10 +4,10 @@ function withHref(el, href) {
   }
 
   return (
-    <a href={href} target="_blank">
+    <a className="href" href={href} target="_blank">
       {el}
       <style jsx>{`
-        a {
+        a.href{
           border: 0;
         }
       `}</style>

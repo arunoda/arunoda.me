@@ -21,11 +21,15 @@ export default WithDoc({
   }
 })(markdown(components)`
 
+{<Image
+  src="https://user-images.githubusercontent.com/50838/49079724-67185000-f267-11e8-95cc-32641ba47733.jpg"
+/>}
+
 Every time I started trying to study deep learning, I got stuck. But not this time, thanks to [fast.ai](https://www.fast.ai/). After two months of deep learning experience, I understand why I got stuck before.
 
 I can group them into three myths. Let’s discover.
 
-## Myth #1: Deep learning requires expert knowledge.
+## #1: Deep learning requires expert knowledge.
 
 Deep learning is an ocean of jargon. Here are some of the trickier words and phrases:
 
@@ -39,7 +43,7 @@ And if you use the right tool, you won't need to worry at all about most of this
 
 In order to practice deep learning and solve day-to-day problems, you don't need a PhD. If you are familiar with basic programming fundamentals, you are good to go.
 
-## Myth #2: Deep learning is time consuming.
+## #2: Deep learning is time consuming.
 
 You may have heard that you need to have a lot of data to train in a deep learning model, and that it will be time-intensive as a result, taking days and months of training.
 
@@ -65,7 +69,7 @@ That's transfer learning.
 
 We can train this dataset in about an hour with approximately [94% accuracy](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson3-imdb.ipynb). This is very close to state-of-the-art accuracy (95%) for this dataset.
 
-## Myth #3: Deep learning is very expensive.
+## #3: Deep learning is very expensive.
 
 I already mentioned that we use GPUs for deep learning. We could use traditional gaming GPUs, and there are some powerful GPUs made especially for deep learning. They tend to be very expensive. This Tesla v100 GPU costs almost [$6000](https://www.amazon.com/PNY-TCSV100MPCIE-PB-Nvidia-Tesla-v100/dp/B076P84525).
 
