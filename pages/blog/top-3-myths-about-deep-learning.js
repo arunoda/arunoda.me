@@ -14,8 +14,8 @@ export default WithDoc({
   slug: 'top-3-myths-about-deep-learning',
   date: '27 November, 2018',
   links: {
-    twitter: '',
-    facebook: ''
+    twitter: 'https://twitter.com/arunoda/status/1067410542829162496',
+    facebook: 'https://www.facebook.com/arunoda.susiripala/posts/10157153758423606'
   }
 })(markdown(components)`
 
