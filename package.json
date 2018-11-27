@@ -29,6 +29,7 @@
     "markdown-in-js": "^1.1.4",
     "mongodb": "^2.2.28",
     "next": "7.x.x",
+    "next-ga": "^2.3.4",
     "react": "16.x.x",
     "react-dom": "16.x.x",
     "react-syntax-highlighter": "^5.6.2",
