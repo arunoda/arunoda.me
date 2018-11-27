@@ -17,7 +17,7 @@ export default WithDoc({
 })(markdown(components)`
 As I continue my electronic experiments, I wanted to measure the current used by [ESP8266](https://en.wikipedia.org/wiki/ESP8266) at its different stages. I didn’t wanna just look at numbers, but visualize the current via graphs. The current range I wanted to measure is from 120mA to 30uA. At the end, I wanted a graph like this:
 
-${<Image src="https://user-images.githubusercontent.com/50838/32688859-d43fd440-c6fe-11e7-8eb7-ad428a13c47c.png" />}
+${<Image src='https://user-images.githubusercontent.com/50838/32688859-d43fd440-c6fe-11e7-8eb7-ad428a13c47c.png' />}
 
 ## Measuring the voltage with Arduino
 
@@ -25,11 +25,11 @@ ${<Image src="https://user-images.githubusercontent.com/50838/32688859-d43fd440-
 
 This is my Arduino setup:
 
-${<Image src="https://user-images.githubusercontent.com/50838/32688884-3e7c1c38-c6ff-11e7-9763-575a486d165d.png" />}
+${<Image src='https://user-images.githubusercontent.com/50838/32688884-3e7c1c38-c6ff-11e7-9763-575a486d165d.png' />}
 
 Here's the code:
 
-${<Code language="c">{`
+${<Code language='c'>{`
 void setup() {
   Serial.begin(9600);
 }
@@ -57,7 +57,7 @@ It works well. Initially, the accuracy was not that precise. However, I was able
 
 As you've noticed in the above Arduino code, I sent measurements to the serial port every 250ms. Then I wrote a simple [Next.js app](https://github.com/arunoda/ardmeter/tree/master/dashboard) to visualize those measurements.
 
-${<Image src="https://user-images.githubusercontent.com/50838/32688937-289f0b40-c700-11e7-846a-d656572fe73c.jpg" />}
+${<Image src='https://user-images.githubusercontent.com/50838/32688937-289f0b40-c700-11e7-846a-d656572fe73c.jpg' />}
 
 It's pretty simple and it achieves what I want.
 
@@ -65,7 +65,7 @@ It's pretty simple and it achieves what I want.
 
 Next, I started using my new ammeter to monitor the current usage of ESP8266. Here's my setup:
 
-${<Image src="https://user-images.githubusercontent.com/50838/32688964-8364b764-c700-11e7-8057-de734b566de2.jpg" />}
+${<Image src='https://user-images.githubusercontent.com/50838/32688964-8364b764-c700-11e7-8057-de734b566de2.jpg' />}
 
 Initially, it failed. I used a 100ohms resistor, where I could measure as low as 50uA of current. I came up with that number by applying \`I=V/R\` and using V as 5mv (which is the minimal voltage Arduino can measure).
 
@@ -80,7 +80,7 @@ I could have used a higher input of voltage like 12v and give it a try, but I di
 
 I then used a 2ohms resistor and got it working. Then the minimal current I could measure was around 2.5 mA. That was not good enough for me.
 
-${<Image src="https://user-images.githubusercontent.com/50838/32688981-d7239ab4-c700-11e7-8a65-ae27726563eb.jpg" />}
+${<Image src='https://user-images.githubusercontent.com/50838/32688981-d7239ab4-c700-11e7-8a65-ae27726563eb.jpg' />}
 
 ## In the End
 

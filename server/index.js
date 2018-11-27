@@ -10,7 +10,7 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 const pageCache = new LRUCache({ max: 500 })
 
-function renderPost(app, req, res) {
+function renderPost (app, req, res) {
   if (dev) {
     handle(req, res)
     return
@@ -26,19 +26,19 @@ function renderPost(app, req, res) {
     .then(html => {
       // Let's cache this page
       // eslint-disable-next-line no-console
-      console.log(`CACHE MISS: ${req.path}`);
-      pageCache.set(req.path, html);
+      console.log(`CACHE MISS: ${req.path}`)
+      pageCache.set(req.path, html)
 
       // send it
-      res.send(html);
+      res.send(html)
     })
     .catch(err => {
       console.error(err.stack)
-      app.renderError(err, req, res, req.path, req.query);
-    });
+      app.renderError(err, req, res, req.path, req.query)
+    })
 }
 
-async function run() {
+async function run () {
   let db
   if (mongoUrl) {
     db = await MongoClient.connect(mongoUrl)

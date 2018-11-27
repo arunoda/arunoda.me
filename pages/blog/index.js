@@ -2,9 +2,9 @@ import BlogLayout from '../../components/BlogLayout'
 import posts from '../../posts'
 
 const PostLink = ({ href, title, date }) => (
-  <div id="post-link">
-    <div className="date-mobile">{date}</div>
-    <span className="date-desktop">{date}</span>
+  <div id='post-link'>
+    <div className='date-mobile'>{date}</div>
+    <span className='date-desktop'>{date}</span>
     <a href={href}>{title}</a>
     <style jsx>{`
       #post-link {
@@ -54,7 +54,7 @@ const PostLink = ({ href, title, date }) => (
 
 export default () => (
   <BlogLayout>
-    <div id="post-list">
+    <div id='post-list'>
       {posts.map(post => (
         <PostLink
           key={post.slug}

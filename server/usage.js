@@ -1,4 +1,4 @@
-exports.trackPost = function(db, url, counter) {
+exports.trackPost = function (db, url, counter) {
   const now = Date.now()
   // Rounded to the nearest hour
   const timestamp = new Date(now - (now % (1000 * 60 * 60)))

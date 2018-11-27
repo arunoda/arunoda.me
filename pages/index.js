@@ -25,15 +25,15 @@ const MainLink = ({ href, as, children }) => (
 )
 
 export default () => (
-  <div className="wrapper">
-    <div className="page">
-      <div id="intro">
+  <div className='wrapper'>
+    <div className='page'>
+      <div id='intro'>
         <h1>Arunoda Susiripala</h1>
       </div>
-      <div id="ct2">
-        <MainLink href="https://twitter.com/arunoda">Twitter</MainLink>
-        <MainLink href="/blog">Blog</MainLink>
-        <MainLink href="https://github.com/arunoda">GitHub</MainLink>
+      <div id='ct2'>
+        <MainLink href='https://twitter.com/arunoda'>Twitter</MainLink>
+        <MainLink href='/blog'>Blog</MainLink>
+        <MainLink href='https://github.com/arunoda'>GitHub</MainLink>
       </div>
     </div>
     <style jsx>{`

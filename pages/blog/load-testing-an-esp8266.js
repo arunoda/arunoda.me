@@ -2,7 +2,6 @@ import markdown from 'markdown-in-js'
 import WithDoc, { components } from '~/lib/with-doc'
 
 import Image from '~/components/Image'
-import Code from '~/components/Code'
 
 export default WithDoc({
   title: 'Load Testing an ESP8266',
@@ -39,7 +38,7 @@ Even though we are downloading the file via the local network, I didn't want to 
 I uploaded this code to my ESP8266 via the Arduino IDE.
 My ESP8226 is a generic [ESP-12F](https://www.instructables.com/id/Getting-Started-with-the-ESP8266-ESP-12/) chip with a custom made dev board.
 
-${<Image src="https://user-images.githubusercontent.com/50838/32901740-8f793fba-cb16-11e7-8ec6-1dc1f85bfb02.jpeg"/>}
+${<Image src='https://user-images.githubusercontent.com/50838/32901740-8f793fba-cb16-11e7-8ec6-1dc1f85bfb02.jpeg' />}
 
 When uploading the code, I've set the clock speed to 160 MHz to get the maximum output from the ESP8266.
 
@@ -56,13 +55,13 @@ NOTE: All of the download speed numbers are in **Killo Bytes Per Seconds (kBps)*
 
 First of all, let me show you the time series chart of the download speed data I [collected](https://gist.github.com/arunoda/adad7657d7e89b512212df793526d237).
 
-${<Image src="https://user-images.githubusercontent.com/50838/32901946-2527f182-cb17-11e7-8870-8a714ea9ce85.png" />}
+${<Image src='https://user-images.githubusercontent.com/50838/32901946-2527f182-cb17-11e7-8870-8a714ea9ce85.png' />}
 
 Just by looking at it, you can see that it was performing really well. It has some drops and that could be a slowdown in the ESP8266 or something with my WiFi setup (which is not very reliable).
 
 This is the histogram of the whole data points:
 
-${<Image src="https://user-images.githubusercontent.com/50838/32901959-2f83b472-cb17-11e7-9bf2-4a1c21320159.png"/>}
+${<Image src='https://user-images.githubusercontent.com/50838/32901959-2f83b472-cb17-11e7-9bf2-4a1c21320159.png' />}
 
 Here's a set of summary statistics:
 

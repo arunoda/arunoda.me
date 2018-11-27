@@ -1,3 +1,4 @@
+/* global alert */
 import React from 'react'
 
 const Button = ({ onClick, children }) => (
@@ -61,18 +62,18 @@ export default class Question extends React.Component {
   renderQuestions () {
     const { answers } = this.props
     return (
-      <div className="answer-box">
-        <div className="answers">
+      <div className='answer-box'>
+        <div className='answers'>
           {answers.map((answer) => (
-            <div className="answer" key={answer}>
+            <div className='answer' key={answer}>
               <input
-                type="radio"
-                name="answer"
+                type='radio'
+                name='answer'
                 value={answer}
                 onChange={() => this.setAnswer(answer)}
               />
-              <div className="text">{answer}</div>
-              <div className="clearfix" />
+              <div className='text'>{answer}</div>
+              <div className='clearfix' />
             </div>
           ))}
         </div>
@@ -111,20 +112,20 @@ export default class Question extends React.Component {
   renderResult () {
     const { correctAnswer } = this.props
     const { givenAnswer } = this.state
-    const isCorrect = correctAnswer === givenAnswer 
+    const isCorrect = correctAnswer === givenAnswer
 
     return (
-      <div className="result-box">
-        { isCorrect? (
-          <div className="correct">Yes. You are correct :)</div>
+      <div className='result-box'>
+        { isCorrect ? (
+          <div className='correct'>Yes. You are correct :)</div>
         ) : (
-          <div className="wrong">Unfortunately, you missed this :(</div>
+          <div className='wrong'>Unfortunately, you missed this :(</div>
         )}
-        <div className="correct-answer">
+        <div className='correct-answer'>
           <h4>Correct Answer</h4>
           <div>{correctAnswer}</div>
         </div>
-        <div className="reset" onClick={() => this.reset()}>( Click here to reset )</div>
+        <div className='reset' onClick={() => this.reset()}>( Click here to reset )</div>
         <style jsx>{`
           .result-box {
             margin: 15px 0 0 0;
@@ -152,12 +153,12 @@ export default class Question extends React.Component {
 
   renderDetails () {
     const { givenAnswer } = this.state
-    return givenAnswer? this.renderResult() : this.renderQuestions()
+    return givenAnswer ? this.renderResult() : this.renderQuestions()
   }
 
   showClickToAnswer () {
     return (
-      <div onClick={() => this.showAll() }>
+      <div onClick={() => this.showAll()}>
         ( Click here to answer )
         <style jsx>{`
           div {
@@ -174,9 +175,9 @@ export default class Question extends React.Component {
     const { showAll } = this.state
 
     return (
-      <div className="question-box">
-        <div className="question">Q: {question}</div>
-        { showAll? this.renderDetails() : this.showClickToAnswer() }
+      <div className='question-box'>
+        <div className='question'>Q: {question}</div>
+        { showAll ? this.renderDetails() : this.showClickToAnswer() }
         <style jsx>{`
           .question-box {
             background-color: #3f51b5;

@@ -7,7 +7,8 @@
     "dev": "node server",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server",
-    "analyze": "cross-env ANALYZE=1 next build"
+    "analyze": "cross-env ANALYZE=1 next build",
+    "lint": "standard --parser babel-eslint"
   },
   "repository": {
     "type": "git",
@@ -32,5 +33,9 @@
     "react-dom": "16.x.x",
     "react-syntax-highlighter": "^5.6.2",
     "webpack-bundle-analyzer": "^2.8.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "standard": "^12.0.1"
   }
 }

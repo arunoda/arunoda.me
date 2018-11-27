@@ -4,7 +4,6 @@ import WithDoc, { components } from '~/lib/with-doc'
 import Image from '~/components/Image'
 import Code from '~/components/Code'
 import Note from '~/components/Note'
-import Youtube from '~/components/Youtube'
 
 const noteOnJupyter = markdown(components)`
 In the rest of this post, I'm using some fastai-related code. If you need to run them, you will need a machine with a Nvidia GPU.
@@ -28,9 +27,9 @@ export default WithDoc({
     facebook: 'https://www.facebook.com/arunoda.susiripala/posts/10157080335103606'
   }
 })(markdown(components)`
-This is my experience on using [fastai](http://www.fast.ai/) to create a deep learning classifier which could differentiate between ten different vehicle models with the accuracy of 98%. 
+This is my experience on using [fastai](http://www.fast.ai/) to create a deep learning classifier which could differentiate between ten different vehicle models with the accuracy of 98%.
 
-This is not something groundbreaking. The interesting thing is that I just did it with a little amount of code and using some common sense. 
+This is not something groundbreaking. The interesting thing is that I just did it with a little amount of code and using some common sense.
 
 A few years ago, this could be a Ph.D. research.
 
@@ -38,8 +37,8 @@ A few years ago, this could be a Ph.D. research.
 
 First of all, I needed some images. Google was my friend. I used [this tool](https://github.com/hardikvasa/google-images-download) to download a set of images from Google. Here's the complete command I used:
 
-${<Code language="bash">{`
-googleimagesdownload --limit 20 --keywords "Honda Fit, Jeep Wrangler" --format jpg 
+${<Code language='bash'>{`
+googleimagesdownload --limit 20 --keywords "Honda Fit, Jeep Wrangler" --format jpg
 `}</Code>}
 
 With this command, it downloads 20 images for both “Honda Fit” and “Jeep Wrangler.” Just like that, you can list as many keywords as you want.
@@ -48,7 +47,7 @@ With this command, it downloads 20 images for both “Honda Fit” and “Jeep W
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/47656602-667f9180-dbb5-11e8-88ec-ad741b8ce6ea.png"
+    src='https://user-images.githubusercontent.com/50838/47656602-667f9180-dbb5-11e8-88ec-ad741b8ce6ea.png'
   />
 }
 
@@ -56,7 +55,7 @@ Then, I browsed through the downloaded images and removed images which were not 
 
 For that, I used a simple bash script, which utilizes [ImageMagick](https://imagemagick.org/script/download.php).
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 #!/bin/bash
 SRC="downloads"
 DEST="images"
@@ -65,21 +64,21 @@ rm -rf $DEST
 mkdir -p $DEST
 
 cd $SRC
-find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224^ ../$DEST/{}.jpg \; 
+find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224^ ../$DEST/{}.jpg ;
 `}</Code>}
 
 > Actually, you really don't need to resize these images. But my internet connection was very slow. So resizing helped me to upload them quickly.
 
 Then I created a tarball with these images:
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 tar cvzf fastai-vehicles.tgz images
 `}</Code>}
 
-I uploaded the resulting tarball into a GitHub [release](https://github.com/arunoda/fastai-courses/releases/tag/fastai-vehicles-dataset), so I could easily use them in my notebooks. 
+I uploaded the resulting tarball into a GitHub [release](https://github.com/arunoda/fastai-courses/releases/tag/fastai-vehicles-dataset), so I could easily use them in my notebooks.
 
 ${
-  <Note>{noteOnJupyter}</Note>  
+  <Note>{noteOnJupyter}</Note>
 }
 
 ## The Notebook
@@ -99,14 +98,14 @@ So, instead of building my classifier from scratch, I can build it on top of res
 
 In order to do that, I run the following code:
 
-${<Code language="python">{`
+${<Code language='python'>{`
 learn1 = ConvLearner(data, models.resnet34, metrics=error_rate)
 learn1.fit_one_cycle(3)
 `}</Code>}
 
 Here's the result of this:
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 Total time: 00:15
 epoch  train_loss  valid_loss  error_rate
 1      2.187938    0.983076    0.296154    (00:05)
@@ -122,23 +121,23 @@ An **error rate of 20%** is not bad to start with, but we can do better.
 
 ## Unfreezing
 
-This pre-trained model "resnet34" has 34 layers. But we only trained it with the last layer. With unfreezing, we can train our images with all the layers. Hopefully, we can get a better result. 
+This pre-trained model "resnet34" has 34 layers. But we only trained it with the last layer. With unfreezing, we can train our images with all the layers. Hopefully, we can get a better result.
 
 It doesn't always give us a better result, but we can always try.
 
 Before that, we need to find the learning rate for our model. For that, run the following command:
 
-${<Code language="python">{`
+${<Code language='python'>{`
 learn1.lr_find();
 learn1.recorder.plot();
 `}</Code>}
 
-It will give us the following graph. 
+It will give us the following graph.
 
 ${
   <Image
-    width="300px"
-    src="https://user-images.githubusercontent.com/50838/47656231-b3af3380-dbb4-11e8-8937-24888ec4dcb9.png"
+    width='300px'
+    src='https://user-images.githubusercontent.com/50838/47656231-b3af3380-dbb4-11e8-8937-24888ec4dcb9.png'
   />
 }
 
@@ -146,10 +145,10 @@ Learning rate is a constant which affects the performance of the model. If it's 
 
 By default, Fast.ai uses a good default learning rate. But with the unfreezed model, it's better to specify a range of learning rates manually.
 
-For that, we select a range which has a downward slope from the above graph. In this case, it's 10^-4 to 10^-2. 
+For that, we select a range which has a downward slope from the above graph. In this case, it's 10^-4 to 10^-2.
 Now we can train again:
 
-${<Code language="python">{`
+${<Code language='python'>{`
 learn1.unfreeze()
 learn1.fit_one_cycle(3, slice(1e-4, 1e-2))
 `}</Code>}
@@ -160,7 +159,7 @@ This gave us an **error rate of 11%**. So, this is a good improvement from the 2
 
 This is also a pre-trained model like resnet34 but with 50 layers. Hopefully, this would give us better results.
 
-${<Code language="python">{`
+${<Code language='python'>{`
 learn2 = ConvLearner(data, models.resnet50, metrics=error_rate)
 learn2.fit_one_cycle(4)
 `}</Code>}
@@ -176,7 +175,7 @@ So, fastai automatically crops images like this:
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/47656228-b3169d00-dbb4-11e8-8960-0a05672cd58a.png"
+    src='https://user-images.githubusercontent.com/50838/47656228-b3169d00-dbb4-11e8-8960-0a05672cd58a.png'
   />
 }
 
@@ -185,13 +184,13 @@ So, I resized these images as a square, like below:
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/47656233-b3af3380-dbb4-11e8-8324-695bb63881c7.png"
+    src='https://user-images.githubusercontent.com/50838/47656233-b3af3380-dbb4-11e8-8324-695bb63881c7.png'
   />
 }
 
 To resize, I use the following code:
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 #!/bin/bash
 SRC="vehicles-fastai-original"
 DEST="images"
@@ -200,7 +199,7 @@ rm -rf $DEST
 mkdir -p $DEST
 
 cd $SRC
-find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224 -gravity center -extent 224x224 ../$DEST/{}.jpg \;
+find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224 -gravity center -extent 224x224 ../$DEST/{}.jpg ;
 `}</Code>}
 
 I ran this dataset against both resnet34 and resnet50. The result is worse than before.
@@ -209,19 +208,19 @@ It could be due to the lack of details of the image. Even though my classifier c
 
 ## With Multiple Crops
 
-I certainly believed there was something wrong with my dataset. Instead of making a square image as before, I asked myself: what if I could create multiple crops which covered the whole rectangle. 
+I certainly believed there was something wrong with my dataset. Instead of making a square image as before, I asked myself: what if I could create multiple crops which covered the whole rectangle.
 
 Have a look at the example below:
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/47656230-b3169d00-dbb4-11e8-8468-1e09cea2a32c.png"
+    src='https://user-images.githubusercontent.com/50838/47656230-b3169d00-dbb4-11e8-8468-1e09cea2a32c.png'
   />
 }
 
 With that, I could feed more details into my model with the same set of images I downloaded. With that approach, I created a new dataset with the following resize script:
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 #!/bin/bash
 SRC="vehicles-fastai-original"
 DEST="images"
@@ -230,9 +229,9 @@ rm -rf $DEST
 mkdir -p $DEST
 
 cd $SRC
-find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224^ -gravity center -extent 224x224 ../$DEST/{}-center.jpg \;
-find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224^ -gravity east -extent 224x224 ../$DEST/{}-east.jpg \;
-find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224^ -gravity west -extent 224x224 ../$DEST/{}-west.jpg \;
+find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224^ -gravity center -extent 224x224 ../$DEST/{}-center.jpg ;
+find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224^ -gravity east -extent 224x224 ../$DEST/{}-east.jpg ;
+find . -maxdepth 1 -mindepth 1 -type d -exec convert {}/*.jpg -resize 224x224^ -gravity west -extent 224x224 ../$DEST/{}-west.jpg ;
 `}</Code>}
 
 
@@ -244,8 +243,8 @@ Here's the set of images our classifier predicted incorrectly:
 
 ${
   <Image
-    width="570px"
-    src="https://user-images.githubusercontent.com/50838/47661273-b9117b80-dbbe-11e8-9e5a-e68ffd0dc3ae.png"
+    width='570px'
+    src='https://user-images.githubusercontent.com/50838/47661273-b9117b80-dbbe-11e8-9e5a-e68ffd0dc3ae.png'
   />
 }
 

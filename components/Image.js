@@ -1,10 +1,10 @@
-function withHref(el, href) {
+function withHref (el, href) {
   if (!href) {
-    return el;
+    return el
   }
 
   return (
-    <a className="href" href={href} target="_blank">
+    <a className='href' href={href} target='_blank'>
       {el}
       <style jsx>{`
         a.href{
@@ -15,8 +15,8 @@ function withHref(el, href) {
   )
 }
 
-export default ({ src, width="100%", height, alt, title, onClick, href }) => (
-  <div className="container">
+export default ({ src, width = '100%', height, alt, title, onClick, href }) => (
+  <div className='container'>
     {withHref(<img
       src={src}
       width={width}
@@ -24,8 +24,8 @@ export default ({ src, width="100%", height, alt, title, onClick, href }) => (
       alt={alt}
       onClick={onClick}
     />, href)}
-    {title? (
-      <div className="title">
+    {title ? (
+      <div className='title'>
         { title }
       </div>
     ) : null}

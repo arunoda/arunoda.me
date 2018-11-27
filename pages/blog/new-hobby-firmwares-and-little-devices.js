@@ -33,9 +33,9 @@ That's not worth my time. (And I don't have money to risk.)
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/31915499-4f8950be-b86c-11e7-86aa-760dcd9a83a8.jpeg"
+    src='https://user-images.githubusercontent.com/50838/31915499-4f8950be-b86c-11e7-86aa-760dcd9a83a8.jpeg'
     width={650}
-    title="One of my WiFi device experiment."
+    title='One of my WiFi device experiment.'
   />
 }
 
@@ -58,7 +58,7 @@ You can buy a Philips Hue WiFi bulb for less than [$15 ](http://www2.meethue.com
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/31915712-1b3ae510-b86d-11e7-9351-a4eb070a51a6.jpg"
+    src='https://user-images.githubusercontent.com/50838/31915712-1b3ae510-b86d-11e7-9351-a4eb070a51a6.jpg'
     width={650}
     title="My Arduino kit. It's a locally assembled kit."
   />
@@ -68,9 +68,9 @@ I also found a very nice website: [Tinkercad Circuits](https://www.tinkercad.com
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/31915786-6d79e9fc-b86d-11e7-9b75-c62791f302ef.png"
+    src='https://user-images.githubusercontent.com/50838/31915786-6d79e9fc-b86d-11e7-9b75-c62791f302ef.png'
     width={650}
-    title="A simple capacitor experiment in Tinkercad."
+    title='A simple capacitor experiment in Tinkercad.'
   />
 }
 
@@ -97,9 +97,9 @@ If you are not much into this kind of stuff, I am pretty sure you haven't heard 
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/31915956-272950c2-b86e-11e7-9a4e-0eba9e6e22f1.jpg"
+    src='https://user-images.githubusercontent.com/50838/31915956-272950c2-b86e-11e7-9a4e-0eba9e6e22f1.jpg'
     width={650}
-    title="ESP8266-01: See how small it is."
+    title='ESP8266-01: See how small it is.'
   />
 }
 
@@ -129,9 +129,9 @@ So, I experimented (and shopped) a little bit and came up with this setup.
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/31915499-4f8950be-b86c-11e7-86aa-760dcd9a83a8.jpeg"
+    src='https://user-images.githubusercontent.com/50838/31915499-4f8950be-b86c-11e7-86aa-760dcd9a83a8.jpeg'
     width={650}
-    title="My initial ESP8266 setup."
+    title='My initial ESP8266 setup.'
   />
 }
 
@@ -147,9 +147,9 @@ Here it is:
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/31916207-2e5c7382-b86f-11e7-859e-74405c6508f5.jpeg"
+    src='https://user-images.githubusercontent.com/50838/31916207-2e5c7382-b86f-11e7-859e-74405c6508f5.jpeg'
     width={400}
-    title="My ESP8266 dev board."
+    title='My ESP8266 dev board.'
   />
 }
 
@@ -161,9 +161,9 @@ This is a working setup with my ESP8266 Dev Board:
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/31916367-01bc8cb2-b870-11e7-9595-a2b298085650.jpeg"
+    src='https://user-images.githubusercontent.com/50838/31916367-01bc8cb2-b870-11e7-9595-a2b298085650.jpeg'
     width={650}
-    title="My ESP8266 dev board in action."
+    title='My ESP8266 dev board in action.'
   />
 }
 
@@ -185,7 +185,7 @@ Frankly, setting that up in ESP8266 was very simple.
 Here's the code for everything that I have described:
 
 ${
-  <Code language="c">{`
+  <Code language='c'>{`
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>

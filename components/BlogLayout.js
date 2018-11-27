@@ -27,8 +27,8 @@ const MyLink = ({ href, as, children }) => (
 export default ({ children }) => (
   <div>
     <header>
-      <MyLink href="/">Home</MyLink>
-      <MyLink href="/blog">Blog</MyLink>
+      <MyLink href='/'>Home</MyLink>
+      <MyLink href='/blog'>Blog</MyLink>
     </header>
     <article>
       { children }

@@ -1,4 +1,4 @@
-const Note = ({children}) => (
+const Note = ({ children }) => (
   <div>
     {children}
     <style jsx>{`
@@ -19,4 +19,4 @@ const Note = ({children}) => (
   </div>
 )
 
-export default Note;
+export default Note

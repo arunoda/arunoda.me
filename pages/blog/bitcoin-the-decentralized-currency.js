@@ -26,9 +26,9 @@ Bitcoin's marketcap is less than USD 100 billion; if we compare that to the over
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/28466565-8086049e-6e4a-11e7-9f5f-b7620a7729eb.jpg"
+    src='https://user-images.githubusercontent.com/50838/28466565-8086049e-6e4a-11e7-9f5f-b7620a7729eb.jpg'
     width={650}
-    title="Source: https://howmuch.net/articles/worlds-money-in-perspective"
+    title='Source: https://howmuch.net/articles/worlds-money-in-perspective'
   />
 }
 
@@ -60,15 +60,15 @@ While these Bitcoin transactions are public information, it is hard to reveal th
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/28486111-4f58be50-6e9c-11e7-8761-92f1c09cae33.png"
+    src='https://user-images.githubusercontent.com/50838/28486111-4f58be50-6e9c-11e7-8761-92f1c09cae33.png'
     width={650}
-    title="This is a public Bitcoin transaction (https://goo.gl/Xyy2GV)."
+    title='This is a public Bitcoin transaction (https://goo.gl/Xyy2GV).'
   />
 }
 
 ${
   <Question
-    question="All of my Bitcoin transactions are publicly available. Does that mean that my friends can see how I spend my Bitcoins?"
+    question='All of my Bitcoin transactions are publicly available. Does that mean that my friends can see how I spend my Bitcoins?'
     answers={
       [
         'Yes. That\'s the problem with using Bitcoins.',
@@ -77,7 +77,7 @@ ${
         'No. I keep my Bitcoin address safe and no one can see it.'
       ]
     }
-    correctAnswer="No, not if I use different addresses for each transaction."
+    correctAnswer='No, not if I use different addresses for each transaction.'
   />
 }
 
@@ -113,7 +113,7 @@ This makes mining Bitcoins increasingly expensive.
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/28485811-c38210ea-6e99-11e7-9c98-1198ab120cdf.jpg"
+    src='https://user-images.githubusercontent.com/50838/28485811-c38210ea-6e99-11e7-9c98-1198ab120cdf.jpg'
     width={650}
     title="Currently, bitcoin mining is done using a special hardware device known as ASIC. That's the most efficient solution right now."
   />
@@ -141,7 +141,7 @@ If the pool wins for a given ten-minute window, the reward of 12.5 Bitcoins will
 
 ${
   <Question
-    question="Mining Bitcoin is expensive, but why do people still mine it?"
+    question='Mining Bitcoin is expensive, but why do people still mine it?'
     answers={
       [
         'They want to help the Bitcoin network.',
@@ -168,9 +168,9 @@ You could buy a Bitcoin for a few dollars in 2012 when the demand for Bitcoins w
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/28485674-b9e27fbc-6e98-11e7-9669-fb56959ae885.png"
+    src='https://user-images.githubusercontent.com/50838/28485674-b9e27fbc-6e98-11e7-9669-fb56959ae885.png'
     width={650}
-    title="This is how you can buy bitcoins using the cex.io exchange"
+    title='This is how you can buy bitcoins using the cex.io exchange'
   />
 }
 
@@ -188,9 +188,9 @@ These days, you will use a different address for each transaction: this is to in
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/28485999-6bfaf6fa-6e9b-11e7-91e8-f41fbf25922e.png"
+    src='https://user-images.githubusercontent.com/50838/28485999-6bfaf6fa-6e9b-11e7-91e8-f41fbf25922e.png'
     width={650}
-    title="This is a popular online wallet hosted at https://blockchain.info. (The numbers in the image are edited)"
+    title='This is a popular online wallet hosted at https://blockchain.info. (The numbers in the image are edited)'
   />
 }
 
@@ -231,7 +231,7 @@ ${
         'I can ask one of my friends to give me some Bitcoins.'
       ]
     }
-    correctAnswer="When creating a Bitcoin address, I can add some funds by using a credit card."
+    correctAnswer='When creating a Bitcoin address, I can add some funds by using a credit card.'
   />
 }
 
@@ -253,9 +253,9 @@ As mining becomes more and more centralized, even though many participate in min
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/28486192-7ed7cb66-6e9d-11e7-8a84-c97e090aab5a.png"
+    src='https://user-images.githubusercontent.com/50838/28486192-7ed7cb66-6e9d-11e7-8a84-c97e090aab5a.png'
     width={650}
-    title="This is the distribution of the bitcoin mining network. Only a few mining pools control it."
+    title='This is the distribution of the bitcoin mining network. Only a few mining pools control it.'
   />
 }
 
@@ -275,16 +275,16 @@ However, you won't be validating transactions — that happens in a remote node 
 
 ${
   <Question
-    question="Is Bitcoin massively distributed?"
+    question='Is Bitcoin massively distributed?'
     answers={
       [
         'Yes. There\'s a huge amount of people doing Bitcoin transactions.',
         'Yes. It has been used all over the world.',
         'No. The majority of the network is mainly a few mining pools, exchanges, and wallet services.',
-        'No. Only a few miners control it.',
+        'No. Only a few miners control it.'
       ]
     }
-    correctAnswer="No. The majority of the network is mainly a few mining pools, exchanges, and wallet services."
+    correctAnswer='No. The majority of the network is mainly a few mining pools, exchanges, and wallet services.'
   />
 }
 
@@ -337,15 +337,15 @@ After miners began to show an interest in adopting SegWit, Bitcoin price recover
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/28486354-cbd0775a-6e9e-11e7-84be-714fdba9853e.png"
+    src='https://user-images.githubusercontent.com/50838/28486354-cbd0775a-6e9e-11e7-84be-714fdba9853e.png'
     width={650}
-    title="This is the above mentioned price drop."
+    title='This is the above mentioned price drop.'
   />
 }
 
 ${
   <Question
-    question="Can end users (who do transactions) control or influence the Bitcoin network?"
+    question='Can end users (who do transactions) control or influence the Bitcoin network?'
     answers={
       [
         'No. It\'s all up to the miners.',

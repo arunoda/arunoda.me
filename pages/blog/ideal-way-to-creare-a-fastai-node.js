@@ -43,8 +43,8 @@ export default WithDoc({
 })(markdown(components)`
 ${
   <Youtube
-    overlay="https://user-images.githubusercontent.com/50838/47286724-8ccd8c00-d60d-11e8-946d-f7d40366460a.png"
-    src="https://www.youtube.com/embed/quMRkV-zGq0"
+    overlay='https://user-images.githubusercontent.com/50838/47286724-8ccd8c00-d60d-11e8-946d-f7d40366460a.png'
+    src='https://www.youtube.com/embed/quMRkV-zGq0'
     height={360}
   />
 }
@@ -71,8 +71,8 @@ To use this, you need to create a [Google Cloud](https://cloud.google.com/comput
 
 ${
   <Image
-    title="Click the console icon marked with the red square to start the shell"
-    src="https://user-images.githubusercontent.com/50838/47280304-53882280-d5f3-11e8-92d0-c0625b728967.png"
+    title='Click the console icon marked with the red square to start the shell'
+    src='https://user-images.githubusercontent.com/50838/47280304-53882280-d5f3-11e8-92d0-c0625b728967.png'
   />
 }
 
@@ -85,13 +85,13 @@ We need to create a network for our nodes so we don't interfere with other nodes
 
 First, let's create the network itself:
 
-${<Code wrap language="bash">{`
+${<Code wrap language='bash'>{`
 gcloud compute --project=$DEVSHELL_PROJECT_ID networks create fastai --subnet-mode=auto
 `}</Code>}
 
 Then we need to add a firewall rule to open ports:
 
-${<Code wrap language="bash">{`
+${<Code wrap language='bash'>{`
 gcloud compute --project=$DEVSHELL_PROJECT_ID firewall-rules create allow-all --direction=INGRESS --priority=1000 --network=fastai --action=ALLOW --rules=all --source-ranges=0.0.0.0/0
 `}</Code>}
 
@@ -99,19 +99,19 @@ gcloud compute --project=$DEVSHELL_PROJECT_ID firewall-rules create allow-all --
 
 Now we are trying to create our boot disk. For that, we need to create a small temporary VM. For that, run the following command:
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai-boot --zone=us-west1-b --machine-type=n1-standard-1 --subnet=fastai --network-tier=PREMIUM --maintenance-policy=TERMINATE --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=type=nvidia-tesla-k80,count=1 --image=ubuntu-1804-bionic-v20181029 --image-project=ubuntu-os-cloud --boot-disk-size=50GB --no-boot-disk-auto-delete --boot-disk-type=pd-ssd --boot-disk-device-name=fastai-boot
 `}</Code>}
 
 SSH into that box by typing the following command:
 
-${<Code wrap language="bash">{`
+${<Code wrap language='bash'>{`
 gcloud compute --project $DEVSHELL_PROJECT_ID ssh --zone "us-west1-b" "fastai-boot"
 `}</Code>}
 
 Now run the following commands to set up the disk:
 
-${<Code wrap language="bash">{`
+${<Code wrap language='bash'>{`
 curl https://raw.githubusercontent.com/arunoda/create-fastai-node/master/setup-gce.sh | bash
 `}</Code>}
 
@@ -119,7 +119,7 @@ This will take around 30 minutes to complete. After that, it will reboot the mac
 Once it's rebooted, SSH again with the following command:
 
 
-${<Code wrap language="bash">{`
+${<Code wrap language='bash'>{`
 gcloud compute --project $DEVSHELL_PROJECT_ID ssh --zone "us-west1-b" "fastai-boot"
 `}</Code>}
 
@@ -127,7 +127,7 @@ gcloud compute --project $DEVSHELL_PROJECT_ID ssh --zone "us-west1-b" "fastai-bo
 
 Now we need to set a password for our jupyter setup. To do that, run the following commands: 
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 source activate fastai-v1
 jupyter notebook --generate-config
 jupyter notebook password
@@ -135,14 +135,14 @@ jupyter notebook password
 
 Now close the SSH session by typing:
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 exit
 `}</Code>}
 
 
 We don't need our temporary VM anymore. Let’s delete it:
 
-${<Code wrap language="bash">{`
+${<Code wrap language='bash'>{`
 gcloud compute instances delete fastai-boot --zone=us-west1-b --project=$DEVSHELL_PROJECT_ID
 `}</Code>}
 
@@ -154,7 +154,7 @@ Now everything is ready. We can create a node with one of the following types. S
 
 This is a setup with Tesla p100 GPU, 8 vCPUs and 30GB RAM.
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai --zone=us-west1-b --machine-type=n1-standard-8 --subnet=fastai --network-tier=PREMIUM --no-restart-on-failure --maintenance-policy=TERMINATE --preemptible --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=type=nvidia-tesla-p100,count=1 --disk=name=fastai-boot,device-name=fastai-boot,mode=rw,boot=yes
 `}</Code>}
 
@@ -162,7 +162,7 @@ gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai --zon
 
 This is a setup with Tesla k80 GPU, 4 vCPUs and 15GB RAM.
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai --zone=us-west1-b --machine-type=n1-standard-4 --subnet=fastai --network-tier=PREMIUM --no-restart-on-failure --maintenance-policy=TERMINATE --preemptible --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=type=nvidia-tesla-k80,count=1 --disk=name=fastai-boot,device-name=fastai-boot,mode=rw,boot=yes
 `}</Code>}
 
@@ -170,19 +170,19 @@ gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai --zon
 
 This doesn't have a GPU, but it is great for management tasks like downloading data and creating notes.
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 gcloud beta compute --project=$DEVSHELL_PROJECT_ID instances create fastai --zone=us-west1-b --machine-type=n1-standard-1 --subnet=fastai --network-tier=PREMIUM --no-restart-on-failure --maintenance-policy=TERMINATE --preemptible --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --disk=name=fastai-boot,device-name=fastai-boot,mode=rw,boot=yes
 `}</Code>}
 
 ${
-  <Note>{noteOnJupyterAccess}</Note>  
+  <Note>{noteOnJupyterAccess}</Note>
 }
 
 ### Deleting The Node
 
 After you are done with your notebooks, simply delete the VM by typing:
 
-${<Code language="bash">{`
+${<Code language='bash'>{`
 gcloud compute instances delete fastai --project=$DEVSHELL_PROJECT_ID --zone=us-west1-b
 `}</Code>}
 
@@ -205,4 +205,3 @@ Okay, now that we've covered our fastai node and have spent plenty of time worki
 
 Now it's time to dive into the world of [deep learning](https://course.fast.ai/).
 `)
-

@@ -2,16 +2,14 @@ import markdown from 'markdown-in-js'
 import WithDoc, { components } from '~/lib/with-doc'
 
 import Image from '~/components/Image'
-import Code from '~/components/Code'
-import Note from '~/components/Note'
 
 const fastaiShellInfo = markdown(components)`
 This is [fastai-shell](https://github.com/arunoda/fastai-shell). It will allow you to create a GPU based instance starting from just $0.2/hour.
-`;
+`
 
 export default WithDoc({
   title: 'Top 3 Myths About Deep Learning',
-  description:'',
+  description: '',
   image: '',
   slug: 'top-3-myths-about-deep-learning',
   date: '27 November, 2018',
@@ -75,11 +73,13 @@ I already mentioned that we use GPUs for deep learning. We could use traditional
 
 However, we don't need to buy these GPUs in order to work with deep learning. We can use cloud GPUs from cloud service providers like AWS or Google. For the previously mentioned v100 GPU, you would pay around $2.50/hour, and there are ways to [cut down](https://github.com/arunoda/fastai-shell) this cost to something around $0.80/hour.
 
-${<Image
-  src="https://user-images.githubusercontent.com/50838/48072112-d3240d00-e201-11e8-860d-22bc5a9697ee.png"
-  title={fastaiShellInfo}
-  href="https://github.com/arunoda/fastai-shell"
-/>}
+${
+  <Image
+    src='https://user-images.githubusercontent.com/50838/48072112-d3240d00-e201-11e8-860d-22bc5a9697ee.png'
+    title={fastaiShellInfo}
+    href='https://github.com/arunoda/fastai-shell'
+  />
+}
 
 If you are just getting started, you can use FREE trial credits from these cloud vendors, or use free services like [Google Colab](https://colab.research.google.com/).
 
@@ -106,5 +106,3 @@ I am in no way an expert in deep learning or data science. This is just what I h
 If you are still struggling on the deep learning track, try [fast.ai](https://github.com/arunoda/fastai-shell). You won't regret it.
 
 `)
-
-

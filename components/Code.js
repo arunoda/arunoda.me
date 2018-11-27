@@ -2,19 +2,20 @@ import dynamic from 'next/dynamic'
 import theme from 'react-syntax-highlighter/dist/styles/github-gist'
 
 // We use dynamic import here to make sure we don't copy this module across pages.
-const SyntaxHighlighter = dynamic(import('react-syntax-highlighter'), {
-  loading: () => (<div></div>)
+// eslint-disable-next-line
+const SyntaxHighlighter = dynamic(import('react-syntax-highlighter'), { // eslint-disable-line no-use-before-define
+  loading: () => (<div />)
 })
 
 const customPreStyle = {
   padding: 15,
-  fontSize: "90%",
+  fontSize: '90%',
   borderRadius: 3,
-  backgroundColor: "#FAFAFA"
+  backgroundColor: '#FAFAFA'
 }
 
 export default ({ language, wrap, children }) => (
-  <div className="code">
+  <div className='code'>
     <SyntaxHighlighter
       language={language}
       style={theme}
@@ -28,7 +29,7 @@ export default ({ language, wrap, children }) => (
       }
 
       .code :global(pre) {
-        ${wrap? 'white-space: normal' : ''};
+        ${wrap ? 'white-space: normal' : ''};
       }
     `}</style>
   </div>

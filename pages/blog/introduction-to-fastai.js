@@ -25,7 +25,7 @@ export default WithDoc({
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/47049269-6bf2da00-d1ba-11e8-9a7a-a13bd789f874.png"
+    src='https://user-images.githubusercontent.com/50838/47049269-6bf2da00-d1ba-11e8-9a7a-a13bd789f874.png'
   />
 }
 
@@ -39,7 +39,7 @@ Then something called [fast.ai](http://www.fast.ai/) changed my perception of AI
 
 > This is a beginner's introduction to fast.ai. If you are an expert in this field, I think you can ignore the rest of this blog post. :D
 
-## What is fast.ai? 
+## What is fast.ai?
 
 If you visit the [fast.ai](http://www.fast.ai/) website, you'd think it's just another blog. If you hopover to their [MOOC](http://course.fast.ai/), you'd think it just looks like a set of videos recorded in some university classroom. If you check [fast.ai'](https://github.com/fastai/fastai)s GitHub repository, you'd definitely ask, "What the hell is this?"
 
@@ -47,15 +47,16 @@ Yet despite what it looks like, what's behind fast.ai is very interesting.
 
 It is a research lab started by [two people](http://www.fast.ai/about/), one a former President of Kaggle and the other a well known expert in AI. Their mission is to make AI accessible for all.
 
-${<Image 
-    src="https://user-images.githubusercontent.com/50838/47047606-a1e18f80-d1b5-11e8-93d9-7eac0c5a56e4.jpg"
-    title="Jeremy Howard and Rachel Thomas, founders of fast.ai"
+${
+  <Image
+    src='https://user-images.githubusercontent.com/50838/47047606-a1e18f80-d1b5-11e8-93d9-7eac0c5a56e4.jpg'
+    title='Jeremy Howard and Rachel Thomas, founders of fast.ai'
   />
 }
 
 fast.ai can be described as a research lab bundled with courses, an easy-to-use Python library with a huge community. Their library wraps popular deep learning and machine learning libraries for common workflows and provides a user-friendly interface.
 
-Most importantly, it follows the **"top down"** approach. 
+Most importantly, it follows the **"top down"** approach.
 
 "Top down" is exactly like how we learn a sport. We start by trying to play it, without worrying about rules. Once we are confident, we learn the rules and tricks one by one.
 
@@ -63,7 +64,7 @@ Similarly, fast.ai allows us to build a model using only a few lines of code. Af
 For example, have a look at the following code:
 
 ${
-  <Code language="python">{`
+  <Code language='python'>{`
 PATH = 'location/to/images/to/train'
 arch = resnet34
 data = ImageClassifierData.from_paths(PATH, tfms=tfms_from_model(arch, sz))
@@ -73,12 +74,12 @@ learn.fit(0.01, 3)
   </Code>
 }
 
-Using this code, I build an image classifier which could detect elephants and lions with 95% accuracy. 
+Using this code, I build an image classifier which could detect elephants and lions with 95% accuracy.
 
 ${
   <Image
-    src="https://user-images.githubusercontent.com/50838/47048045-defa5180-d1b6-11e8-994d-81e510c363ab.png"
-    title="Validating the above model with some random images"
+    src='https://user-images.githubusercontent.com/50838/47048045-defa5180-d1b6-11e8-994d-81e510c363ab.png'
+    title='Validating the above model with some random images'
   />
 }
 
@@ -87,7 +88,7 @@ ${
 In order to follow these courses, you would definitely need to use a GPU from Nvidia. Unless you own a gaming PC, it is unlikely that you have a Nvidia GPU.
 Even if you have a Nvidia GPU, you may need to download a lot of data from the internet to train models.
 
-The best option is to use a Cloud GPU. 
+The best option is to use a Cloud GPU.
 
 Here are some options for you:
 
@@ -117,7 +118,7 @@ With [Google CoLab](https://colab.research.google.com/), you can get a GPU for F
 If you have time to experiment, you could try making it work for fast.ai.
 
 ${
-  <Note>{noteOnMyGpuChoice}</Note>  
+  <Note>{noteOnMyGpuChoice}</Note>
 }
 
 ## Fastai version 1.0

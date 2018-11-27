@@ -1,6 +1,6 @@
 const NewsLetter = ({ name, link }) => (
   <div>
-    <p><a href={link} target="_blank">Subscribe</a> to the {name} newsletter to see more like this.</p>
+    <p><a href={link} target='_blank'>Subscribe</a> to the {name} newsletter to see more like this.</p>
     <style jsx>{`
       p {
         margin: 20px 0;
@@ -22,5 +22,5 @@ const NewsLetter = ({ name, link }) => (
 
 export default NewsLetter
 export const Cryptocurrency = () => (
-  <NewsLetter name="cryptocurrency" link="https://tinyletter.com/cryptocurrency"/>
+  <NewsLetter name='cryptocurrency' link='https://tinyletter.com/cryptocurrency' />
 )
