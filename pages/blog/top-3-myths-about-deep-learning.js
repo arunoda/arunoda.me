@@ -9,8 +9,8 @@ This is [fastai-shell](https://github.com/arunoda/fastai-shell). It will allow y
 
 export default WithDoc({
   title: 'Top 3 Myths About Deep Learning',
-  description: '',
-  image: '',
+  image: 'https://user-images.githubusercontent.com/50838/49079724-67185000-f267-11e8-95cc-32641ba47733.jpg',
+  description: 'There are a lot of myths about deep learning. Let\'s have a look at them.',
   slug: 'top-3-myths-about-deep-learning',
   date: '27 November, 2018',
   links: {
