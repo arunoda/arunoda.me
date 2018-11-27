@@ -1,12 +1,29 @@
-export default ({ src, width="100%", height, alt, title, onClick }) => (
+function withHref(el, href) {
+  if (!href) {
+    return el;
+  }
+
+  return (
+    <a href={href} target="_blank">
+      {el}
+      <style jsx>{`
+        a {
+          border: 0;
+        }
+      `}</style>
+    </a>
+  )
+}
+
+export default ({ src, width="100%", height, alt, title, onClick, href }) => (
   <div className="container">
-    <img
+    {withHref(<img
       src={src}
       width={width}
       height={height}
       alt={alt}
       onClick={onClick}
-    />
+    />, href)}
     {title? (
       <div className="title">
         { title }

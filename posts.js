@@ -1,5 +1,10 @@
 export default [
   {
+    slug: 'top-3-myths-about-deep-learning',
+    title: 'Top 3 Myths About Deep Learning',
+    date: 'November 27, 2018'
+  },
+  {
     slug: 'getting-started-with-fastai',
     title: 'Getting Started with Fastai Deep Learning Framework',
     date: 'October 30, 2018'
