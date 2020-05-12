@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import theme from 'react-syntax-highlighter/dist/styles/github-gist'
+import theme from 'react-syntax-highlighter/dist/cjs/styles/hljs/github-gist'
 
 // We use dynamic import here to make sure we don't copy this module across pages.
 // eslint-disable-next-line

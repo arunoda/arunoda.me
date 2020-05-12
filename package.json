@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server",
+    "dev": "next",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node server",
-    "analyze": "cross-env ANALYZE=1 next build",
+    "analyze": "ANALYZE=1 next build",
     "lint": "standard --parser babel-eslint"
   },
   "repository": {
@@ -21,22 +20,20 @@
   },
   "homepage": "https://github.com/arunoda/arunoda.me#readme",
   "dependencies": {
-    "babel-plugin-root-import": "^6.1.0",
-    "babel-plugin-transform-define": "^1.3.0",
-    "cross-env": "^5.0.1",
-    "express": "^4.15.3",
-    "lru-cache": "^4.1.1",
+    "async-sema": "^3.1.0",
+    "disqus-react": "^1.0.8",
+    "isomorphic-unfetch": "*",
     "markdown-in-js": "^1.1.4",
-    "mongodb": "^2.2.28",
-    "next": "7.x.x",
+    "next": "^9.3.6",
     "next-ga": "^2.3.4",
-    "react": "16.x.x",
-    "react-dom": "16.x.x",
-    "react-syntax-highlighter": "^5.6.2",
-    "webpack-bundle-analyzer": "^2.8.2"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-syntax-highlighter": "^12.2.1"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "standard": "^12.0.1"
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-root-import": "^6.5.0",
+    "standard": "^14.3.3",
+    "webpack-bundle-analyzer": "^3.7.0"
   }
 }

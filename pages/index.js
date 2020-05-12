@@ -2,9 +2,13 @@ import Link from 'next/link'
 
 const MainLink = ({ href, as, children }) => (
   <span>
-    <Link href={href} as={as}>
+    {href.startsWith('http')? (
       <a>{children}</a>
-    </Link>
+    ) : (
+      <Link href={href} as={as}>
+        <a>{children}</a>
+      </Link>
+    )}
     <style jsx>{`
       span {
         margin-right: 20px;

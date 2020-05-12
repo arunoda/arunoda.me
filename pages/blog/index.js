@@ -1,11 +1,14 @@
 import BlogLayout from '../../components/BlogLayout'
 import posts from '../../posts'
+import Link from 'next/link'
 
 const PostLink = ({ href, title, date }) => (
   <div id='post-link'>
     <div className='date-mobile'>{date}</div>
     <span className='date-desktop'>{date}</span>
-    <a href={href}>{title}</a>
+    <Link href={href}>
+      <a>{title}</a>
+    </Link>
     <style jsx>{`
       #post-link {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
