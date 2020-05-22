@@ -3,6 +3,7 @@ import WithDoc, { components } from '~/lib/with-doc'
 import Note from '~/components/Note'
 import Image from '~/components/Image'
 import Code from '~/components/Code'
+import Youtube from '~/components/Youtube'
 
 const finalNote = (
   <Note>
@@ -45,6 +46,15 @@ ${
     src="https://user-images.githubusercontent.com/50838/82573539-89143980-9ba3-11ea-81ef-efedbf7ac994.png"
     href="https://nextjs-magic-bank.now.sh"
     title="Click this image to visit https://nextjs-magic-bank.now.sh"
+  />
+}
+
+Like to watch instead of reading? Then, watch this:
+
+${
+  <Youtube
+    videoId="9kC24Mr0wHg"
+    height={360}
   />
 }
 
