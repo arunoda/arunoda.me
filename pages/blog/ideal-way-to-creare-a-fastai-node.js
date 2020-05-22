@@ -43,8 +43,7 @@ export default WithDoc({
 })(markdown(components)`
 ${
   <Youtube
-    overlay='https://user-images.githubusercontent.com/50838/47286724-8ccd8c00-d60d-11e8-946d-f7d40366460a.png'
-    src='https://www.youtube.com/embed/quMRkV-zGq0'
+    videoId="quMRkV-zGq0"
     height={360}
   />
 }

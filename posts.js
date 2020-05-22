@@ -1,5 +1,10 @@
 export default [
   {
+    slug: 'simple-auth-setup-for-your-react-app',
+    title: 'Simple Auth Setup for Your React App',
+    date: 'May 22, 2020'
+  },
+  {
     slug: 'top-3-myths-about-deep-learning',
     title: 'Top 3 Myths About Deep Learning',
     date: 'November 27, 2018'

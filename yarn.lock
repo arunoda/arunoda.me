@@ -2392,13 +2392,6 @@ debug@^2.2.0:
   dependencies:
     ms "2.0.0"
 
-debug@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.0.tgz#373687bffa678b38b1cd91f861b63850035ddc87"
-  integrity sha512-heNPJUJIqC+xB6ayLAMHaIrmN9HKa7aQO8MGqKpvCA+uJYVcvR6l5kgdrhRuwPFHU7P5/A1w0BjByPHwpfTDKg==
-  dependencies:
-    ms "^2.1.1"
-
 debug@^4.0.1, debug@^4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
@@ -4512,14 +4505,6 @@ neo-async@^2.5.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
 
-next-ga@^2.3.4:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/next-ga/-/next-ga-2.3.4.tgz#0bec23e7c2eea35485af0b342e7794bbbdb61d04"
-  integrity sha512-mIol83ehPCz9Z+QtK6ig1w9Db4ShoyhjS6NgDnTIVJuBQ1iobiZap2xXn6KtYWBc+AH5DdTCBtZRF8PP5yJAVA==
-  dependencies:
-    debug "^4.0.0"
-    react-ga "^2.5.3"
-
 next-tick@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
@@ -5588,11 +5573,6 @@ react-dom@^16.13.1:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
-
-react-ga@^2.5.3:
-  version "2.5.5"
-  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.5.5.tgz#b809c41d5964125fb4ce7bf480abe76d845c4f89"
-  integrity sha512-qqbv0nzSa33T1HWJuJWwNb2kn2BjJq35MJtHwiV2RGC5/OzBXM3qoH95bzl830Nj8ncUE42YhChGt+y/WojSVQ==
 
 react-is@16.13.1, react-is@^16.8.1:
   version "16.13.1"
