@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
               __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            if (window.location.host === 'deeplearningmantra.com') {
+            if (!(window.location.host.includes('localhost'))) {
               gtag('js', new Date());
               gtag('config', '${GA_TRACKING_ID}', {
                 page_path: window.location.pathname,
