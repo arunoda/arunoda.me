@@ -20,7 +20,7 @@ export default WithDoc({
   slug: 'simple-auth-setup-for-your-react-app',
   date: '22 May, 2020',
   links: {
-    twitter: 'https://twitter.com/arunoda'
+    twitter: 'https://twitter.com/arunoda/status/1263837065952800768'
   }
 })(markdown(components)`
 
