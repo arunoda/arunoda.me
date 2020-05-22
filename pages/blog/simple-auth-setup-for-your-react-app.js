@@ -15,9 +15,9 @@ You need to install the \`@magic-sdk/admin\` NPM module and get the "Secret Key"
 
 export default WithDoc({
   title: 'Simple Auth Setup for Your React App',
-  image: 'https://user-images.githubusercontent.com/50838/82573539-89143980-9ba3-11ea-81ef-efedbf7ac994.png',
-  description: 'There are a lot of myths about deep learning. Let\'s have a look at them.',
-  slug: 'top-3-myths-about-deep-learning',
+  image: 'https://img.youtube.com/vi/9kC24Mr0wHg/maxresdefault.jpg',
+  description: 'Add a login system to your React app in just 30 minutes.',
+  slug: 'simple-auth-setup-for-your-react-app',
   date: '22 May, 2020',
   links: {
     twitter: 'https://twitter.com/arunoda'
@@ -40,7 +40,7 @@ Then I found [Magic Link](https://magic.link/). It's simple and easy to use. Her
 * Boom, user enter to the app
 <br/>
 
-Try this example app:
+[Try this example app](https://nextjs-magic-bank.now.sh):
 ${
   <Image
     src="https://user-images.githubusercontent.com/50838/82573539-89143980-9ba3-11ea-81ef-efedbf7ac994.png"
