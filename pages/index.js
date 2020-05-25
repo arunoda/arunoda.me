@@ -3,7 +3,7 @@ import Link from 'next/link'
 const MainLink = ({ href, as, children }) => (
   <span>
     {href.startsWith('http')? (
-      <a>{children}</a>
+      <a href={href}>{children}</a>
     ) : (
       <Link href={href} as={as}>
         <a>{children}</a>
