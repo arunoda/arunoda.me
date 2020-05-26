@@ -8,7 +8,7 @@ import Question from '../../components/Question'
 
 const q1 = (
   <Question
-    question = "What's the issue with code block?"
+    question = "What's the issue with this code block?"
     answers = {[
       "This is incorrect Typescript syntax",
       "There is no input validation",
@@ -42,10 +42,10 @@ ${
   />
 }
 
-Sometimes, developers(and managers) think that using Typescript fix bugs or reduce potential bugs. In reality, Typescript has very little to do with bugs, but it gives you these benefits (among others):
+Sometimes, developers(and managers) think that using Typescript will fix bugs or reduce potential bugs. In reality, Typescript has very little to do with bugs, but it gives you these benefits (among others):
 
 * Reduce human errors (This will prevent some bugs for sure)
-* Faster development with code completion
+* Faster development with code intelligence
 * A form of documentation due to the use of types
 
 ## So, what's missing?
@@ -70,7 +70,7 @@ function handleRequest(req: HTTPRequest, res: HTTPResponse) {
     const payload = JSON.parse(req.body) as Payload
     const currentBalance = 5000 - payload.transaction
     const {email} = payload
-    res.send({ email, currentBalance })
+    res.send(JSON.stringify({ email, currentBalance }))
 }
 `}</Code>}
 
@@ -91,8 +91,9 @@ async function calculatePoints(lib: ExternalLib) {
 
 In this code, we use a third-party library; even it is correctly typed, we are not confident that it will always return a number.
 
-Likewise, I can give a ton of examples like this. Typescript does not (and cannot) handle any runtime errors or knows how to deal with them. It still our job to take care of them.
-That's why we should always do proper input validations and write tests.
+Likewise, I can give a ton of examples like this. Typescript alone cannot handle any runtime errors or knows how to deal with them. It still our job to take care of them.
+
+That's why we should always do proper **input validations** and **write tests**.
 
 ${<Note>
   So, if you think a bit, Typescript is an upgrade from ESLint. ~That's it.~
@@ -100,7 +101,7 @@ ${<Note>
 
 ## Find the Right Balance
 
-Now we know, Typescript is not a substitute for testing even though it uses types. Typescript alone also does not make your app bulletproof. 
+Now we know, Typescript is not a substitute for testing even though it uses types. Typescript alone does not make your app bulletproof. 
 
 > So, shall I use it with my projects?
 
