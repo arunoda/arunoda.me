@@ -10,7 +10,7 @@ const q1 = (
   <Question
     question = "What's the issue with this code block?"
     answers = {[
-      "This is incorrect Typescript syntax",
+      "This is incorrect TypeScript syntax",
       "There is no input validation",
       "You missed the return statement",
       "There is no issue with this code block"
@@ -18,14 +18,14 @@ const q1 = (
     correctAnswer = {1}
     points = {30}
     explaination = {markdown(components)`
-According to Typescript, there is no issue with this code. But what if  \`req.body\` is not a valid JSON. Even it's a valid JSON string, what if \`req.body.transaction\` is not a number.   
+According to TypeScript, there is no issue with this code. But what if  \`req.body\` is not a valid JSON. Even it's a valid JSON string, what if \`req.body.transaction\` is not a number.   
     `}
   />
 )
 
 export default WithDoc({
-  title: 'Typescript is a Dev Tool; Not Your Test Suite',
-  description: 'This is not another article shitting on Typescript, but trying to show what it offers and what it doesn\'t.',
+  title: 'TypeScript is a Dev Tool; Not Your Test Suite',
+  description: 'This is not another article shitting on TypeScript, but trying to show what it offers and what it doesn\'t.',
   image: 'https://user-images.githubusercontent.com/50838/82894473-40c49500-9f70-11ea-9bb0-82930bcaa13f.png',
   slug: 'typescript-is-a-dev-tool-not-your-test-suite',
   date: 'May 26, 2020',
@@ -34,7 +34,7 @@ export default WithDoc({
   }
 })(markdown(components)`
 
-This is not another article shitting on Typescript, but trying to show what it offers and what it doesn't.
+This is not another article shitting on TypeScript, but trying to show what it offers and what it doesn't.
 
 ${
   <Image
@@ -42,7 +42,7 @@ ${
   />
 }
 
-Sometimes, developers(and managers) think that using Typescript will fix bugs or reduce potential bugs. In reality, Typescript has very little to do with bugs, but it gives you these benefits (among others):
+Sometimes, developers(and managers) think that using TypeScript will fix bugs or reduce potential bugs. In reality, TypeScript has very little to do with bugs, but it gives you these benefits (among others):
 
 * Reduce human errors (This will prevent some bugs for sure)
 * Faster development with code intelligence
@@ -91,32 +91,32 @@ async function calculatePoints(lib: ExternalLib) {
 
 In this code, we use a third-party library; even it is correctly typed, we are not confident that it will always return a number.
 
-Likewise, I can give a ton of examples like this. Typescript alone cannot handle any runtime errors or knows how to deal with them. It still our job to take care of them.
+Likewise, I can give a ton of examples like this. TypeScript alone cannot handle any runtime errors or knows how to deal with them. It still our job to take care of them.
 
 That's why we should always do proper **input validations** and **write tests**.
 
 ${<Note>
-  So, if you think a bit, Typescript is an upgrade from ESLint. ~That's it.~
+  So, if you think a bit, TypeScript is an upgrade from ESLint. ~That's it.~
 </Note>}
 
 ## Find the Right Balance
 
-Now we know, Typescript is not a substitute for testing even though it uses types. Typescript alone does not make your app bulletproof. 
+Now we know, TypeScript is not a substitute for testing even though it uses types. TypeScript alone does not make your app bulletproof. 
 
 > So, shall I use it with my projects?
 
 Okay. That's a tough question.
 
-Typescript adds a build step to your app. If you already have a build step, Typescript will slow it down.
+TypeScript adds a build step to your app. If you already have a build step, TypeScript will slow it down.
 There's a learning curve as well.
 
-So, converting all your existing projects to use Typescript may not be a wise idea.
+So, converting all your existing projects to use TypeScript may not be a wise idea.
 
-We use Typescript at [Vercel](https://vercel.com) for new projects and new functionalities. It improves dev time productivity and self-document the codebase, and that's a win for us.
+We use TypeScript at [Vercel](https://vercel.com) for new projects and new functionalities. It improves dev time productivity and self-document the codebase, and that's a win for us.
 
 ${
   <Note>
-    Typescript is just another devtool. So, think before you decide.
+    TypeScript is just another devtool. So, think before you decide.
     <br/>
     Don't follow the crowd.
   </Note>

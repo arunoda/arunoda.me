@@ -1,7 +1,7 @@
 export default [
   {
     slug: 'typescript-is-a-dev-tool-not-your-test-suite',
-    title: 'Typescript is a Dev Tool. Not Your Test Suite.',
+    title: 'TypeScript is a Dev Tool; Not Your Test Suite',
     date: 'May 26, 2020'
   },
   {
