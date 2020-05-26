@@ -1,5 +1,10 @@
 export default [
   {
+    slug: 'typescript-is-a-dev-tool-not-your-test-suite',
+    title: 'Typescript is a Dev Tool. Not Your Test Suite.',
+    date: 'May 26, 2020'
+  },
+  {
     slug: 'simple-auth-setup-for-your-react-app',
     title: 'Simple Auth Setup for Your React App',
     date: 'May 22, 2020'
