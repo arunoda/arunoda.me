@@ -122,7 +122,7 @@ ${q2}
 Likewise, I can give a ton of examples like this. TypeScript alone cannot handle any runtime errors or knows how to deal with them. It still our job to take care of them.
 
 ${<Note>
-  So, if you think a bit, TypeScript is an upgrade from ESLint. ~That's it.~
+  So, if you think a bit, TypeScript is an upgrade from ESLint.
 </Note>}
 
 ## Any Solutions?
