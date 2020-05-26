@@ -8,6 +8,7 @@ import Question from '../../components/Question'
 
 const q1 = (
   <Question
+    id = "typescript-is-a-dev-tool-q1"
     question = "What's the issue with this code block?"
     answers = {[
       "This is incorrect TypeScript syntax",
@@ -19,6 +20,31 @@ const q1 = (
     points = {30}
     explaination = {markdown(components)`
 According to TypeScript, there is no issue with this code. But what if  \`req.body\` is not a valid JSON. Even it's a valid JSON string, what if \`req.body.transaction\` is not a number.   
+    `}
+  />
+)
+
+const q2 = (
+  <Question
+    id = "typescript-is-a-dev-tool-q2"
+    question = "These third-party libraries are written with Typescript. So, why do I still need to worry?"
+    answers = {[
+      "They might use directives like @ts-ignore",
+      "They might not validate input correctly",
+      "Those types could be wrong with the actual implementation",
+      "All of the above",
+      "No. We don't need to worry"
+    ]}
+    correctAnswer = {3}
+    points = {30}
+    explaination = {markdown(components)`
+Typescript type safety is a dev time assurance. In the runtime, nothing is preventing from breaking types. Here are some potential cases which might break types:
+
+* They might use directives like @ts-ignore. 
+* They might not validate inputs correctly.
+* Those types could be wrong with the actual implementation.
+
+TypeScript does not offer runtime type safety. In practice, there no difference in JavaScript and TypeScript at runtime.
     `}
   />
 )
@@ -91,13 +117,21 @@ async function calculatePoints(lib: ExternalLib) {
 
 In this code, we use a third-party library; even it is correctly typed, we are not confident that it will always return a number.
 
-Likewise, I can give a ton of examples like this. TypeScript alone cannot handle any runtime errors or knows how to deal with them. It still our job to take care of them.
+${q2}
 
-That's why we should always do proper **input validations** and **write tests**.
+Likewise, I can give a ton of examples like this. TypeScript alone cannot handle any runtime errors or knows how to deal with them. It still our job to take care of them.
 
 ${<Note>
   So, if you think a bit, TypeScript is an upgrade from ESLint. ~That's it.~
 </Note>}
+
+## Any Solutions?
+
+Actually, the solutions are not new or specific to TypeScript. It's the usual best practices when making apps. You have to use input validations and write tests. 
+
+For input validation, you can try using [io-ts](https://github.com/gcanti/io-ts). It adds runtime type checking capabilities to Typescript. For that, you have to change how you create types, but that's worth it.
+
+If we talk about tests, I don't think there's anything specific to TypeScript. Just use any framework you like. You'll get notable results when you started to write end to end testing.
 
 ## Find the Right Balance
 
