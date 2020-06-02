@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const MainLink = ({ href, as, children }) => (
+const MainLink = ({ href, as, children, nomargin }) => (
   <span>
     {href.startsWith('http')? (
       <a href={href}>{children}</a>
@@ -11,7 +11,7 @@ const MainLink = ({ href, as, children }) => (
     )}
     <style jsx>{`
       span {
-        margin-right: 20px;
+        margin-right: ${nomargin? '0' : '20px'};
       }
 
       a {
@@ -40,7 +40,7 @@ export default () => (
         <MainLink href='https://github.com/arunoda'>GitHub</MainLink>
       </div>
       <div id='ct3'>
-        <MainLink href='/blog/i-dont-live-in-america-but-i-support-black-lives-matter'>#BlackLivesMatter</MainLink>
+        <MainLink nomargin href='/blog/i-dont-live-in-america-but-i-support-black-lives-matter'>#BlackLivesMatter</MainLink>
       </div>
     </div>
     <style jsx>{`
