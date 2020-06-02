@@ -20,7 +20,7 @@ ${
   />
 }
 
-[Try to do the same.](https://www.obama.org/anguish-and-action/)
+[Support](https://www.obama.org/anguish-and-action/) [#BlackLivesMatter](https://blacklivesmatters.carrd.co)
 
 I don't know much about US politics or a lot about the current situation. But things I saw on Twitter and News is just wrong. 
 
