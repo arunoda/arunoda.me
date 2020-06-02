@@ -17,7 +17,7 @@ const MainLink = ({ href, as, children }) => (
       a {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         text-decoration: none;
-        color: #000;
+        color: #EEE;
         font-size: 20px;
       }
 
@@ -38,6 +38,9 @@ export default () => (
         <MainLink href='https://twitter.com/arunoda'>Twitter</MainLink>
         <MainLink href='/blog'>Blog</MainLink>
         <MainLink href='https://github.com/arunoda'>GitHub</MainLink>
+      </div>
+      <div id='ct3'>
+        <MainLink href='/blog/i-dont-live-in-america-but-i-support-black-lives-matter'>#BlackLivesMatter</MainLink>
       </div>
     </div>
     <style jsx>{`
@@ -78,13 +81,24 @@ export default () => (
         margin: 20px 0 0 0;
       }
 
+      #ct3 {
+        border-top: 1px solid #FFF;
+        padding-top: 10px;
+        text-align: center;
+        margin: 15px 0 0 0;
+      }
+
+      #ct3 :global(a) {
+        font-size: 14px;
+      }
+
       @media screen and (max-width: 650px) {
         
       }
     `}</style>
     <style jsx global>{`
       body {
-        background-color: #8BC34A;
+        background-color: #4c4c4c;
       }
     `}</style>
   </div>

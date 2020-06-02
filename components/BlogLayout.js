@@ -2,16 +2,20 @@ import Link from 'next/link'
 
 const MyLink = ({ href, as, children }) => (
   <span>
-    <Link href={href} as={as}>
-      <a>{children}</a>
-    </Link>
+    {href.startsWith('http')? (
+      <a href={href}>{children}</a>
+    ) : (
+      <Link href={href} as={as}>
+        <a>{children}</a>
+      </Link>
+    )}
     <style jsx>{`
       span {
         margin-right: 20px;
       }
 
       a {
-        color: #000;
+        color: #EEE;
         text-decoration: none;
         font-size: 16px;
         font-weight: 600;
@@ -24,11 +28,27 @@ const MyLink = ({ href, as, children }) => (
   </span>
 )
 
+const Subscribe = () => (
+  <span>
+    <span className="divider">|</span>
+    <MyLink href='https://buttondown.email/arunoda'>Subscribe</MyLink>
+    <style jsx>{`
+      .divider {
+        margin: 0 5px 0 0;
+        color: #FFF;
+        font-weight: 700;
+      }
+    `}</style>
+  </span>
+)
+
 export default ({ children }) => (
   <div>
     <header>
       <MyLink href='/'>Home</MyLink>
       <MyLink href='/blog'>Blog</MyLink>
+      <MyLink href='/blog/i-dont-live-in-america-but-i-support-black-lives-matter'>#BlackLivesMatter</MyLink>
+      <Subscribe />
     </header>
     <article>
       { children }
@@ -36,7 +56,7 @@ export default ({ children }) => (
     <style jsx>{`
       header {
         padding: 30px 30px;
-        background-color: #8BC34A;
+        background-color: #4c4c4c;
       }
 
       article {

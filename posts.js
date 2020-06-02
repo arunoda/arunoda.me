@@ -1,5 +1,10 @@
 export default [
   {
+    slug: 'i-dont-live-in-america-but-i-support-black-lives-matter',
+    title: "I don't live in America. But I support #BlackLivesMatter",
+    date: 'June 2, 2020'
+  },
+  {
     slug: 'typescript-is-a-dev-tool-not-your-test-suite',
     title: 'TypeScript is a Dev Tool; Not Your Test Suite',
     date: 'May 26, 2020'
