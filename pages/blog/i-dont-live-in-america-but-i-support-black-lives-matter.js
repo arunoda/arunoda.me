@@ -45,11 +45,11 @@ What's wrong with that?
 
 Even though you don't care, there are many software products, open-source libraries written and contributed by many Americans. So, you are here writing apps, because of them. You need to help them in a situation like this.
 
-I don't ask you to donate or riot. At least try to understand what's going on.
+I don't ask you to donate or protest. At least try to understand what's going on.
 <br/>
 <br/>
 
-**See, these rioters are hurting innocent people. Why the fuck I want to support this?**
+**See, these protestors are hurting innocent people. Why the fuck I want to support this?**
 
 If there is violence, police and law enforcement should handle it properly. They deserve any lawful punishment. But still, I don't think that's the majority.
 <br/>
