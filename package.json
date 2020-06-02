@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 4001",
     "build": "next build",
     "analyze": "ANALYZE=1 next build",
     "lint": "standard --parser babel-eslint"

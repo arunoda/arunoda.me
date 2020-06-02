@@ -32,10 +32,7 @@ I don't think this is only about Black people or related to recent events anymor
 
 In these years, I have work with many American contributors and friends with open-source projects like [Meteor](https://twitter.com/meteorjs), [Storybook](https://twitter.com/storybookjs), and [Next.js](https://nextjs.org/). So, it's my responsibility to help them when they are in trouble.
 
-<br/>
-
 # Here are some questions you might ask?
-<br/>
 
 **Are you just following the Twitter trend?**
 
@@ -54,7 +51,7 @@ I don't ask you to donate or riot. At least try to understand what's going on.
 
 **See, these rioters are hurting innocent people. Why the fuck I want to support this?**
 
-Me too. If there is violence, police and law enforcement should handle it properly. They deserve any lawful punishment. But still, I don't think that's the majority.
+If there is violence, police and law enforcement should handle it properly. They deserve any lawful punishment. But still, I don't think that's the majority.
 <br/>
 <br/>
 
