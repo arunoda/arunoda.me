@@ -11,7 +11,7 @@ const q1 = (
     id = "what-is-nextjs-issg-q1"
     question = "Do this multiple times. What was your experience?"
     answers = {[
-      "The updated time is the same always",
+      "The updated time is always the same",
       "The updated time is changing every time.",
       "I got an error.",
       "The updated time changed around every 20 secs."
@@ -69,7 +69,7 @@ const q4 = (
     id = "what-is-nextjs-issg-q4"
     question = "Do this multiple times. What was your experience?"
     answers = {[
-      "The updated time is the same always",
+      "The updated time is always the same",
       "The updated time is changing every time.",
       "I got an error.",
       "The updated time changed around every 20 secs."
