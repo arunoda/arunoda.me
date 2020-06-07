@@ -94,8 +94,8 @@ const q5 = (
     correctAnswer = {2}
     points = {30}
     explaination = {markdown(components)`
-One of the disadvantages of SSG is that you need to rebuild your app every time you add new content or change the app itself.
-If your app contains more pages, it will take more time to build your app.
+With SSG, you need to rebuild your app every time you add new content or change the app itself.
+If your app contains more pages, it will take more time to build your app as well.
 
 This sounds fine for a personal blog. But for a news portal like BBC, this is problematic. That's because such an app needs to add new pages every day, and they actively develop the app itself. Which leads to more rebuild times.
     `}
@@ -125,7 +125,7 @@ Next.js only changes the updated time when it's generating the page. We can chec
 const q7 = (
   <Question
     id = "what-is-nextjs-issg-q7"
-    question = 'Why I asked you to load this "Sri Lanka" page explicitly instead of any page?'
+    question = 'Why I asked you to load this "Sri Lanka" page explicitly?'
     answers = {[
       "It's just because I live in SriLanka.",
       "\"Sri Lanka\" page is generated via the fallback, but it doesn't matter",
@@ -146,6 +146,8 @@ But for the "Sri Lanka" page, we use a route with a format like \`/news/srilanka
 
 const subscribe = (
   <Note>{markdown(components)`
+There's more to iSSG and how to build a modern app with Next.js. I am creating more content like this and publish once every week. 
+
 [Subscribe](https://buttondown.email/arunoda) to get these posts right into your inbox.
   `}</Note>
 )
@@ -226,7 +228,7 @@ Try to follow these steps in the above web site:
 
 ${q1}
 
-Let me ask some questions.
+Let me ask you some questions.
 
 ${q2}
 ${q3}
@@ -311,11 +313,13 @@ That's where iSSG is going to help us.
 
 ### Fallback Support
 
-Just like in SSG, we can generate a set of pages at the build time. But it can also generate new pages dynamically(similar to SSR) if needed at runtime. Let me give you an example:
+Just like in SSG, we can generate a set of pages at the build time. But it can also generate new pages dynamically if needed at runtime. 
+
+Let me give you an example:
 
 * Here's a route for a typical news portal: \`/news/[slug]\`
 * We can generate pages via SSG for \`/news/covid19\` and \`news/global-warming\`
-* But it can dynamically(at runtime) create pages by loading a page with a new slug like \news/srilanka.\`
+* But it can dynamically(at runtime) create pages by loading a page with a new slug like \`news/srilanka.\`
 
 ${
   <Note>
@@ -411,18 +415,18 @@ This is what's happening behind the scenes:
 * In the next reload, you will get the newly built page.
 
 ${
-  <Note>Yes, you have to reload the page twice to get the updated version. But if multiple users accessing this page, it's not a big problem.</Note>
+  <Note>Yes, you have to reload the page twice to get the updated version. But if multiple users are accessing the page, it's not problem at all.</Note>
 } 
 
 This is very similar to how [stale-while-revalidate](https://tools.ietf.org/html/rfc5861) HTTP header works.
 <br/>
-(Actually, Next.js uses that header too.)
+(Next.js uses that header too.)
 
 ${q7}
 
-Now you have a much better understanding of what Next.js iSSG means and how you can get the real benefit of it. 
+Now you have a much better understanding of what Next.js iSSG means and how you can get the real benefit of it.
 
-There's more to iSSG and how to build a modern app with Next.js. I am creating more content like this and publish at-least-once in each week.
+[Clone this](https://github.com/arunoda/nextjs-issg-example) example repository and play with it.
 
 ${subscribe}
 `)
