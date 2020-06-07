@@ -290,7 +290,7 @@ Try to follow these steps in the above web site:
 * Click the page "Covid 19". 
 * Remember the time it was updated. 
 * Go back. 
-* Clcik "Covid 19" again
+* Click "Covid 19" again
 * Check the updated time now.
 
 ${q4}
@@ -304,7 +304,7 @@ ${q5}
 
 ## Incremental Static Site Generation (iSSG)
 
-As we discussed, SSG is all great. It saves server resources, and users can access pages very quickly. But it has two main disadvantages:
+As we discussed, SSG apps perform really well at runtime. It saves server resources, and users can access pages very quickly. But it has two main disadvantages:
 
 1. It takes more time to build the app
 2. To add new content or update existing, we need to rebuild the app
@@ -318,8 +318,8 @@ Just like in SSG, we can generate a set of pages at the build time. But it can a
 Let me give you an example:
 
 * Here's a route for a typical news portal: \`/news/[slug]\`
-* We can generate pages via SSG for \`/news/covid19\` and \`news/global-warming\`
-* But it can dynamically(at runtime) create pages by loading a page with a new slug like \`news/srilanka.\`
+* We can generate pages via SSG for \`/news/covid19\` and \`/news/global-warming\`
+* But it can dynamically(at runtime) create pages for a new slug like \`/news/so-srilanka\`
 
 ${
   <Note>
@@ -373,6 +373,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
+    // You can fetch external data here
     return {
         props: {
             slug: params.slug,
@@ -392,12 +393,15 @@ ${
 
 We generated the following two pages in the build time:
 
-* \`news/covid19\`
-* \`news/globalwarming\`
+* \`/news/covid19\`
+* \`/news/globalwarming\`
 
-But the page \`news/srilanka\` has generated with the fallback.
+(We provide this information via the getStaticPaths function)
 
-<br/>
+But it can also generate news pages like \`/news/srilanka\` in the runtime, because we have set \`fallback\` to true. Then we need to write our getStaticProps function to fetch related data in the runtime as well.
+
+> In our example app, we don't fetch any external data. In a real-world app, it'll be your CMS or a database.
+
 Try to follow these steps in the above iSSG web app:
 
 * Click the "Sri Lanka" page
