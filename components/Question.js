@@ -287,13 +287,13 @@ export default function Question (props) {
           {answers.map((answer, index) => (
             <div className='answer' key={answer}>
               <input
-                id={`radio-answer-${index}`}
+                id={`${props.id}-radio-answer-${index}`}
                 type='radio'
-                name='answer'
+                name={`answer-${props.id}`}
                 value={index}
                 onChange={() => setSelectedAnswer(index)}
               />
-              <label htmlFor={`radio-answer-${index}`} className='text'>{answer}</label>
+              <label htmlFor={`${props.id}-radio-answer-${index}`} className='text'>{answer}</label>
               <div className='clearfix' />
             </div>
           ))}

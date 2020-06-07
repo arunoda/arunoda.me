@@ -1,5 +1,10 @@
 export default [
   {
+    slug: 'what-is-nextjs-issg',
+    title: "What is Next.js iSSG",
+    date: 'June 8, 2020'
+  },
+  {
     slug: 'i-dont-live-in-america-but-i-support-black-lives-matter',
     title: "I don't live in America. But I support #BlackLivesMatter",
     date: 'June 2, 2020'
