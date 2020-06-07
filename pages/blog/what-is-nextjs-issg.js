@@ -219,6 +219,8 @@ It's a simple page served via SSR. It contains the time the page has generated.
 
 ([View source code on GitHub](https://github.com/arunoda/nextjs-issg-example/tree/ssr))
 
+${<Website src="https://nextjs-ssr-example.now.sh" height={350}/>}
+
 Try to follow these steps in the above web site:
 
 * Click the page "Covid 19". 
@@ -285,6 +287,8 @@ export async function getStaticProps({params}) {
 }
 
 ([View source code on GitHub](https://github.com/arunoda/nextjs-issg-example/tree/ssg))
+
+${<Website src="https://nextjs-ssg-example.now.sh" height={350}/>}
 
 Try to follow these steps in the above web site:
 
@@ -403,7 +407,7 @@ But it can also generate news pages like \`/news/srilanka\` in the runtime, beca
 
 > In our example app, we don't fetch any external data. In a real-world app, it'll be your CMS or a database.
 
-${<Website src="https://nextjs-issg-example.now.sh"/>}
+${<Website src="https://nextjs-issg-example.now.sh" height={350}/>}
 
 Try to follow these steps in the above iSSG web app:
 
