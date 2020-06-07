@@ -214,7 +214,7 @@ NewsPage.getInitialProps = async ({query}) => {
 
 It's a simple page served via SSR. It contains the time the page has generated. 
 
-([Click to see the complete source code](https://github.com/arunoda/nextjs-issg-example/tree/ssr))
+([View source code on GitHub](https://github.com/arunoda/nextjs-issg-example/tree/ssr))
 
 Try to follow these steps in the above web site:
 
@@ -281,7 +281,7 @@ export async function getStaticProps({params}) {
   `}</Code>
 }
 
-([Click to see the complete source code](https://github.com/arunoda/nextjs-issg-example/tree/ssg))
+([View source code on GitHub](https://github.com/arunoda/nextjs-issg-example/tree/ssg))
 
 Try to follow these steps in the above web site:
 
@@ -380,6 +380,8 @@ export async function getStaticProps({params}) {
   `}</Code>
 }
 
+([View source code on GitHub](https://github.com/arunoda/nextjs-issg-example))
+
 ${
   <Note>Make your attention to <b><code>fallback</code></b> and <b><code>unstable_revalidate</code></b>.</Note>
 }
@@ -391,6 +393,7 @@ We generated the following two pages in the build time:
 
 But the page \`news/srilanka\` has generated with the fallback.
 
+<br/>
 Try to follow these steps in the above iSSG web app:
 
 * Click the "Sri Lanka" page
