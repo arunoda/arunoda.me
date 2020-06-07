@@ -3,7 +3,8 @@ import WithDoc, { components } from '~/lib/with-doc'
 
 import Note from '~/components/Note'
 import Code from '~/components/Code'
-import Question from '../../components/Question'
+import Question from '~/components/Question'
+import Website from '~/components/Website'
 
 const q1 = (
   <Question
@@ -401,6 +402,8 @@ We generated the following two pages in the build time:
 But it can also generate news pages like \`/news/srilanka\` in the runtime, because we have set \`fallback\` to true. Then we need to write our getStaticProps function to fetch related data in the runtime as well.
 
 > In our example app, we don't fetch any external data. In a real-world app, it'll be your CMS or a database.
+
+${<Website src="https://nextjs-issg-example.now.sh"/>}
 
 Try to follow these steps in the above iSSG web app:
 
