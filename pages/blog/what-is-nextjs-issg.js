@@ -19,7 +19,7 @@ const q1 = (
     correctAnswer = {1}
     points = {30}
     explaination = {markdown(components)`
-As you experienced, every time you load the page, the updated time was changed. That's because Next.js is regenerating the page every time you load it.
+As you experienced, every time you load the page, the updated time was changed. That's because Next.js is generating the page on-demand as you load it.
     `}
   />
 )
@@ -37,9 +37,9 @@ const q2 = (
     correctAnswer = {0}
     points = {30}
     explaination = {markdown(components)`
-In the past, SSR really helped with SEO. But nowadays, search engines know how to crawl Single Page Apps. Still, there could be some benefits related to SEO, but there are many other alternatives.
+In the past, SSR really helped with SEO. But nowadays, search engines know how to crawl pages created on the client-side(Using React, Vue, etc.).
 
-The real advantage of Next.js + SSR is the ability to create dynamic web apps and build them quickly. You don't need to create pages at build time. Next.js can generate them at runtime at will.
+The real advantage of Next.js + SSR is the ability to create a dynamic web app and build it quickly. You don't need to generate pages at build time, and Next.js can create them on-demand in the server.
     `}
   />
 )
@@ -57,7 +57,7 @@ const q3 = (
     correctAnswer = {3}
     points = {30}
     explaination = {markdown(components)`
-Since we generate pages at runtime, it needs to run all the logic for that in the server. Which takes a lot of resources, including CPU, Memory, and external API calls. Which could affect the page load time.
+Since we generate pages on-demand in the server, it needs to run all the logic for that in the server. Which takes a lot of resources, including CPU, Memory, and external API calls. Which could affect the page load time.
 
 If your pages do not often change (like news articles), regenerating the same page every time is a waste.
     `}
@@ -154,8 +154,8 @@ There's more to iSSG and how to build a modern app with Next.js. I am creating m
 )
 
 export default WithDoc({
-  title: 'What is Next.js iSSG?',
-  description: "It's a combination of best features from server-side rendering(SSR) and static site generation(SSG).",
+  title: 'What is Next.js Incremental (Re)Generation?',
+  description: " It's a combination of best features from server-side rendering(SSR) and static site generation(SSG).",
   image: '',
   slug: 'what-is-nextjs-issg',
   date: 'June 8, 2020',
@@ -163,7 +163,7 @@ export default WithDoc({
     twitter: 'https://twitter.com/arunoda'
   }
 })(markdown(components)`
-Next.js iSSG means "Incremental Static Site Generation." With that, you can build your app as a static web app. But it can also regenerate those static pages at runtime. In a way, it's like putting a static cache in front of your server-side rendered(SSR) app.
+With these Next.js improvements, you can build your app as a static web app. But it can also (re)generate those static pages as needed. In a way, it's like putting a static cache in front of your server-side rendered(SSR) app. So, you get the benefits of both SSR and static site generation(SSG).
 
 ${
   <Note>
@@ -171,13 +171,13 @@ ${
   </Note>
 }
 
-Unlike a caching server, this is a built-in feature of Next.js, and you are in full control of how to manage those pages. You can use your existing deployment solution to get the full benefits of iSSG. But if you deploy your app with [Vercel](https://vercel.com), it will be much faster and smoother.
+Unlike a caching server, this is a built-in feature of Next.js, and you are in full control of how to manage those pages. You can use your existing deployment solution to get the full benefits. But if you deploy your app with [Vercel](https://vercel.com), it will be much faster and smoother.
 
 I know you have a lot of questions, let's dive in.
 
 ## Server Side Rendering (SSR)
 
-One of the core selling points of Next.js was its ability to build Server Side Rendered apps. With that, you can generate pages at runtime. For example, let's say you are running a news website.
+One of the core selling points of Next.js is its ability to build Server Side Rendered apps. With that, you can generate pages at runtime. For example, let's say you are running a news website.
 
 * You create a generic page like \`/news/[slug].js\`. 
 * If a user asks for a page like \`/news/covid19\`, Next.js will render it inside the server and send it to the user.
@@ -238,7 +238,7 @@ ${q3}
 
 ## Static Site Generation (SSG)
 
-With the static site generation, we generate pages at build time into static HTML. Then, when a user asks for a page, Next.js can quickly deliver the page. (There's no runtime page generation process.)
+With the static site generation, we generate pages at build time into static HTML. Then, when a user asks for a page, Next.js can quickly deliver the page. (There's no on-demand page generation process.)
 
 After you build the app, you will get a set of HTML files and related assets. Since there's no need for a Node.js server, you have more options to deploy your app.
 
@@ -307,24 +307,27 @@ With static apps,
 
 ${q5}
 
-## Incremental Static Site Generation (iSSG)
+---
 
-As we discussed, SSG apps perform really well at runtime. It saves server resources, and users can access pages very quickly. But it has two main disadvantages:
+# Next.js Improvements for Static Site Generation
+
+As we discussed, SSG apps perform really well after we deployed them. It saves server resources, and users can access pages very quickly. But it has two main disadvantages:
 
 1. It takes more time to build the app
 2. To add new content or update existing, we need to rebuild the app
 
-That's where iSSG is going to help us.
+That's where these improvements are going to help us.
 
-### Fallback Support
 
-Just like in SSG, we can generate a set of pages at the build time. But it can also generate new pages dynamically if needed at runtime. 
+## Incremental Static Generation - Fallback Mode
+
+Just like in SSG, we can generate a set of pages at the build time. But it can also generate new pages on-demand as needed.
 
 Let me give you an example:
 
 * Here's a route for a typical news portal: \`/news/[slug]\`
 * We can generate pages via SSG for \`/news/covid19\` and \`/news/global-warming\`
-* But it can dynamically(at runtime) create pages for a new slug like \`/news/so-srilanka\`
+* But it can create pages for a new slug like \`news/so-srilanka\` in the server.
 
 ${
   <Note>
@@ -332,17 +335,17 @@ ${
   </Note>
 }
 
-### Page Regeneration
+## Incremental Static <i>RE</i>generation
 
-Sometimes pages contain dynamic content, or we need to fix a typo. With page regeneration, Next.js can rebuild these pages dynamically as it gets requests. But unlike SSR, they do not generate on every page request. You can set a timeout called \`unstable_revalidate\` in seconds.
+Sometimes pages contain dynamic content, or we need to fix a typo. With this regeneration mode, Next.js can rebuild these pages on-demand as it gets requests. But unlike SSR, they do not generate on every page request. You can set a timeout called \`unstable_revalidate\` in seconds.
 
-With that, Next.js can regenerate these pages after the timeout in the background. But if there are no requests to a given page, it won't regenerate it.
+With that, Next.js can regenerate these pages after the timeout in the background. But if there are no requests to a given page, there's no regeneration.
 
 ${
   <Note>With this, we can update pages at runtime, just like in an SSR app.</Note>
 }
 
-> As you can see, iSSG is a combination of positive things from SSR and SSG.
+> As you can see, these improvements bring positive things from both SSR and SSG.
 
 Let me show you an example:
 
@@ -401,15 +404,15 @@ We generated the following two pages in the build time:
 * \`/news/covid19\`
 * \`/news/globalwarming\`
 
-(We provide this information via the getStaticPaths function)
+(We provide this information via the \`getStaticPaths\` function)
 
-But it can also generate news pages like \`/news/srilanka\` in the runtime, because we have set \`fallback\` to true. Then we need to write our getStaticProps function to fetch related data in the runtime as well.
+But it can also generate new pages like \`/news/srilanka\` as needed, because we have set \`fallback\` to true. Then we need to write our getStaticProps function to fetch related data in the runtime as well.
 
-> In our example app, we don't fetch any external data. In a real-world app, it'll be your CMS or a database.
+> In our example app, we don't fetch any external data. In a real-world app, you might need to talk to a CMS, external API, or to a database.
 
 ${<Website src="https://nextjs-issg-example.now.sh" height={350}/>}
 
-Try to follow these steps in the above iSSG web app:
+Try to follow these steps in the above web app:
 
 * Click the "Sri Lanka" page
 * Wait until it asks you to reload the page
