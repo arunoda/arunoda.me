@@ -154,7 +154,7 @@ There's more to iSSG and how to build a modern app with Next.js. I am creating m
 )
 
 export default WithDoc({
-  title: 'What is Next.js Incremental (Re)Generation?',
+  title: 'What is Next.js Incremental Static (Re)Generation?',
   description: " It's a combination of best features from server-side rendering(SSR) and static site generation(SSG).",
   image: '',
   slug: 'what-is-nextjs-issg',

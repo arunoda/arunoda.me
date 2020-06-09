@@ -1,7 +1,7 @@
 export default [
   {
     slug: 'what-is-nextjs-issg',
-    title: "What is Next.js Incremental (Re)Generation?",
+    title: "What is Next.js Incremental Static (Re)Generation?",
     date: 'June 8, 2020'
   },
   {
