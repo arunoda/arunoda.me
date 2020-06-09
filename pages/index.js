@@ -17,7 +17,7 @@ const MainLink = ({ href, as, children, nomargin }) => (
       a {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         text-decoration: none;
-        color: #EEE;
+        color: #000;
         font-size: 20px;
       }
 
@@ -82,7 +82,7 @@ export default () => (
       }
 
       #ct3 {
-        border-top: 1px solid #FFF;
+        border-top: 1px solid #000;
         padding-top: 10px;
         text-align: center;
         margin: 15px 0 0 0;
@@ -98,7 +98,7 @@ export default () => (
     `}</style>
     <style jsx global>{`
       body {
-        background-color: #4c4c4c;
+        background-color: #8bc34a;
       }
     `}</style>
   </div>

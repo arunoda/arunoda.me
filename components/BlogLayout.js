@@ -15,7 +15,7 @@ const MyLink = ({ href, as, children }) => (
       }
 
       a {
-        color: #EEE;
+        color: #000;
         text-decoration: none;
         font-size: 16px;
         font-weight: 600;
@@ -35,7 +35,7 @@ const Subscribe = () => (
     <style jsx>{`
       .divider {
         margin: 0 5px 0 0;
-        color: #FFF;
+        color: #000;
         font-weight: 700;
       }
     `}</style>
@@ -56,7 +56,7 @@ export default ({ children }) => (
     <style jsx>{`
       header {
         padding: 30px 30px;
-        background-color: #4c4c4c;
+        background-color: #8bc34a;
       }
 
       article {
