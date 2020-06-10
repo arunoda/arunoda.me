@@ -1,6 +1,7 @@
 import markdown from 'markdown-in-js'
 import WithDoc, { components } from '~/lib/with-doc'
 
+import Image from '~/components/Image'
 import Note from '~/components/Note'
 import Code from '~/components/Code'
 import Question from '~/components/Question'
@@ -156,7 +157,7 @@ There are many things to discuss about "building a modern app" with Next.js. I a
 export default WithDoc({
   title: 'What is Next.js Incremental Static (Re)Generation?',
   description: " It's a combination of best features from server-side rendering(SSR) and static site generation(SSG).",
-  image: '',
+  image: 'https://user-images.githubusercontent.com/50838/84260920-781e6e80-ab38-11ea-865a-84e098d2ae1b.png',
   slug: 'what-is-nextjs-issg',
   date: 'June 8, 2020',
   links: {
@@ -172,6 +173,14 @@ ${
 }
 
 Unlike a caching server, this is a built-in feature of Next.js, and you are in full control of how to manage those pages. You can use your existing deployment solution to get the full benefits. But if you deploy your app with [Vercel](https://vercel.com), it will be much faster and smoother.
+
+${
+  <Image
+    src="https://user-images.githubusercontent.com/50838/84260920-781e6e80-ab38-11ea-865a-84e098d2ae1b.png"
+    alt="How Next.js Incremental Static Regeneration works"
+    title="This is how Incremental Static Regeneration works. Start reading for more details."
+  />
+}
 
 I know you have a lot of questions, let's dive in.
 
@@ -424,8 +433,15 @@ ${q6}
 
 This is what's happening behind the scenes:
 
-* In the first reload, Next.js sends you the current version of the page.
-* But it starts to rebuild the page in the background. 
+${
+  <Image
+    src="https://user-images.githubusercontent.com/50838/84260920-781e6e80-ab38-11ea-865a-84e098d2ae1b.png"
+    alt="How Next.js Incremental Static Regeneration works"
+  />
+}
+
+* In the first reload, Next.js sends you the old version of the page.
+* But it starts to regenerate the page in the background. 
 * In the next reload, you will get the newly built page.
 
 ${

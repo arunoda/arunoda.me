@@ -1,0 +1,100 @@
+<mxfile host="" modified="2020-06-10T11:01:40.492Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.45.1 Chrome/78.0.3904.130 Electron/7.2.4 Safari/537.36" etag="nD6gJ4rXz9NW-z1QBnfp" version="13.1.3">
+    <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
+        <mxGraphModel dx="561" dy="656" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="32" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="70" y="120" width="710" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="group" parent="32" vertex="1" connectable="0">
+                    <mxGeometry y="60" width="139.52" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;font style=&quot;font-size: 14px ; font-weight: normal&quot;&gt;User 1&lt;/font&gt;" style="html=1;whiteSpace=wrap;comic=1;strokeWidth=2;fontFamily=Comic Sans MS;fontStyle=1;" parent="6" vertex="1">
+                    <mxGeometry y="1" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.chrome" parent="6" vertex="1">
+                    <mxGeometry x="-30" y="30" width="59.52" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;comic=1;strokeWidth=2;fontFamily=Comic Sans MS;fontStyle=1;align=center;" parent="32" vertex="1">
+                    <mxGeometry x="390" width="320" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 14px&quot;&gt;Next.js APP&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="32" vertex="1">
+                    <mxGeometry x="500" y="2" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="rounded=0;comic=1;strokeWidth=2;endArrow=blockThin;html=1;fontFamily=Comic Sans MS;fontStyle=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.006;entryY=0.19;entryDx=0;entryDy=0;entryPerimeter=0;" parent="32" source="3" target="7" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="261" as="sourcePoint"/>
+                        <mxPoint x="387" y="46" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 14px ; font-weight: normal&quot;&gt;Ask for page /srilanka&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="32" vertex="1">
+                    <mxGeometry x="220" y="30" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="rounded=0;comic=1;strokeWidth=2;endArrow=blockThin;html=1;fontFamily=Comic Sans MS;fontStyle=1;" parent="32" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="110" as="sourcePoint"/>
+                        <mxPoint x="120" y="110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 14px ; font-weight: normal&quot;&gt;Send the old version&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="32" vertex="1">
+                    <mxGeometry x="210" y="100" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;span style=&quot;font-weight: normal&quot;&gt;Regeneration Process&lt;/span&gt;" style="html=1;whiteSpace=wrap;comic=1;strokeWidth=2;fontFamily=Comic Sans MS;fontStyle=1;" parent="32" vertex="1">
+                    <mxGeometry x="560" y="56" width="120" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="rounded=0;comic=1;strokeWidth=2;endArrow=blockThin;html=1;fontFamily=Comic Sans MS;fontStyle=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="32" target="18" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="391" y="82" as="sourcePoint"/>
+                        <mxPoint x="360" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;span style=&quot;font-size: 14px ; font-weight: 400&quot;&gt;Sends a trigger&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="32" vertex="1">
+                    <mxGeometry x="420" y="40" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;span style=&quot;font-weight: normal&quot;&gt;New Version&lt;br&gt;/srilanka&lt;/span&gt;" style="html=1;whiteSpace=wrap;comic=1;strokeWidth=2;fontFamily=Comic Sans MS;fontStyle=1;strokeColor=#66CC00;" parent="32" vertex="1">
+                    <mxGeometry x="400" y="250" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;span style=&quot;font-weight: normal&quot;&gt;Old Version&lt;br&gt;/srilanka&lt;/span&gt;" style="html=1;whiteSpace=wrap;comic=1;strokeWidth=2;fontFamily=Comic Sans MS;fontStyle=1;fillColor=none;strokeColor=#F04713;" parent="32" vertex="1">
+                    <mxGeometry x="400" y="100" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="rounded=0;comic=1;strokeWidth=2;endArrow=blockThin;html=1;fontFamily=Comic Sans MS;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="32" source="18" target="21" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="310" y="270" as="sourcePoint"/>
+                        <mxPoint x="360" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;span style=&quot;font-size: 14px ; font-weight: 400&quot;&gt;creates a&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="32" vertex="1">
+                    <mxGeometry x="550" y="200" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="group" parent="32" vertex="1" connectable="0">
+                    <mxGeometry y="250" width="139.52" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;font style=&quot;font-size: 14px ; font-weight: normal&quot;&gt;User 2&lt;/font&gt;" style="html=1;whiteSpace=wrap;comic=1;strokeWidth=2;fontFamily=Comic Sans MS;fontStyle=1;" parent="25" vertex="1">
+                    <mxGeometry y="1" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.chrome" parent="25" vertex="1">
+                    <mxGeometry x="-30" y="30" width="59.52" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="rounded=0;comic=1;strokeWidth=2;endArrow=blockThin;html=1;fontFamily=Comic Sans MS;fontStyle=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.006;entryY=0.19;entryDx=0;entryDy=0;entryPerimeter=0;" parent="32" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="121.91999999999999" y="266" as="sourcePoint"/>
+                        <mxPoint x="389.99999999999994" y="266" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 14px ; font-weight: normal&quot;&gt;Ask for page /srilanka&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="32" vertex="1">
+                    <mxGeometry x="221.92000000000002" y="220" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="rounded=0;comic=1;strokeWidth=2;endArrow=blockThin;html=1;fontFamily=Comic Sans MS;fontStyle=1;" parent="32" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="381.92" y="300" as="sourcePoint"/>
+                        <mxPoint x="121.91999999999999" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 14px ; font-weight: normal&quot;&gt;Send the new version&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="32" vertex="1">
+                    <mxGeometry x="211.92" y="290" width="100" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
