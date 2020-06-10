@@ -147,7 +147,7 @@ But for the "Sri Lanka" page, we use a route with a format like \`/news/srilanka
 
 const subscribe = (
   <Note>{markdown(components)`
-There's more to iSSG and how to build a modern app with Next.js. I am creating more content like this and publish once every week. 
+There are many things to discuss about "building a modern app" with Next.js. I am creating more content like this and publish once every week.
 
 [Subscribe](https://buttondown.email/arunoda) to get these posts right into your inbox.
   `}</Note>
