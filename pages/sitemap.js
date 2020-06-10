@@ -52,7 +52,13 @@ Sitemap.getInitialProps = function({res}) {
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${urlsetContent}
-</urlset> 
+    <url>
+        <loc>https://arunoda.me</loc>
+        <lastmod>2020-06-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+</urlset>
     `);
     res.end();
 }
