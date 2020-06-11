@@ -164,7 +164,7 @@ export default WithDoc({
     twitter: 'https://twitter.com/arunoda'
   }
 })(markdown(components)`
-With these Next.js improvements, you can build your app as a static web app. But it can also (re)generate those static pages as needed. In a way, it's like putting a static cache in front of your server-side rendered(SSR) app. So, you get the benefits of both SSR and static site generation(SSG).
+With these Next.js improvements, you can build your app as a static web app. But it can also (re)generate those static pages as needed. In a way, it's like putting a static cache in front of your server-side rendered(SSR) app.
 
 ${
   <Note>
