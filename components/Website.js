@@ -10,18 +10,20 @@ export default function Website({src, height=500}) {
     return (
         <div className="container">
             <div className="url-bar">
-                <span className="title">URL:</span>
+                <span className="title">🌎</span>
                 <span className="url"><a href={src} target="_blank">{src}</a></span>
-                <span className="reload" onClick={reloadSrc}>Reload</span>
+                <span className="reload" onClick={reloadSrc}>🔄</span>
             </div>
             <iframe key={reloadKey} src={src} />
             <style jsx>{`
                 .container {
-                    border: 2px solid #8BC34A;
+                    margin: 50px 0;
+                    border: 1px solid #CCC;
+                    border-radius: 4px;
                 }
 
                 .url-bar {
-                    border-bottom: 1px solid #8BC34A;
+                    border-bottom: 1px solid #EEE;
                     padding: 3px 10px;
                     font-size: 12px;
                     position: relative;
@@ -43,6 +45,7 @@ export default function Website({src, height=500}) {
                     font-weight: bold;
                     float: right;
                     cursor: pointer;
+                    font-size: 16px;
                 }
 
                 .url-bar .reload:hover {
