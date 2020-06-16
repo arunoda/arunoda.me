@@ -1,5 +1,11 @@
 export default [
   {
+    slug: 'hey-nextjs-is-server-side-rendering-dead',
+    title: "Hey Next.js, Is Server Side Rendering Dead?",
+    date: 'June 17, 2020',
+    updatedAt: 'June 17, 2020'
+  },
+  {
     slug: 'what-is-nextjs-issg',
     title: "What is Next.js Incremental Static (Re)Generation?",
     date: 'June 8, 2020',

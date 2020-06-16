@@ -14,7 +14,7 @@ const customPreStyle = {
   backgroundColor: '#FAFAFA'
 }
 
-export default ({ language, wrap, children }) => (
+export default ({ language, wrap, title, children }) => (
   <div className='code'>
     <SyntaxHighlighter
       language={language}
@@ -23,6 +23,9 @@ export default ({ language, wrap, children }) => (
     >
       { children.trim() }
     </SyntaxHighlighter>
+    {title? (
+      <div className="title">{title}</div>
+    ) : null}
     <style jsx>{`
       .code {
         margin: 30px 0;
@@ -30,6 +33,14 @@ export default ({ language, wrap, children }) => (
 
       .code :global(pre) {
         ${wrap ? 'white-space: normal' : ''};
+      }
+
+      .title {
+        text-align: center;
+        color: #888;
+        font-size: 13px;
+        line-height: 22px;
+        padding: 5px 20px;
       }
     `}</style>
   </div>
