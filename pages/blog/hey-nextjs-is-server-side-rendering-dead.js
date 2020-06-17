@@ -4,6 +4,7 @@ import WithDoc, { components } from '~/lib/with-doc'
 import Image from '~/components/Image'
 import Code from '~/components/Code'
 import Note from '~/components/Note'
+import Website from '~/components/Website'
 
 
 const newsletter = (
@@ -81,7 +82,7 @@ Here's how you can do this. It's not that hard.
 
 ### 1. Build your public pages as static pages
 
-These public pages could include homepages, various marketing pages, docs, and the blog. Here's such an example:
+These public pages could include homepages, various marketing pages, docs, and the blog. Here's such [an example](https://github.com/arunoda/nextjs-issg-example/tree/ssr).
 
 ### 2. Build your dynamic pages with a static shell
 
@@ -91,7 +92,10 @@ ${<Note>This is not a new concept at all. This is the basic building block for c
 
 But now, we can do the initial render very fast without SSR. 
 
-Look at this example. It lists a set of tweets from the public timeline. Try to reload the page and see.
+Look at this example. It lists a set of tracks by "Marshmello" fetched from the iTunes API.
+
+${<Website src="https://nextjs-example-preload-data.vercel.app" height={350}/>}
+
 
 This app [preload data](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content) just like any other asset on your website. we can render the data without waiting for a fetch API call.
 
