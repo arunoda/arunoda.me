@@ -28,24 +28,38 @@ export default function Website({src, height=500}) {
                     font-size: 12px;
                     position: relative;
                     user-select: none;
+                    height: 28px;
                 }
 
                 .url-bar .title {
+                    position: absolute;
                     text-transform: uppercase;
                     font-weight: bold;
-                    margin-right: 10px;
+                    left: 0;
+                    width: 30px;
+                    text-align: center;
+                }
+
+                .url-bar .url {
+                    position: absolute;
+                    padding: 0 20px;
+                    white-space: nowrap;
+                }
+
+                .url-bar .reload {
+                    position: absolute;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    cursor: pointer;
+                    font-size: 16px;
+                    right: 0px;
+                    background-color: #FFF;
+                    width: 30px;
+                    text-align: center;
                 }
 
                 .url-bar a {
                     border-bottom: 0;
-                }
-
-                .url-bar .reload {
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    float: right;
-                    cursor: pointer;
-                    font-size: 16px;
                 }
 
                 .url-bar .reload:hover {
