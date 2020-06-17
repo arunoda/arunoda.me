@@ -16,13 +16,20 @@ I write content like this every week. You'd like my [Newsletter](https://buttond
 export default WithDoc({
   title: 'Hey Next.js, Is Server Side Rendering Dead?',
   description: 'These days, we discuss a lot about static site generation when it comes to Next.js. So, it server-side rendering dead?',
-  image: '',
+  image: 'https://arunoda.me/hey-nextjs-is-server-side-rendering-dead/caption.png',
   slug: 'hey-nextjs-is-server-side-rendering-dead',
   date: 'June 17, 2020',
 })(markdown(components)`
 If you ask someone about Next.js, they will talk about server-side rendering(SSR) for sure. But recently, we started to talk more about [static site generation](/blog/what-is-nextjs-issg) when it comes to Next.js.
 
-So, is server rendering dead? If so, what I should use Next.js instead of Jekyll and GitHub pages.
+So, is server rendering dead? 
+
+${
+  <Image
+    alt="Is Next.js SSR dead?."
+    src="/hey-nextjs-is-server-side-rendering-dead/caption.png"
+  />
+}
 
 You will get your answers at the end of this article.
 
@@ -93,6 +100,7 @@ ${<Note>This is not a new concept at all. This is the basic building block for c
 But now, we can do the initial render very fast without SSR. 
 
 Look at this example. It lists a set of tracks by "Marshmello" fetched from the iTunes API.
+(Try to reload it multiple times.)
 
 ${<Website src="https://nextjs-example-preload-data.vercel.app" height={350}/>}
 
