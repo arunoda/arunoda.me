@@ -15,7 +15,7 @@ I write content like this every week. You'd like my [Newsletter](https://buttond
 
 export default WithDoc({
   title: 'Hey Next.js, Is Server Side Rendering Dead?',
-  description: 'These days, we discuss a lot about static site generation when it comes to Next.js. So, it server-side rendering dead?',
+  description: 'These days, we discuss a lot about static site generation when it comes to Next.js. So, is server-side rendering dead?',
   image: 'https://arunoda.me/hey-nextjs-is-server-side-rendering-dead/caption.png',
   slug: 'hey-nextjs-is-server-side-rendering-dead',
   date: 'June 17, 2020',
