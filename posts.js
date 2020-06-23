@@ -1,5 +1,11 @@
 export default [
   {
+    slug: 'lighthouse-syndrome',
+    title: "Lighthouse Syndrome",
+    date: 'June 23, 2020',
+    updatedAt: 'June 23, 2020'
+  },
+  {
     slug: 'hey-nextjs-is-server-side-rendering-dead',
     title: "Hey Next.js, Is Server Side Rendering Dead?",
     date: 'June 17, 2020',
