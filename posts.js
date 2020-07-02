@@ -1,5 +1,11 @@
 export default [
   {
+    slug: 'thank-you-vercel',
+    title: "🙏 Thank you, Vercel",
+    date: 'July 2, 2020',
+    updatedAt: 'July 2, 2020'
+  },
+  {
     slug: 'lighthouse-syndrome',
     title: "Lighthouse Syndrome",
     date: 'June 23, 2020',
