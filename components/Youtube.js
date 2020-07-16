@@ -10,21 +10,28 @@ export default class Youtube extends React.Component {
 
   renderVideo (options = {}) {
     const { autoplay = false } = options
-    const { videoId, width = '100%', height = 315 } = this.props
+    const { videoId, width = '100%', height = 366 } = this.props
     const src = `https://www.youtube.com/embed/${videoId}`
     const videoUrl = autoplay ? `${src}?autoplay=1` : src
     return (
-      <iframe width={width} height={height} src={videoUrl} frameborder='0' allow='autoplay; encrypted-media' allowfullscreen='1' />
+      <>
+        <iframe width={width} height={height} src={videoUrl} frameborder='0' allow='autoplay; encrypted-media' allowfullscreen='1' />
+        <style jsx>{`
+          iframe {
+            border-radius: 4px;
+          }
+        `}</style>
+      </>
     )
   }
 
-  handleShowVideo() {
+  handleShowVideo () {
     this.setState({ showVideo: true })
     gtag.event({
       action: 'play_video',
       category: 'videos',
       label: this.props.videoId
-    });
+    })
   }
 
   render () {
@@ -39,7 +46,7 @@ export default class Youtube extends React.Component {
 
     return (
       <div id='container'>
-        <div id='click-to-play'>Play Now</div>
+        <div className='click-to-play' onClick={() => this.handleShowVideo()}>Play Now</div>
         <Image src={overlay} onClick={() => this.handleShowVideo()} />
         <style jsx>{`
           #container {
@@ -47,12 +54,13 @@ export default class Youtube extends React.Component {
             cursor: pointer;
           }
 
-          #click-to-play {
+          .click-to-play {
             position: absolute;
             width: 200px;
             height: 30px;
             line-height: 30px;
-            border: 2px solid #000;
+            border-radius: 20px;
+            box-shadow: 0px 0px 7px 1px #9e9e9e;
             color: #FFF;
             background-color: #ca0c0c;
 
@@ -61,7 +69,6 @@ export default class Youtube extends React.Component {
             margin-left: -100px;
             top: 50%;
             margin-top: -17px;
-            pointer-events:none;
 
             font-family: arial;
             letter-spacing: 4px;
@@ -71,7 +78,9 @@ export default class Youtube extends React.Component {
           }
 
           div :global(img) {
-            border: 3px solid #000;
+            border: 0;
+            box-shadow: 0px 0px 7px 0px #9e9e9e;
+            border-radius: 4px;
           }
 
           div:hover {

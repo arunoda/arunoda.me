@@ -1,5 +1,11 @@
 export default [
   {
+    slug: 'we-need-tests-but-now-or-later',
+    title: "We need tests. But now or later? 🤔",
+    date: 'July 16, 2020',
+    updatedAt: 'July 16, 2020'
+  },
+  {
     slug: 'thank-you-vercel',
     title: "🙏 Thank you, Vercel",
     date: 'July 2, 2020',

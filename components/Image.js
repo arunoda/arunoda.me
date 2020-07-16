@@ -38,6 +38,8 @@ export default ({ src, width = '100%', height, alt, title, onClick, href }) => (
 
       img {
         max-width: 100%;
+        border-radius: 4px;
+        box-shadow: 0px 0px 7px 0px #9e9e9e;
       }
 
       .title {
