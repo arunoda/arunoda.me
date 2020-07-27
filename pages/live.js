@@ -164,7 +164,7 @@ export default function Live() {
                     font-weight: 600;
                     letter-spacing: 1px;
                     display: flex;
-                    margin: 50px 0 80px 0;
+                    margin: 150px 0 80px 0;
                     justify-content: center;
                     align-items: center;
                     color: hsl(0deg, 0%, 10%);
@@ -289,6 +289,7 @@ export default function Live() {
                 @media only screen and (max-width: 400px) {
                     .heading {
                         font-size: 35px;
+                        margin: 50px 0 80px 0;
                     }
 
                     .heading .caption {
