@@ -274,6 +274,7 @@ export default function Live() {
 
                 .twitch img {
                     width: 20px;
+                    height: 23px;
                     margin-right: 10px;
                 }
 
