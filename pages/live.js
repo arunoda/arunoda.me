@@ -239,6 +239,8 @@ export default function Live() {
                     font-size: 18px;
                     width: 300px;
                     outline: 0;
+                    -webkit-appearance: none;
+                    border-radius: 0;
                 }
 
                 .form button:focus,
