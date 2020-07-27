@@ -91,6 +91,11 @@ export default function Live() {
                     title: "Arunoda Live 🔴",
                     description: "Exploring E2E Testing With Cypress.io",
                     url: 'https://arunoda.me/live',
+                    images: [
+                        {
+                            url: '/images/arunoda-live-tw-card.png'
+                        }
+                    ]
                 }}
                 twitter={{
                     handle: '@arunoda',
