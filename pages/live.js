@@ -93,7 +93,7 @@ export default function Live() {
                     url: 'https://arunoda.me/live',
                     images: [
                         {
-                            url: '/images/arunoda-live-tw-card.png'
+                            url: 'https://arunoda.me/images/arunoda-live-tw-card.png'
                         }
                     ]
                 }}
