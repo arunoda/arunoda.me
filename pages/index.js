@@ -38,6 +38,7 @@ export default () => (
         <MainLink href='https://twitter.com/arunoda'>Twitter</MainLink>
         <MainLink href='/blog'>Blog</MainLink>
         <MainLink href='https://github.com/arunoda'>GitHub</MainLink>
+        <MainLink href='/live'>Live</MainLink>
       </div>
       <div id='ct3'>
         <MainLink nomargin href='/blog/i-dont-live-in-america-but-i-support-black-lives-matter'>#BlackLivesMatter</MainLink>

@@ -38,8 +38,13 @@ export default function Live() {
     const [subscribing, setSubscribing] = useState(false)
     const [showThanks, setShowThanks] = useState(false)
 
+    const isLiveNow = liveTime < Date.now()
+
     useEffect(() => {
         const handler = setInterval(() => {
+            if (isLiveNow) {
+                clearInterval(handler)
+            }
             setTimerValue(getTimerValue())
         }, 200)
 
@@ -112,13 +117,21 @@ export default function Live() {
             <div className="title">
                 Exploring E2E Testing With Cypress.io
             </div>
-            <div className="countdown">
-                <div className="caption">Starts In</div>
-                <div className="timer">{timerValue}</div>
-            </div>
-            <div className="add-to-cal">
-                <a href={calendarLink} target="_blank">Add to Calender</a>
-            </div>
+            {isLiveNow? (
+                <a className="live-now" href="https://twitch.tv/arunodas">
+                    Visit <img src="/images/twitch-logo.png" /> for 🔴
+                </a>
+            ) : (
+                <>
+                    <div className="countdown">
+                        <div className="caption">Starts In</div>
+                        <div className="timer">{timerValue}</div>
+                    </div>
+                    <div className="add-to-cal">
+                        <a href={calendarLink} target="_blank">Add to Calender</a>
+                    </div>
+                </>
+            )}
             <form className="form" onSubmit={handleSubscribe}>
                 {showThanks ? (
                     <div className="thanks">Thanks. I'll remind you!</div>
@@ -164,7 +177,7 @@ export default function Live() {
                     font-weight: 600;
                     letter-spacing: 1px;
                     display: flex;
-                    margin: 150px 0 80px 0;
+                    margin: 100px 0 80px 0;
                     justify-content: center;
                     align-items: center;
                     color: hsl(0deg, 0%, 10%);
@@ -225,6 +238,23 @@ export default function Live() {
                     text-transform: uppercase;
                     letter-spacing: 2px;
                     font-size: 12px;
+                }
+
+                .live-now {
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    letter-spacing: 8px;
+                    margin: 0 0 80px 0;
+                    text-decoration: none;
+                    color: hsl(0deg, 0%, 10%);
+                }
+
+                .live-now img {
+                    width: 30px;
+                    margin: 0 10px;
                 }
 
                 .form {
