@@ -254,6 +254,7 @@ export default function Live() {
 
                 .live-now img {
                     width: 30px;
+                    height: 35px;
                     margin: 0 10px;
                 }
 
