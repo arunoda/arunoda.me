@@ -104,7 +104,7 @@ export default function Live() {
                 openGraph={{
                     type: 'website',
                     title: "Arunoda Live 🔴",
-                    description: {title},
+                    description: title,
                     url: 'https://arunoda.me/live',
                     images: [
                         {
