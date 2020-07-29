@@ -7,6 +7,15 @@ const liveTime = 1596128400000;
 const title = "Trying out Prisma with Next.js"
 const calendarLink = 'https://bit.ly/3jTLY0T';
 
+function getLiveTag() {
+    const d = new Date(liveTime)
+    const year = d.getUTCFullYear()
+    const month = d.getUTCMonth() + 1
+    const date = d.getUTCDate()
+
+    return `live-${year}-${month}-${date}`
+}
+
 function findDateDiff(diff) {
     let time = diff;
     const days = Math.floor(time / ms('1day'))
@@ -62,7 +71,7 @@ export default function Live() {
                     method: 'POST',
                     body: JSON.stringify({
                         email,
-                        tags: ['live', 'live-2020-July-29']
+                        tags: ['live', getLiveTag()]
                     }),
                     headers: {
                         'Content-Type': 'application/json'
