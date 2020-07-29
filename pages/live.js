@@ -3,8 +3,9 @@ import Head from 'next/head';
 import ms from 'ms'
 import { NextSeo } from 'next-seo';
 
-const liveTime = 1595962800000;
-const calendarLink = 'https://bit.ly/3026B36';
+const liveTime = 1596128400000;
+const title = "Trying out Prisma with Next.js"
+const calendarLink = 'https://bit.ly/3jTLY0T';
 
 function findDateDiff(diff) {
     let time = diff;
@@ -90,11 +91,11 @@ export default function Live() {
         <div className="container">
             <NextSeo
                 title="Arunoda Live 🔴"
-                description="Exploring E2E Testing With Cypress.io"
+                description={title}
                 openGraph={{
                     type: 'website',
                     title: "Arunoda Live 🔴",
-                    description: "Exploring E2E Testing With Cypress.io",
+                    description: {title},
                     url: 'https://arunoda.me/live',
                     images: [
                         {
@@ -114,9 +115,7 @@ export default function Live() {
                 <div className="caption">Arunoda Live</div>
                 <div className="circle"></div>
             </div>
-            <div className="title">
-                Exploring E2E Testing With Cypress.io
-            </div>
+            <div className="title">{title}</div>
             {isLiveNow? (
                 <a className="live-now" href="https://twitch.tv/arunodas">
                     Visit <img src="/images/twitch-logo.png" /> for 🔴
