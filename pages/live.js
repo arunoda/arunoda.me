@@ -3,9 +3,9 @@ import Head from 'next/head';
 import ms from 'ms'
 import { NextSeo } from 'next-seo';
 
-const liveTime = 1596560400000;
-const title = "Trying out RedwoodJS"
-const calendarLink = 'https://bit.ly/33bYlzJ';
+const liveTime = 1596733200000;
+const title = "Implementing auth support for a Next.js app with a custom backend"
+const calendarLink = 'https://shorturl.at/bwKX8';
 
 function getLiveTag() {
     const d = new Date(liveTime)
