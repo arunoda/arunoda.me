@@ -27,8 +27,13 @@ export default ({ language, wrap, title, children }) => (
       <div className="title">{title}</div>
     ) : null}
     <style jsx>{`
-      .code {
+       .code {
         margin: 30px 0;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+        max-width: 650px;
+        border-radius: 8px;
       }
 
       .code :global(pre) {

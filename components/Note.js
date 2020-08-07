@@ -3,9 +3,10 @@ const Note = ({ children }) => (
     {children}
     <style jsx>{`
       div {
-        background-color: #ffffd0;
+        background-color: hsl(54deg 100% 93%);
         padding: 20px;
         margin: 30px 0;
+        border-radius: 8px;
       }
 
       div :global(.p:nth-child(1)) {

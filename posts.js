@@ -1,5 +1,11 @@
 export default [
   {
+    slug: 'add-auth-support-to-a-next-js-app-with-a-custom-backend',
+    title: "Add auth support to a Next.js app with a custom backend",
+    date: 'August 7, 2020',
+    updatedAt: 'August 7, 2020'
+  },
+  {
     slug: 'we-need-tests-but-now-or-later',
     title: "We need tests. But now or later? 🤔",
     date: 'July 16, 2020',

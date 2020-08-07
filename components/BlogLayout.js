@@ -68,7 +68,6 @@ export default ({ children }) => (
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         padding: 0;
         margin: 0;
-        -webkit-font-smoothing: antialiased;
       }
     `}</style>
   </div>
