@@ -3,9 +3,9 @@ import Head from 'next/head';
 import ms from 'ms'
 import { NextSeo } from 'next-seo';
 
-const liveTime = 1596733200000;
-const title = "Implementing auth support for a Next.js app with a custom backend"
-const calendarLink = 'https://shorturl.at/bwKX8';
+const liveTime = 1597165200000;
+const title = "Trying out FaunaDB"
+const calendarLink = 'https://shorturl.at/yEGI8';
 
 function getLiveTag() {
     const d = new Date(liveTime)
