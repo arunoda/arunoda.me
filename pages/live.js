@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo';
 
 const liveTime = 1597165200000;
 const title = "Trying out FaunaDB"
-const calendarLink = 'https://shorturl.at/yEGI8';
+const calendarLink = 'https://bit.ly/33KTJAX';
 
 function getLiveTag() {
     const d = new Date(liveTime)
