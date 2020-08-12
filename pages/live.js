@@ -3,9 +3,9 @@ import Head from 'next/head';
 import ms from 'ms'
 import { NextSeo } from 'next-seo';
 
-const liveTime = 1597165200000;
-const title = "Trying out FaunaDB"
-const calendarLink = 'https://bit.ly/33KTJAX';
+const liveTime = 1597338000000;
+const title = "Exploring GraphQL"
+const calendarLink = 'https://bit.ly/2DCdgsI';
 
 function getLiveTag() {
     const d = new Date(liveTime)
