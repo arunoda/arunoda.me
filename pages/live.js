@@ -3,9 +3,9 @@ import Head from 'next/head';
 import ms from 'ms'
 import { NextSeo } from 'next-seo';
 
-const liveTime = 1597338000000;
-const title = "Exploring GraphQL"
-const calendarLink = 'https://bit.ly/2DCdgsI';
+const liveTime = 1597770000000;
+const title = "Building a Performance Monitoring Solution for Next.js"
+const calendarLink = 'https://bit.ly/3arxlgZ';
 
 function getLiveTag() {
     const d = new Date(liveTime)
