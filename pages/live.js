@@ -3,7 +3,7 @@ import Head from 'next/head';
 import ms from 'ms'
 import { NextSeo } from 'next-seo';
 
-const liveTime = 1597770000000;
+const liveTime = 1597942800000;
 const title = "Building a Performance Monitoring Solution for Next.js"
 const calendarLink = 'https://bit.ly/3arxlgZ';
 
@@ -135,9 +135,9 @@ export default function Live() {
                         <div className="caption">Starts In</div>
                         <div className="timer">{timerValue}</div>
                     </div>
-                    <div className="add-to-cal">
+                    {/* <div className="add-to-cal">
                         <a href={calendarLink} target="_blank">Add to Calender</a>
-                    </div>
+                    </div> */}
                 </>
             )}
             <form className="form" onSubmit={handleSubscribe}>
