@@ -3,8 +3,8 @@ import Head from 'next/head';
 import ms from 'ms'
 import { NextSeo } from 'next-seo';
 
-const liveTime = 1597942800000;
-const title = "Building a Performance Monitoring Solution for Next.js"
+const liveTime = 1598374800000;
+const title = "Adding Tracing Support for Next.js"
 const calendarLink = 'https://bit.ly/3arxlgZ';
 
 function getLiveTag() {
