@@ -1,5 +1,11 @@
 export default [
   {
+    slug: 'first-steps-adding-tracing-support-for-nextjs',
+    title: "First Steps: Tracing Support for Next.js",
+    date: 'August 24, 2020',
+    updatedAt: 'August 24, 2020'
+  },
+  {
     slug: 'add-auth-support-to-a-next-js-app-with-a-custom-backend',
     title: "Add auth support to a Next.js app with a custom backend",
     date: 'August 7, 2020',
