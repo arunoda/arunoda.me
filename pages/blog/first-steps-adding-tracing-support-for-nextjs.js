@@ -17,7 +17,7 @@ export default WithDoc({
   title: 'First Steps: Adding Tracing Support for Next.js',
   description: "Here are my first steps on adding tracing support for Next.js. With that, we can understand what's happening inside a Next.js app.",
   image: 'https://user-images.githubusercontent.com/50838/91061330-ab599f80-e649-11ea-9115-0a315fd030d0.png',
-  slug: 'first-steps-tracing-support-for-nextjs',
+  slug: 'first-steps-adding-tracing-support-for-nextjs',
   date: 'August 24, 2020'
 })(markdown(components)`
 
