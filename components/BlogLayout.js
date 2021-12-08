@@ -47,7 +47,6 @@ export default ({ children }) => (
     <header>
       <MyLink href='/'>Home</MyLink>
       <MyLink href='/blog'>Blog</MyLink>
-      <MyLink href='/blog/i-dont-live-in-america-but-i-support-black-lives-matter'>#BLM</MyLink>
       <Subscribe />
     </header>
     <article>
