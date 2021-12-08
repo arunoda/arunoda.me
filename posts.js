@@ -1,5 +1,11 @@
 export default [
   {
+    slug: 'iam-back-lessons-learned-from-the-gamedev-community',
+    title: "I'm Back! - Lessons Learned from the GameDev Community",
+    date: 'December 8, 2021',
+    updatedAt: 'December 8, 2021'
+  },
+  {
     slug: 'first-steps-adding-tracing-support-for-nextjs',
     title: "First Steps: Tracing Support for Next.js",
     date: 'August 24, 2020',
