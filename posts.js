@@ -1,5 +1,11 @@
 export default [
   {
+    slug: 'web3-love-it-or-hate-it',
+    title: "Web3 - Love It or Hate It?",
+    date: 'December 28, 2021',
+    updatedAt: 'December 28, 2021'
+  },
+  {
     slug: 'iam-back-lessons-learned-from-the-gamedev-community',
     title: "I'm Back! - Lessons Learned from the GameDev Community",
     date: 'December 8, 2021',
