@@ -21,7 +21,7 @@ const noteAboutVCs = (
   <Note>{markdown(components)`
 💡 In nutshell, even though these Web3 projects are VC-funded, some of these projects are pretty good.  We should not hate them just because they are VC-funded.
     
-Even Next.js & Gatsby backed by VCs. But there are cases like Meteor which was [abandoned due to VCs](https://twitter.com/awilkinson/status/1233058058873405441).
+Even Next.js is backed by VCs. But there are cases like Meteor which was [abandoned due to VCs](https://twitter.com/awilkinson/status/1233058058873405441).
   `}</Note>
 );
 
@@ -46,7 +46,7 @@ Before we talk about Web3, we need to talk about Web2. I think we started to hea
 
 JSON-RPC is another transport-independent data protocol introduced in this era. But, we didn’t see any wider adoption. Now, this is a quite well-known protocol used by many [Web3 clients libs](https://www.google.com/search?q=web3+json+rpc) 😜.
 
-Web2 was not a standard & it was just a buzzword to building rich client-side apps. Basically, it’s the beginning of the Single Page Apps. 
+Web2 was not a standard & it was just a buzzword for building rich client-side apps. Basically, it’s the beginning of the Single Page Apps era.
 
 > If you say, we are still building Web2 apps, I am not going to argue with you!
 
