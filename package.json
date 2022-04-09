@@ -25,7 +25,7 @@
     "disqus-react": "^1.0.8",
     "isomorphic-unfetch": "*",
     "markdown-in-js": "^1.1.4",
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "nanoid": "^3.1.9",
     "next": "^9.3.6",
     "next-seo": "^4.7.3",
