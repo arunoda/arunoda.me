@@ -1,21 +1,21 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { GA_TRACKING_ID } from '~/lib/constants'
 
 export default class MyDocument extends Document {
-  static getInitialProps (ctx) {
+  static getInitialProps(ctx) {
     return Document.getInitialProps(ctx)
   }
 
-  render () {
+  render() {
     return (
-      <html>
+      <Html>
         <Head>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           />
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     )
   }
 }

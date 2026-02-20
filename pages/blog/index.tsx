@@ -6,7 +6,7 @@ const PostLink = ({ href, title, date }) => (
   <div id='post-link'>
     <div className='date-mobile'>{date}</div>
     <span className='date-desktop'>{date}</span>
-    <Link href={href}>
+    <Link href={href} legacyBehavior>
       <a>{title}</a>
     </Link>
     <style jsx>{`

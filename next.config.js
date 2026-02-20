@@ -12,5 +12,22 @@ module.exports = {
     }
 
     return config
-  }
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/sitemap',
+      },
+      {
+        source: '/llms.txt',
+        destination: '/llms',
+      },
+      {
+        source: '/llms/blog/:slug.txt',
+        destination: '/api/llms?slug=:slug',
+      }
+    ]
+  },
+  turbopack: {}
 }

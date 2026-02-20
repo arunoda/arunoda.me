@@ -9,17 +9,17 @@ import Website from '~/components/Website'
 
 const q1 = (
   <Question
-    id = "what-is-nextjs-issg-q1"
-    question = "Do this multiple times. What was your experience?"
-    answers = {[
+    id="what-is-nextjs-issg-q1"
+    question="Do this multiple times. What was your experience?"
+    answers={[
       "The updated time is always the same",
       "The updated time is changing every time.",
       "I got an error.",
       "The updated time changed around every 20 secs."
     ]}
-    correctAnswer = {1}
-    points = {30}
-    explaination = {markdown(components)`
+    correctAnswer={1}
+    points={30}
+    explaination={markdown(components)`
 As you experienced, every time you load the page, the updated time was changed. That's because Next.js is generating the page on-demand as you load it.
     `}
   />
@@ -27,17 +27,17 @@ As you experienced, every time you load the page, the updated time was changed. 
 
 const q2 = (
   <Question
-    id = "what-is-nextjs-issg-q2"
-    question = "What is a benefit of SSR?"
-    answers = {[
+    id="what-is-nextjs-issg-q2"
+    question="What is a benefit of SSR?"
+    answers={[
       "Faster builds times",
       "Faster page load times",
       "The only solution for SEO for a React app",
       "Easy to build the app"
     ]}
-    correctAnswer = {0}
-    points = {30}
-    explaination = {markdown(components)`
+    correctAnswer={0}
+    points={30}
+    explaination={markdown(components)`
 In the past, SSR really helped with SEO. But nowadays, search engines know how to crawl pages created on the client-side(Using React, Vue, etc.).
 
 The real advantage of Next.js + SSR is the ability to create a dynamic web app and build it quickly. You don't need to generate pages at build time, and Next.js can create them on-demand in the server.
@@ -47,17 +47,17 @@ The real advantage of Next.js + SSR is the ability to create a dynamic web app a
 
 const q3 = (
   <Question
-    id = "what-is-nextjs-issg-q3"
-    question = "Is there any problem(s) with SSR?"
-    answers = {[
+    id="what-is-nextjs-issg-q3"
+    question="Is there any problem(s) with SSR?"
+    answers={[
       "It consumes a lot of server resources",
       "It could slow page load time",
       "It's a waste of resources including DB calls, external API hits",
       "All of the above"
     ]}
-    correctAnswer = {3}
-    points = {30}
-    explaination = {markdown(components)`
+    correctAnswer={3}
+    points={30}
+    explaination={markdown(components)`
 Since we generate pages on-demand in the server, it needs to run all the logic for that in the server. Which takes a lot of resources, including CPU, Memory, and external API calls. Which could affect the page load time.
 
 If your pages do not often change (like news articles), regenerating the same page every time is a waste.
@@ -67,17 +67,17 @@ If your pages do not often change (like news articles), regenerating the same pa
 
 const q4 = (
   <Question
-    id = "what-is-nextjs-issg-q4"
-    question = "Do this multiple times. What was your experience?"
-    answers = {[
+    id="what-is-nextjs-issg-q4"
+    question="Do this multiple times. What was your experience?"
+    answers={[
       "The updated time is always the same",
       "The updated time is changing every time.",
       "I got an error.",
       "The updated time changed around every 20 secs."
     ]}
-    correctAnswer = {0}
-    points = {30}
-    explaination = {markdown(components)`
+    correctAnswer={0}
+    points={30}
+    explaination={markdown(components)`
 As you have seen, even if you reload, the page updated time does not change. That's because there's no page generation process in the server. It serves a set of static files.
     `}
   />
@@ -85,17 +85,17 @@ As you have seen, even if you reload, the page updated time does not change. Tha
 
 const q5 = (
   <Question
-    id = "what-is-nextjs-issg-q5"
-    question = "Is there any problem(s) with SSG?"
-    answers = {[
+    id="what-is-nextjs-issg-q5"
+    question="Is there any problem(s) with SSG?"
+    answers={[
       "If you have more pages, it will take more time to build the app.",
       "If you want to add some new content, you need to rebuild the app.",
       "All of the above.",
       "There is no problem with SSG."
     ]}
-    correctAnswer = {2}
-    points = {30}
-    explaination = {markdown(components)`
+    correctAnswer={2}
+    points={30}
+    explaination={markdown(components)`
 With SSG, you need to rebuild your app every time you add new content or change the app itself.
 If your app contains more pages, it will take more time to build your app as well.
 
@@ -106,17 +106,17 @@ This sounds fine for a personal blog. But for a news portal like BBC, this is pr
 
 const q6 = (
   <Question
-    id = "what-is-nextjs-issg-q6"
-    question = "What was your experience?"
-    answers = {[
+    id="what-is-nextjs-issg-q6"
+    question="What was your experience?"
+    answers={[
       "The updated time does not change",
       "In the first reload, there's no change. Then it changed in the next reload",
       "The updated time is changing always",
       "The updated time is changing every 10 seconds automatically"
     ]}
-    correctAnswer = {1}
-    points = {30}
-    explaination = {markdown(components)`
+    correctAnswer={1}
+    points={30}
+    explaination={markdown(components)`
 As you have seen, In the first reload, there's no change. Then it changed in the next reload.
 
 Next.js only changes the updated time when it's generating the page. We can check this time to detect whether a page has regenerated or not.
@@ -126,17 +126,17 @@ Next.js only changes the updated time when it's generating the page. We can chec
 
 const q7 = (
   <Question
-    id = "what-is-nextjs-issg-q7"
-    question = 'Why I asked you to load this "Sri Lanka" page explicitly?'
-    answers = {[
+    id="what-is-nextjs-issg-q7"
+    question='Why I asked you to load this "Sri Lanka" page explicitly?'
+    answers={[
       "It's just because I live in SriLanka.",
       "\"Sri Lanka\" page is generated via the fallback, but it doesn't matter",
       "The other two pages are generated at the build time, so it's hard to demonstrate page regeneration.",
       "\"Sri Lanka\" page is generated via the fallback, that's the only way to get iSSG support."
     ]}
-    correctAnswer = {2}
-    points = {30}
-    explaination = {markdown(components)`
+    correctAnswer={2}
+    points={30}
+    explaination={markdown(components)`
 "Sri Lanka" page is generated via the fallback. Next.js supports revalidation regardless of whether it's generated at the build time or via the fallback support.
 
 But it's hard to demonstrate iSSG revalidation with a public website since many users can access the same page at the same time. So, one user could trigger the revalidation, and the next user will get the new content.
@@ -166,21 +166,19 @@ export default WithDoc({
 })(markdown(components)`
 With these Next.js improvements, you can build your app as a static web app. But it can also (re)generate those static pages as needed. In a way, it's like putting a static cache in front of your server-side rendered(SSR) app.
 
-${
-  <Note>
-    So, you get the benefits of both SSR and static site generation(SSG). 
+${<Note>
+    So, you get the benefits of both SSR and static site generation(SSG).
   </Note>
-}
+  }
 
 Unlike a caching server, this is a built-in feature of Next.js, and you are in full control of how to manage those pages. You can use your existing deployment solution to get the full benefits. But if you deploy your app with [Vercel](https://vercel.com), it will be much faster and smoother.
 
-${
-  <Image
+${<Image
     src="https://user-images.githubusercontent.com/50838/84260920-781e6e80-ab38-11ea-865a-84e098d2ae1b.png"
     alt="How Next.js Incremental Static Regeneration works"
     title="This is how Incremental Static Regeneration works. Start reading for more details."
   />
-}
+  }
 
 I know you have a lot of questions, let's dive in.
 
@@ -194,8 +192,7 @@ One of the core selling points of Next.js is its ability to build Server Side Re
 
 Have a look at this example:
 
-${
-  <Code>{`
+${<Code>{`
 import Link from 'next/link'
 
 export default function NewsPage({slug, updatedAt}) {
@@ -209,7 +206,7 @@ export default function NewsPage({slug, updatedAt}) {
                 Updated at <span className="time">{timeString}</span>
             </div>
             <div>
-                <Link href="/"><a>Home</a></Link>
+                <Link href="/" legacyBehavior><a>Home</a></Link>
             </div>
         </div>
     )
@@ -222,13 +219,13 @@ NewsPage.getInitialProps = async ({query}) => {
     }
 };  
   `}</Code>
-}
+  }
 
 It's a simple page served via SSR. It contains the time the page has generated. 
 
 ([View source code on GitHub](https://github.com/arunoda/nextjs-issg-example/tree/ssr))
 
-${<Website src="https://nextjs-ssr-example.now.sh" height={350}/>}
+${<Website src="https://nextjs-ssr-example.now.sh" height={350} />}
 
 Try to follow these steps in the above web site:
 
@@ -253,8 +250,7 @@ After you build the app, you will get a set of HTML files and related assets. Si
 
 Here's a Next.js page of a simple news portal app built with SSG:
 
-${
-  <Code>{`
+${<Code>{`
 import Link from 'next/link'
 
 export default function NewsPage({slug, updatedAt}) {
@@ -268,7 +264,7 @@ export default function NewsPage({slug, updatedAt}) {
                 Updated at <span className="time">{timeString}</span>
             </div>
             <div>
-                <Link href="/"><a>Home</a></Link>
+                <Link href="/" legacyBehavior><a>Home</a></Link>
             </div>
         </div>
     )
@@ -293,11 +289,11 @@ export async function getStaticProps({params}) {
     }
 }
   `}</Code>
-}
+  }
 
 ([View source code on GitHub](https://github.com/arunoda/nextjs-issg-example/tree/ssg))
 
-${<Website src="https://nextjs-ssg-example.now.sh" height={350}/>}
+${<Website src="https://nextjs-ssg-example.now.sh" height={350} />}
 
 Try to follow these steps in the above web site:
 
@@ -338,11 +334,10 @@ Let me give you an example:
 * We can generate pages via SSG for \`/news/covid19\` and \`/news/global-warming\`
 * But it can create pages for a new slug like \`news/so-srilanka\` in the server.
 
-${
-  <Note>
+${<Note>
     With this, we don't need to build all the pages at build time. That will reduce the build time.
   </Note>
-}
+  }
 
 ## Incremental Static <i>RE</i>generation
 
@@ -350,16 +345,14 @@ Sometimes pages contain dynamic content, or we need to fix a typo. With this reg
 
 With that, Next.js can regenerate these pages after the timeout in the background. But if there are no requests to a given page, there's no regeneration.
 
-${
-  <Note>With this, we can update pages at runtime, just like in an SSR app.</Note>
-}
+${<Note>With this, we can update pages at runtime, just like in an SSR app.</Note>
+  }
 
 > As you can see, these improvements bring positive things from both SSR and SSG.
 
 Let me show you an example:
 
-${
-  <Code>{`
+${<Code>{`
 import Link from 'next/link'
 
 export default function NewsPage({slug, updatedAt}) {
@@ -373,7 +366,7 @@ export default function NewsPage({slug, updatedAt}) {
                 Updated at <span className="time">{timeString}</span>
             </div>
             <div>
-                <Link href="/"><a>Home</a></Link>
+                <Link href="/" legacyBehavior><a>Home</a></Link>
             </div>
         </div>
     )
@@ -400,13 +393,12 @@ export async function getStaticProps({params}) {
     }
 }
   `}</Code>
-}
+  }
 
 ([View source code on GitHub](https://github.com/arunoda/nextjs-issg-example))
 
-${
-  <Note>Make your attention to <b><code>fallback</code></b> and <b><code>unstable_revalidate</code></b>.</Note>
-}
+${<Note>Make your attention to <b><code>fallback</code></b> and <b><code>unstable_revalidate</code></b>.</Note>
+  }
 
 We generated the following two pages in the build time:
 
@@ -419,7 +411,7 @@ But it can also generate new pages like \`/news/srilanka\` as needed, because we
 
 > In our example app, we don't fetch any external data. In a real-world app, you might need to talk to a CMS, external API, or to a database.
 
-${<Website src="https://nextjs-issg-example.now.sh" height={350}/>}
+${<Website src="https://nextjs-issg-example.now.sh" height={350} />}
 
 Try to follow these steps in the above web app:
 
@@ -433,20 +425,18 @@ ${q6}
 
 This is what's happening behind the scenes:
 
-${
-  <Image
+${<Image
     src="https://user-images.githubusercontent.com/50838/84260920-781e6e80-ab38-11ea-865a-84e098d2ae1b.png"
     alt="How Next.js Incremental Static Regeneration works"
   />
-}
+  }
 
 * In the first reload, Next.js sends you the old version of the page.
 * But it starts to regenerate the page in the background. 
 * In the next reload, you will get the newly built page.
 
-${
-  <Note>Yes, you have to reload the page twice to get the updated version. But if multiple users are accessing the page, it's not problem at all.</Note>
-} 
+${<Note>Yes, you have to reload the page twice to get the updated version. But if multiple users are accessing the page, it's not problem at all.</Note>
+  } 
 
 This is very similar to how [stale-while-revalidate](https://tools.ietf.org/html/rfc5861) HTTP header works.
 <br/>
