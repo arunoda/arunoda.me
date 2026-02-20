@@ -5,7 +5,7 @@ export default function Sitemap() {
     return null;
 }
 
-Sitemap.getInitialProps = function({res}) {
+Sitemap.getInitialProps = function ({ res }) {
     res.setHeader("Content-Type", "text/xml");
 
     const urlsetContent = posts.map((post, index) => {
@@ -48,8 +48,7 @@ Sitemap.getInitialProps = function({res}) {
         `
     }).join('\n');
 
-    res.write(`
-<?xml version="1.0" encoding="UTF-8"?>
+    res.write(`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${urlsetContent}
     <url>

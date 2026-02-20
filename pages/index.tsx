@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Head from 'next/head'
+import { generateNextSeo as NextSeo } from 'next-seo/pages'
 import styles from './index.module.css'
 
 const MainLink = ({ href, as, children, nomargin }: any) => (
@@ -16,6 +18,12 @@ const MainLink = ({ href, as, children, nomargin }: any) => (
 export default function Index() {
   return (
     <div className={styles.wrapper}>
+      <Head>
+        {NextSeo({
+          title: "Arunoda Susiripala",
+          description: "Arunoda Susiripala's personal space on the internet."
+        })}
+      </Head>
       <div>
         <div className={styles.intro}>
           <h1 className={styles.h1}>Arunoda Susiripala</h1>
