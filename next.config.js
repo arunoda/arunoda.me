@@ -22,6 +22,10 @@ module.exports = {
       {
         source: '/llms.txt',
         destination: '/llms',
+      },
+      {
+        source: '/llms/blog/:slug.txt',
+        destination: '/api/llms?slug=:slug',
       }
     ]
   },

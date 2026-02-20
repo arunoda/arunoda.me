@@ -8,7 +8,7 @@ Llms.getInitialProps = function ({ res }: { res: any }) {
   res.setHeader("Content-Type", "text/plain");
 
   const urls = posts.map(post => {
-    return `- [${post.title}](https://arunoda.me/blog/${post.slug})`;
+    return `- [${post.title}](https://arunoda.me/blog/${post.slug}) ([Text Version](https://arunoda.me/llms/blog/${post.slug}.txt))`;
   }).join('\n');
 
   res.write(`# Arunoda Susiripala - Personal Website
