@@ -1,7 +1,13 @@
 import { GA_TRACKING_ID } from '~/lib/constants'
 
+declare global {
+  interface Window {
+    gtag: any;
+  }
+}
+
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export const pageview = ({url, title}) => {
+export const pageview = ({ url, title }: any) => {
   window.gtag('config', GA_TRACKING_ID, {
     page_path: url,
     page_title: title
@@ -9,7 +15,7 @@ export const pageview = ({url, title}) => {
 }
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
-export const event = ({ action, category, label, value }) => {
+export const event = ({ action, category, label, value }: any) => {
   window.gtag('event', action, {
     event_category: category,
     event_label: label,

@@ -1,7 +1,7 @@
 import NextLink from 'next/link'
 import * as gtag from '~/lib/gtag'
 
-const Link = ({ href, ...rest }) => {
+const Link = ({ href, ...rest }: any) => {
   function trackClick() {
     gtag.event({
       action: 'click_link',
@@ -17,8 +17,8 @@ const Link = ({ href, ...rest }) => {
   }
 
   return (
-    <NextLink href={href}>
-      <a {...rest} onClick={trackClick}/>
+    <NextLink href={href} legacyBehavior>
+      <a {...rest} onClick={trackClick} />
     </NextLink>
   )
 }

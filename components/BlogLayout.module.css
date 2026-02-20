@@ -1,0 +1,29 @@
+.header {
+  padding: 30px 30px;
+  background-color: #8bc34a;
+}
+
+.article {
+  padding: 0 30px;
+}
+
+.span {
+  margin-right: 20px;
+}
+
+.a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.a:hover {
+  color: #FFF;
+}
+
+.divider {
+  margin: 0 5px 0 0;
+  color: #000;
+  font-weight: 700;
+}
