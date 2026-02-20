@@ -3,8 +3,9 @@ import theme from 'react-syntax-highlighter/dist/cjs/styles/hljs/github-gist'
 
 // We use dynamic import here to make sure we don't copy this module across pages.
 // eslint-disable-next-line
-const SyntaxHighlighter: any = dynamic(import('react-syntax-highlighter') as any, { // eslint-disable-line no-use-before-define
-  loading: () => (<div />)
+const SyntaxHighlighter: any = dynamic(() => import('react-syntax-highlighter') as any, {
+  ssr: false,
+  loading: () => (<div style={{ minHeight: '40px' }} />)
 })
 
 const customPreStyle = {

@@ -18,24 +18,22 @@ export default WithDoc({
 
 Recently there was an interesting discussion about [Next.js](https://github.com/zeit/next.js/)'s performance on Twitter.
 
-${
-  <Image
+${<Image
     src='https://user-images.githubusercontent.com/50838/28487019-cff64fd2-6ea6-11e7-9b59-f7c2d67bed1f.png'
     width={450}
     title='Screenshot of the tweet without the author info.'
   />
-}
+  }
 
 Basically, it took about a minute to build the app with \`next build\` and the resulting app's bundle was around 1.2 MB.
 
 Technically, this is impossible for a simple [hello world](https://abc-nfedfcfmoe.now.sh/) Next.js app. Here is what a simple hello world app looks like.
 
-${
-  <Image
+${<Image
     src='https://user-images.githubusercontent.com/50838/28487018-cff49782-6ea6-11e7-8354-724a6ac0e07c.png'
     title='A simple Next.js app only contains less than 100 KB of content.'
   />
-}
+  }
 
 
 Apparently, the mentioned app was using a **server-only** module which caused the issue. That module was only meant to run inside the server, but webpack bundled it.
@@ -65,8 +63,7 @@ a Next.js app we might use a server only module to fetch data.
 
 Have a look at the following code:
 
-${
-  <Code language='js'>{`
+${<Code language='js'>{`
 import React from 'react'
 import Link from 'next/link'
 
@@ -90,14 +87,14 @@ export default class Index extends React.Component {
         <h1>Home Page</h1>
         <p>Welcome, {name}</p>
         <div>
-          <Link href='/about'><a>About Page</a></Link>
+          <Link href='/about' legacyBehavior><a>About Page</a></Link>
         </div>
       </div>
     )
   }
 }
     `}</Code>
-}
+  }
 
 In the above example, our intention is to use \`faker\` module only in the server.
 
@@ -111,19 +108,17 @@ Here's a sample Next.js [app](https://github.com/zeit/next.js/tree/master/exampl
 
 Download the app and run the following command:
 
-${
-  <Code language='bash'>{`
+${<Code language='bash'>{`
 npm run analyze
   `}</Code>
-}
+  }
 
 Then it will open a HTML page in the browser and it'll look like this:
 
-${
-  <Image
+${<Image
     src='https://user-images.githubusercontent.com/50838/28487017-cff25bac-6ea6-11e7-9484-8372467903d2.png'
   />
-}
+  }
 
 You can clearly see \`faker\` module is included in the client side bundle of the “index.js” page.
 
@@ -137,11 +132,10 @@ After you've identified the issue, it's pretty easy to fix it. There are few way
 
 You can require the module inside \`eval\` as mentioned below:
 
-${
-  <Code language='js'>{`
+${<Code language='js'>{`
 const faker = eval("require('faker')")
   `}</Code>
-}
+  }
 
 Webpack can't statically analyze what's inside eval. So it won't bundle the \`faker\` module.
 
@@ -151,8 +145,7 @@ Webpack also has a [plugin](https://webpack.js.org/plugins/ignore-plugin/) where
 
 Create a file called \`next.config.js\` in your Next.js app and add the webpack IgnorePlugin.
 
-${
-  <Code language='js'>{`
+${<Code language='js'>{`
 module.exports = {
   webpack: function (config) {
     config.plugins.push(
@@ -163,7 +156,7 @@ module.exports = {
   }
 }
   `}</Code>
-}
+  }
 
 > If you are using webpack directly, just use the plugin directly.
 
@@ -172,8 +165,7 @@ module.exports = {
 You can also ask webpack to disable bundling \`faker\` module via adding a config in the main \`package.json\` file.<br />
 Add the following code in to your \`package.json\` file.
 
-${
-  <Code language='js'>{`
+${<Code language='js'>{`
 {
   ...
   "browser": {
@@ -182,7 +174,7 @@ ${
   ...
 }
   `}</Code>
-}
+  }
 
 > Additionally you can use webpack's [\`resolve.alias\`](https://webpack.js.org/configuration/resolve/#resolve-alias) to map \`faker\` into an empty module.
 
