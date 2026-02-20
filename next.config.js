@@ -18,6 +18,10 @@ module.exports = {
       {
         source: '/sitemap.xml',
         destination: '/sitemap',
+      },
+      {
+        source: '/llms.txt',
+        destination: '/llms',
       }
     ]
   },
