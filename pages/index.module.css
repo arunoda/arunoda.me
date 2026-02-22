@@ -7,54 +7,151 @@
 }
 
 .a {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
   text-decoration: none;
-  color: #000;
-  font-size: 20px;
+  color: #163214;
+  font-size: 21px;
+  letter-spacing: 0.01em;
+  transition: color 150ms ease, border-color 150ms ease;
+  border-bottom: 1px solid transparent;
 }
 
 .a:hover {
-  color: #FFF;
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.8);
 }
 
 .wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #8bc34a;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #a8d26e 0%, #8cc64b 35%, #76b53f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 20px;
+}
+
+.content {
+  width: min(760px, 100%);
+  padding: 36px 38px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 20px 42px rgba(43, 82, 22, 0.2);
+  backdrop-filter: blur(4px);
 }
 
 .intro {
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
 }
 
 .h1 {
   padding: 0;
   margin: 0;
-  font-size: 35px;
-  font-weight: 400;
-  color: #FFF;
-  line-height: 1;
+  font-size: clamp(36px, 6vw, 54px);
+  font-weight: 500;
+  color: #efffe0;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-shadow: 0 4px 24px rgba(10, 40, 6, 0.2);
 }
 
 .ct2 {
   text-align: center;
-  margin: 20px 0 0 0;
+  margin: 22px 0 0;
 }
 
-.ct3 {
-  border-top: 1px solid #000;
-  padding-top: 10px;
-  text-align: center;
-  margin: 15px 0 0 0;
+.latestPosts {
+  margin: 34px auto 0;
+  max-width: 640px;
+  text-align: left;
+  border-top: 1px solid rgba(20, 63, 12, 0.25);
+  padding-top: 22px;
 }
 
-.ct3 a {
-  font-size: 14px;
+.latestPostsTitle {
+  margin: 0 0 14px;
+  color: #f2ffe5;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.latestPostsList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.postItem {
+  margin: 18px 0;
+}
+
+.postDate {
+  display: block;
+  color: rgba(12, 42, 9, 0.7);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+  margin-bottom: 4px;
+}
+
+.postLink {
+  color: #0b1e34;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 19px;
+  line-height: 1.3;
+  transition: color 150ms ease;
+}
+
+.postLink:hover {
+  color: #f5fff0;
+}
+
+.seeAll {
+  margin-top: 18px;
+}
+
+.seeAllLink {
+  color: #173a17;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+  border-bottom: 1px solid rgba(23, 58, 23, 0.35);
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.seeAllLink:hover {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width: 650px) {
+  .content {
+    padding: 28px 22px;
+    border-radius: 16px;
+  }
+
+  .latestPosts {
+    margin-top: 24px;
+  }
+
+  .postItem {
+    margin: 16px 0;
+  }
+
+  .postDate {
+    font-size: 11px;
+  }
+
+  .postLink {
+    font-size: 16px;
+  }
 }
