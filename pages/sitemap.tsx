@@ -1,5 +1,4 @@
 import posts from '../posts';
-import ms from 'ms';
 
 export default function Sitemap() {
     return null;
@@ -7,10 +6,11 @@ export default function Sitemap() {
 
 Sitemap.getInitialProps = function ({ res }) {
     res.setHeader("Content-Type", "text/xml");
+    const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000;
 
     const urlsetContent = posts.map((post, index) => {
         const lm = new Date(post.updatedAt || post.date);
-        const isNew = (Date.now() - lm.getTime()) < ms('2day');
+        const isNew = (Date.now() - lm.getTime()) < TWO_DAYS_MS;
 
         const getChangeFreq = () => {
             if (isNew) {
