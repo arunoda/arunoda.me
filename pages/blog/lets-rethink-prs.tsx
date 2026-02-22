@@ -44,7 +44,7 @@ If you want a custom feature, just implement it yourself. Talk about it. If othe
 
 ## What about Discussions?
 
-Even though Pull Requests is not there, I think it's healthy to have some discussions around the project. Whether it's human or agent based. Let's give everyone a space to discuss. It could be GitHub issues or some form of a forum.
+Even though Pull Requests as a feature is not there, I think it's healthy to have some discussions around the project. Whether it's human or agent based. Let's give everyone a space to discuss. It could be GitHub issues or some form of a forum.
 
 Then the core team can rank those issues & implement them in the project by taking their time with proper reviews.
 
