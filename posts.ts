@@ -1,5 +1,11 @@
 export default [
   {
+    slug: 'lets-rethink-prs',
+    title: "Let's (Re)think PRs",
+    date: 'February 22, 2026',
+    updatedAt: 'February 22, 2026'
+  },
+  {
     slug: 'web3-love-it-or-hate-it',
     title: "Web3 - Love It or Hate It?",
     date: 'December 28, 2021',
