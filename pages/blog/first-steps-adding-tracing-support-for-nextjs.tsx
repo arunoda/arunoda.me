@@ -77,7 +77,7 @@ Then I thought, it'll be great if I can add tracing support directly into the co
 
 I will fork Next.js & add the tracing capability to the core. Then I will submit an RFC and get feedback from the core team & the community. I think this is the correct approach.
 
-> 👋 I am doing two live streams on Tuesday & Thursday. [Join me](/live) if you are interested to see how I'm doing this.
+> 👋 I am doing two live streams on Tuesday & Thursday and sharing updates as I go.
 
 ## Limitless Possibilities
 

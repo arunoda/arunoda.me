@@ -32,7 +32,6 @@ export default function Index() {
           <MainLink href='https://twitter.com/arunoda'>Twitter</MainLink>
           <MainLink href='/blog'>Blog</MainLink>
           <MainLink href='https://github.com/arunoda'>GitHub</MainLink>
-          <MainLink href='/live'>Live</MainLink>
         </div>
       </div>
     </div>
